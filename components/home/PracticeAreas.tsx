@@ -67,7 +67,7 @@ export const PracticeAreas: React.FC = () => {
   return (
     <section id="practice-areas" className="py-24 relative overflow-hidden">
       {/* Background radial accent */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-[#10253D]/40 blur-[140px] pointer-events-none -z-10" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-[#C6A15B]/10 dark:bg-[#10253D]/40 blur-[140px] pointer-events-none -z-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
@@ -78,7 +78,7 @@ export const PracticeAreas: React.FC = () => {
           />
           <Link
             href="/practice-areas"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-[#DFBF7D] hover:text-[#F7F5F0] transition-colors group shrink-0"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-[#92703B] dark:text-[#DFBF7D] hover:text-[#10253D] dark:hover:text-[#F7F5F0] transition-colors group shrink-0"
           >
             <span>View All Practice Details</span>
             <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
@@ -95,36 +95,36 @@ export const PracticeAreas: React.FC = () => {
               <GlassPanel
                 key={area.id}
                 variant={isFeatured ? "gold" : "default"}
-                className="p-8 flex flex-col justify-between group transition-all duration-300 hover:-translate-y-1 hover:border-[#C6A15B]/50 hover:shadow-xl hover:shadow-[#C6A15B]/5"
+                className="p-8 flex flex-col justify-between group transition-all duration-300 hover:-translate-y-1 hover:border-[#C6A15B]/50 hover:shadow-xl hover:shadow-[#C6A15B]/10"
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">
-                    <div className="w-12 h-12 rounded-xl bg-white/[0.06] border border-[#C6A15B]/30 flex items-center justify-center text-[#DFBF7D] transition-transform duration-300 group-hover:scale-105 group-hover:border-[#C6A15B]/60">
+                    <div className="w-12 h-12 rounded-xl bg-black/[0.04] dark:bg-white/[0.06] border border-[#C6A15B]/30 flex items-center justify-center text-[#92703B] dark:text-[#DFBF7D] transition-transform duration-300 group-hover:scale-105 group-hover:border-[#C6A15B]/60">
                       <Icon className="w-6 h-6 transition-transform duration-300 group-hover:rotate-3" />
                     </div>
-                    <span className="text-[11px] font-medium tracking-wider uppercase px-2.5 py-1 rounded-full bg-white/[0.04] text-[#AAB4C3] border border-white/[0.08]">
+                    <span className="text-[11px] font-medium tracking-wider uppercase px-2.5 py-1 rounded-full bg-black/[0.04] dark:bg-white/[0.04] text-[#4A586E] dark:text-[#AAB4C3] border border-black/10 dark:border-white/[0.08]">
                       {area.badge}
                     </span>
                   </div>
 
-                  <h3 className="font-serif-luxury text-xl sm:text-2xl font-medium text-[#F7F5F0] group-hover:text-[#DFBF7D] transition-colors">
+                  <h3 className="font-serif-luxury text-xl sm:text-2xl font-medium text-[#10253D] dark:text-[#F7F5F0] group-hover:text-[#92703B] dark:group-hover:text-[#DFBF7D] transition-colors">
                     {area.title}
                   </h3>
 
-                  <p className="mt-3 text-sm text-[#AAB4C3] leading-relaxed">
+                  <p className="mt-3 text-sm text-[#4A586E] dark:text-[#AAB4C3] leading-relaxed">
                     {area.description}
                   </p>
                 </div>
 
-                <div className="pt-6 mt-6 border-t border-white/[0.08] flex items-center justify-between">
+                <div className="pt-6 mt-6 border-t border-black/10 dark:border-white/[0.08] flex items-center justify-between">
                   <Link
                     href={`/practice-areas#${area.id}`}
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-[#DFBF7D] group-hover:text-[#F7F5F0] transition-colors"
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-[#92703B] dark:text-[#DFBF7D] group-hover:text-[#10253D] dark:group-hover:text-[#F7F5F0] transition-colors"
                   >
                     <span>Explore Practice</span>
                     <ArrowRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-1" />
                   </Link>
-                  <span className="text-xs text-[#AAB4C3]/50">0{index + 1}</span>
+                  <span className="text-xs text-[#4A586E]/60 dark:text-[#AAB4C3]/50">0{index + 1}</span>
                 </div>
               </GlassPanel>
             );
@@ -132,7 +132,7 @@ export const PracticeAreas: React.FC = () => {
         </div>
 
         <div className="mt-12 text-center">
-          <p className="text-xs text-[#AAB4C3]/70 max-w-2xl mx-auto">
+          <p className="text-xs text-[#4A586E]/80 dark:text-[#AAB4C3]/70 max-w-2xl mx-auto">
             Note: Specific legal services are confirmed following an initial consultation and conflict check in accordance with the Advocates Act and Bar Council regulations.
           </p>
         </div>

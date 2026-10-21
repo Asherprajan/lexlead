@@ -1,6 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
-import { Scale, AlertCircle, FileCheck2 } from "lucide-react";
+import { Scale, AlertCircle } from "lucide-react";
 import { GlassPanel } from "@/components/ui/GlassPanel";
 
 export const metadata: Metadata = {
@@ -13,25 +13,25 @@ export default function TermsPage() {
   return (
     <main className="flex-1 w-full pt-28 pb-20 overflow-hidden">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-[#C6A15B]/30 mb-6">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/[0.04] dark:bg-white/[0.04] border border-[#C6A15B]/30 mb-6">
           <Scale className="w-4 h-4 text-[#C6A15B]" />
-          <span className="text-xs font-semibold tracking-widest uppercase text-[#DFBF7D]">
+          <span className="text-xs font-semibold tracking-widest uppercase text-[#92703B] dark:text-[#DFBF7D]">
             Regulatory Compliance
           </span>
         </div>
 
-        <h1 className="font-serif-luxury text-3xl sm:text-4xl lg:text-5xl font-medium text-[#F7F5F0]">
+        <h1 className="font-serif-luxury text-3xl sm:text-4xl lg:text-5xl font-medium text-[#10253D] dark:text-[#F7F5F0]">
           Terms of Use & Bar Council Compliance
         </h1>
-        <p className="mt-4 text-xs text-[#DFBF7D]">
+        <p className="mt-4 text-xs text-[#92703B] dark:text-[#DFBF7D]">
           Applicable under the Bar Council of India Rules • Thiruvananthapuram, Kerala
         </p>
 
         {/* Highlighted Compliance Notice */}
-        <div className="mt-8 p-6 rounded-2xl bg-[#C6A15B]/10 border border-[#C6A15B]/35 flex items-start gap-4">
-          <AlertCircle className="w-6 h-6 text-[#DFBF7D] shrink-0 mt-1" />
-          <div className="space-y-1.5 text-xs sm:text-sm text-[#F7F5F0]/90 leading-relaxed">
-            <h2 className="font-semibold text-[#DFBF7D] uppercase tracking-wide text-xs">
+        <div className="mt-8 p-6 rounded-2xl bg-[#C6A15B]/15 dark:bg-[#C6A15B]/10 border border-[#C6A15B]/35 flex items-start gap-4">
+          <AlertCircle className="w-6 h-6 text-[#92703B] dark:text-[#DFBF7D] shrink-0 mt-1" />
+          <div className="space-y-1.5 text-xs sm:text-sm text-[#10253D]/90 dark:text-[#F7F5F0]/90 leading-relaxed">
+            <h2 className="font-semibold text-[#92703B] dark:text-[#DFBF7D] uppercase tracking-wide text-xs">
               Bar Council of India Rule 36 Mandatory Notice
             </h2>
             <p>
@@ -40,9 +40,9 @@ export default function TermsPage() {
           </div>
         </div>
 
-        <GlassPanel variant="subtle" className="mt-8 p-8 sm:p-10 border border-white/10 space-y-8 text-sm text-[#AAB4C3] leading-relaxed">
+        <GlassPanel variant="subtle" className="mt-8 p-8 sm:p-10 border border-black/10 dark:border-white/10 space-y-8 text-sm text-[#4A586E] dark:text-[#AAB4C3] leading-relaxed">
           <section className="space-y-3">
-            <h2 className="font-serif-luxury text-xl font-medium text-[#F7F5F0]">
+            <h2 className="font-serif-luxury text-xl font-medium text-[#10253D] dark:text-[#F7F5F0]">
               1. Informational Purpose Only
             </h2>
             <p>
@@ -51,7 +51,7 @@ export default function TermsPage() {
           </section>
 
           <section className="space-y-3">
-            <h2 className="font-serif-luxury text-xl font-medium text-[#F7F5F0]">
+            <h2 className="font-serif-luxury text-xl font-medium text-[#10253D] dark:text-[#F7F5F0]">
               2. No Advocate-Client Relationship
             </h2>
             <p>
@@ -65,7 +65,7 @@ export default function TermsPage() {
           </section>
 
           <section className="space-y-3">
-            <h2 className="font-serif-luxury text-xl font-medium text-[#F7F5F0]">
+            <h2 className="font-serif-luxury text-xl font-medium text-[#10253D] dark:text-[#F7F5F0]">
               3. No Guarantee of Judicial Outcomes
             </h2>
             <p>
@@ -74,7 +74,7 @@ export default function TermsPage() {
           </section>
 
           <section className="space-y-3">
-            <h2 className="font-serif-luxury text-xl font-medium text-[#F7F5F0]">
+            <h2 className="font-serif-luxury text-xl font-medium text-[#10253D] dark:text-[#F7F5F0]">
               4. Intellectual Property
             </h2>
             <p>
@@ -83,7 +83,7 @@ export default function TermsPage() {
           </section>
 
           <section className="space-y-3">
-            <h2 className="font-serif-luxury text-xl font-medium text-[#F7F5F0]">
+            <h2 className="font-serif-luxury text-xl font-medium text-[#10253D] dark:text-[#F7F5F0]">
               5. Governing Law & Jurisdiction
             </h2>
             <p>

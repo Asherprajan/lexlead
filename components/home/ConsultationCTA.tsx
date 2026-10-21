@@ -20,23 +20,23 @@ export const ConsultationCTA: React.FC = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             <div className="lg:col-span-8 space-y-4">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.05] border border-[#C6A15B]/30">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/[0.04] dark:bg-white/[0.05] border border-[#C6A15B]/30">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#C6A15B]" />
-                <span className="text-[11px] font-semibold tracking-widest uppercase text-[#DFBF7D]">
+                <span className="text-[11px] font-semibold tracking-widest uppercase text-[#92703B] dark:text-[#DFBF7D]">
                   Confidential Consultation
                 </span>
               </div>
 
-              <h2 className="font-serif-luxury text-3xl sm:text-4xl lg:text-5xl font-medium text-[#F7F5F0] leading-tight">
+              <h2 className="font-serif-luxury text-3xl sm:text-4xl lg:text-5xl font-medium text-[#10253D] dark:text-[#F7F5F0] leading-tight">
                 Every Important Decision Deserves Clarity.
               </h2>
 
-              <p className="text-base sm:text-lg text-[#AAB4C3] max-w-2xl leading-relaxed">
+              <p className="text-base sm:text-lg text-[#4A586E] dark:text-[#AAB4C3] max-w-2xl leading-relaxed">
                 Start a conversation about your legal requirements and the next steps you may wish to consider. We offer preliminary assessments for both individuals and commercial enterprises.
               </p>
 
               {/* Trust badges */}
-              <div className="pt-2 flex flex-wrap items-center gap-6 text-xs text-[#AAB4C3]/80">
+              <div className="pt-2 flex flex-wrap items-center gap-6 text-xs text-[#4A586E]/80 dark:text-[#AAB4C3]/80">
                 <div className="flex items-center gap-2">
                   <ShieldCheck className="w-4 h-4 text-[#C6A15B]" />
                   <span>Strict Confidentiality Maintained</span>

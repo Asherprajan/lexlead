@@ -1,6 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
-import { Shield, Lock, FileCheck } from "lucide-react";
+import { Shield } from "lucide-react";
 import { GlassPanel } from "@/components/ui/GlassPanel";
 
 export const metadata: Metadata = {
@@ -12,23 +12,23 @@ export default function PrivacyPage() {
   return (
     <main className="flex-1 w-full pt-28 pb-20 overflow-hidden">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-[#C6A15B]/30 mb-6">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/[0.04] dark:bg-white/[0.04] border border-[#C6A15B]/30 mb-6">
           <Shield className="w-4 h-4 text-[#C6A15B]" />
-          <span className="text-xs font-semibold tracking-widest uppercase text-[#DFBF7D]">
+          <span className="text-xs font-semibold tracking-widest uppercase text-[#92703B] dark:text-[#DFBF7D]">
             Legal Transparency
           </span>
         </div>
 
-        <h1 className="font-serif-luxury text-3xl sm:text-4xl lg:text-5xl font-medium text-[#F7F5F0]">
+        <h1 className="font-serif-luxury text-3xl sm:text-4xl lg:text-5xl font-medium text-[#10253D] dark:text-[#F7F5F0]">
           Privacy Policy & Confidentiality Statement
         </h1>
-        <p className="mt-4 text-xs text-[#DFBF7D]">
+        <p className="mt-4 text-xs text-[#92703B] dark:text-[#DFBF7D]">
           Last reviewed: January 2026 • Lexlead Legal Solutions, Advocates
         </p>
 
-        <GlassPanel variant="subtle" className="mt-10 p-8 sm:p-10 border border-white/10 space-y-8 text-sm text-[#AAB4C3] leading-relaxed">
+        <GlassPanel variant="subtle" className="mt-10 p-8 sm:p-10 border border-black/10 dark:border-white/10 space-y-8 text-sm text-[#4A586E] dark:text-[#AAB4C3] leading-relaxed">
           <section className="space-y-3">
-            <h2 className="font-serif-luxury text-xl font-medium text-[#F7F5F0]">
+            <h2 className="font-serif-luxury text-xl font-medium text-[#10253D] dark:text-[#F7F5F0]">
               1. Professional Privilege & Data Confidentiality
             </h2>
             <p>
@@ -37,7 +37,7 @@ export default function PrivacyPage() {
           </section>
 
           <section className="space-y-3">
-            <h2 className="font-serif-luxury text-xl font-medium text-[#F7F5F0]">
+            <h2 className="font-serif-luxury text-xl font-medium text-[#10253D] dark:text-[#F7F5F0]">
               2. Information Collected Through This Website
             </h2>
             <p>
@@ -48,13 +48,13 @@ export default function PrivacyPage() {
               <li>The selected category of legal practice</li>
               <li>A preliminary summary of the matter solely for intake and conflict screening purposes</li>
             </ul>
-            <p className="text-xs text-[#DFBF7D]">
+            <p className="text-xs text-[#92703B] dark:text-[#DFBF7D]">
               We advise visitors not to upload or transmit highly sensitive confidential documents, financial records, or original deeds through the initial public enquiry form.
             </p>
           </section>
 
           <section className="space-y-3">
-            <h2 className="font-serif-luxury text-xl font-medium text-[#F7F5F0]">
+            <h2 className="font-serif-luxury text-xl font-medium text-[#10253D] dark:text-[#F7F5F0]">
               3. Purpose of Processing
             </h2>
             <p>
@@ -72,7 +72,7 @@ export default function PrivacyPage() {
           </section>
 
           <section className="space-y-3">
-            <h2 className="font-serif-luxury text-xl font-medium text-[#F7F5F0]">
+            <h2 className="font-serif-luxury text-xl font-medium text-[#10253D] dark:text-[#F7F5F0]">
               4. Data Storage & Security
             </h2>
             <p>
@@ -81,17 +81,17 @@ export default function PrivacyPage() {
           </section>
 
           <section className="space-y-3">
-            <h2 className="font-serif-luxury text-xl font-medium text-[#F7F5F0]">
+            <h2 className="font-serif-luxury text-xl font-medium text-[#10253D] dark:text-[#F7F5F0]">
               5. Contact for Privacy Inquiries
             </h2>
             <p>
               If you have any questions regarding how your data is handled or wish to have your contact details updated or expunged following a consultation, you may address written correspondence to:
             </p>
-            <div className="p-4 rounded-xl bg-white/[0.03] border border-white/10 text-xs text-[#F7F5F0]">
-              <p className="font-semibold text-[#DFBF7D]">Chamber Registry</p>
+            <div className="p-4 rounded-xl bg-black/[0.03] dark:bg-white/[0.03] border border-black/10 dark:border-white/10 text-xs text-[#10253D] dark:text-[#F7F5F0]">
+              <p className="font-semibold text-[#92703B] dark:text-[#DFBF7D]">Chamber Registry</p>
               <p>Lexlead Legal Solutions — Advocates</p>
               <p>Court Road / Vanchiyoor, Thiruvananthapuram, Kerala — 695035</p>
-              <p>Email: <a href="mailto:office@lexlead.in" className="text-[#DFBF7D] underline">office@lexlead.in</a></p>
+              <p>Email: <a href="mailto:office@lexlead.in" className="text-[#92703B] dark:text-[#DFBF7D] underline">office@lexlead.in</a></p>
             </div>
           </section>
         </GlassPanel>

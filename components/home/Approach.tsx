@@ -65,7 +65,7 @@ export const Approach: React.FC = () => {
           <div className="lg:col-span-5 order-2 lg:order-1 relative">
             <div className="relative mx-auto max-w-md lg:max-w-none">
               <div className="absolute -inset-3 rounded-3xl border border-[#C6A15B]/20 -z-10" />
-              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-black/10 dark:border-white/10">
                 <Image
                   src="/images/editorial-desk.jpg"
                   alt="Legal documentation and chambers desk at Lexlead"
@@ -73,18 +73,18 @@ export const Approach: React.FC = () => {
                   sizes="(max-width: 1024px) 100vw, 500px"
                   className="object-cover object-center"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0B1728]/70 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#F8F7F4]/90 dark:from-[#0B1728]/70 via-transparent to-transparent" />
               </div>
 
               {/* Floating Quote Badge */}
               <GlassPanel
                 variant="subtle"
-                className="absolute -bottom-6 right-4 sm:-right-4 max-w-xs p-5 border border-white/15 bg-[#0B1728]/90"
+                className="absolute -bottom-6 right-4 sm:-right-4 max-w-xs p-5 border border-black/10 dark:border-white/15 bg-[#F8F7F4]/95 dark:bg-[#0B1728]/90"
               >
-                <p className="text-xs italic text-[#DFBF7D] leading-relaxed font-serif-luxury text-base">
+                <p className="text-xs italic text-[#92703B] dark:text-[#DFBF7D] leading-relaxed font-serif-luxury text-base">
                   &ldquo;In the practice of law, thorough preparation is the greatest foundation of confidence.&rdquo;
                 </p>
-                <p className="text-[10px] tracking-wider uppercase text-[#AAB4C3] mt-2 font-semibold">
+                <p className="text-[10px] tracking-wider uppercase text-[#4A586E] dark:text-[#AAB4C3] mt-2 font-semibold">
                   Lexlead Legal Solutions
                 </p>
               </GlassPanel>
@@ -104,11 +104,11 @@ export const Approach: React.FC = () => {
                 <div key={pillar.title} className="space-y-2">
                   <div className="flex items-center gap-2.5">
                     <CheckCircle2 className="w-4 h-4 text-[#C6A15B] shrink-0" />
-                    <h3 className="text-sm font-semibold text-[#F7F5F0]">
+                    <h3 className="text-sm font-semibold text-[#10253D] dark:text-[#F7F5F0]">
                       {pillar.title}
                     </h3>
                   </div>
-                  <p className="text-xs sm:text-sm text-[#AAB4C3] leading-relaxed pl-6.5">
+                  <p className="text-xs sm:text-sm text-[#4A586E] dark:text-[#AAB4C3] leading-relaxed pl-6.5">
                     {pillar.description}
                   </p>
                 </div>
@@ -152,18 +152,18 @@ export const Approach: React.FC = () => {
                     <span className="font-serif-luxury text-3xl font-bold text-gold-gradient">
                       {item.step}
                     </span>
-                    <span className="w-8 h-8 rounded-full bg-white/[0.05] border border-white/10 flex items-center justify-center text-xs text-[#DFBF7D]">
+                    <span className="w-8 h-8 rounded-full bg-black/[0.04] dark:bg-white/[0.05] border border-black/10 dark:border-white/10 flex items-center justify-center text-xs text-[#92703B] dark:text-[#DFBF7D]">
                       0{idx + 1}
                     </span>
                   </div>
-                  <h3 className="font-serif-luxury text-lg sm:text-xl font-medium text-[#F7F5F0] group-hover:text-[#DFBF7D] transition-colors">
+                  <h3 className="font-serif-luxury text-lg sm:text-xl font-medium text-[#10253D] dark:text-[#F7F5F0] group-hover:text-[#92703B] dark:group-hover:text-[#DFBF7D] transition-colors">
                     {item.title}
                   </h3>
-                  <p className="mt-2 text-xs sm:text-sm text-[#AAB4C3] leading-relaxed">
+                  <p className="mt-2 text-xs sm:text-sm text-[#4A586E] dark:text-[#AAB4C3] leading-relaxed">
                     {item.description}
                   </p>
                 </div>
-                <div className="pt-4 mt-4 border-t border-white/[0.06] text-[11px] text-[#AAB4C3]/60 flex items-center justify-between">
+                <div className="pt-4 mt-4 border-t border-black/10 dark:border-white/[0.06] text-[11px] text-[#4A586E]/70 dark:text-[#AAB4C3]/60 flex items-center justify-between">
                   <span>Phase {idx + 1}</span>
                   <ArrowRight className="w-3 h-3 text-[#C6A15B] opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
@@ -172,7 +172,7 @@ export const Approach: React.FC = () => {
           </div>
         </div>
 
-        <p className="mt-10 text-center text-xs text-[#AAB4C3]/60">
+        <p className="mt-10 text-center text-xs text-[#4A586E]/80 dark:text-[#AAB4C3]/60">
           *Note: Actual procedural timelines and procedural stages may vary depending on court calendars, statutory procedures, and the specific nature of the dispute.
         </p>
       </div>

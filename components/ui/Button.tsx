@@ -34,13 +34,13 @@ export const Button: React.FC<ButtonProps> = ({
     primary:
       "bg-gradient-to-r from-[#DFBF7D] via-[#C6A15B] to-[#92703B] text-[#0B1728] font-semibold shadow-lg shadow-[#C6A15B]/20 hover:shadow-xl hover:shadow-[#C6A15B]/30 hover:brightness-105 border border-[#DFBF7D]/40",
     secondary:
-      "bg-[#10253D] text-[#F7F5F0] border border-[#C6A15B]/30 hover:border-[#C6A15B]/70 hover:bg-[#183354] shadow-md",
+      "bg-[#10253D] text-[#F7F5F0] border border-[#C6A15B]/40 hover:border-[#C6A15B] hover:bg-[#183354] shadow-md",
     glass:
-      "bg-white/[0.07] backdrop-blur-md text-[#F7F5F0] border border-white/15 hover:bg-white/[0.12] hover:border-[#C6A15B]/40 shadow-sm",
+      "bg-black/[0.04] dark:bg-white/[0.07] backdrop-blur-md text-[#10253D] dark:text-[#F7F5F0] border border-black/10 dark:border-white/15 hover:bg-black/[0.08] dark:hover:bg-white/[0.12] hover:border-[#C6A15B]/40 shadow-sm",
     outline:
-      "bg-transparent text-[#DFBF7D] border border-[#C6A15B]/50 hover:bg-[#C6A15B]/10 hover:border-[#C6A15B]",
+      "bg-transparent text-[#92703B] dark:text-[#DFBF7D] border border-[#C6A15B]/50 hover:bg-[#C6A15B]/10 hover:border-[#C6A15B]",
     text:
-      "bg-transparent text-[#DFBF7D] hover:text-[#F7F5F0] px-0 py-0 underline-offset-4 hover:underline",
+      "bg-transparent text-[#92703B] dark:text-[#DFBF7D] hover:text-[#10253D] dark:hover:text-[#F7F5F0] px-0 py-0 underline-offset-4 hover:underline",
   };
 
   const content = (

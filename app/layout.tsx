@@ -2,9 +2,13 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { ThemeProvider } from "@/components/theme/ThemeProvider";
 
 export const viewport: Viewport = {
-  themeColor: "#0B1728",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#F8F7F4" },
+    { media: "(prefers-color-scheme: dark)", color: "#0B1728" },
+  ],
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
@@ -74,8 +78,28 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth antialiased">
+    <html lang="en" className="scroll-smooth antialiased dark" suppressHydrationWarning>
       <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var stored = localStorage.getItem('lexlead_theme');
+                  var supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                  var isDark = stored ? stored === 'dark' : supportDarkMode;
+                  if (stored === 'light') {
+                    document.documentElement.classList.remove('dark');
+                    document.documentElement.setAttribute('data-theme', 'light');
+                  } else {
+                    document.documentElement.classList.add('dark');
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                  }
+                } catch (e) {}
+              })();
+            `,
+          }}
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
@@ -83,10 +107,12 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="min-h-screen flex flex-col bg-[#0B1728] text-[#F7F5F0] selection:bg-[#C6A15B]/30 selection:text-white font-sans">
-        <Header />
-        <div className="flex-1 flex flex-col">{children}</div>
-        <Footer />
+      <body className="min-h-screen flex flex-col bg-[var(--background)] text-[var(--foreground)] selection:bg-[#C6A15B]/30 selection:text-white font-sans transition-colors duration-300">
+        <ThemeProvider>
+          <Header />
+          <div className="flex-1 flex flex-col">{children}</div>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

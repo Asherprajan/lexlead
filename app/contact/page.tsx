@@ -34,24 +34,24 @@ export default function ContactPage() {
   return (
     <main className="flex-1 w-full pt-28 pb-20 overflow-hidden">
       {/* Background Lighting */}
-      <div className="absolute top-1/4 right-1/4 w-[600px] h-[400px] bg-[#183354]/30 blur-[130px] pointer-events-none -z-10" />
+      <div className="absolute top-1/4 right-1/4 w-[600px] h-[400px] bg-[#DFBF7D]/10 dark:bg-[#183354]/30 blur-[130px] pointer-events-none -z-10" />
       <div className="absolute bottom-1/4 left-10 w-[500px] h-[500px] bg-[#C6A15B]/10 blur-[140px] rounded-full pointer-events-none -z-10" />
 
       {/* Header */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-12">
         <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-[#C6A15B]/30 mb-6">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/[0.04] dark:bg-white/[0.04] border border-[#C6A15B]/30 mb-6">
             <MapPin className="w-4 h-4 text-[#C6A15B]" />
-            <span className="text-xs font-semibold tracking-widest uppercase text-[#DFBF7D]">
+            <span className="text-xs font-semibold tracking-widest uppercase text-[#92703B] dark:text-[#DFBF7D]">
               Chambers Registry • Thiruvananthapuram
             </span>
           </div>
 
-          <h1 className="font-serif-luxury text-4xl sm:text-5xl lg:text-6xl font-medium text-[#F7F5F0] leading-tight">
+          <h1 className="font-serif-luxury text-4xl sm:text-5xl lg:text-6xl font-medium text-[#10253D] dark:text-[#F7F5F0] leading-tight">
             Schedule a Confidential Legal Consultation.
           </h1>
 
-          <p className="mt-6 text-base sm:text-lg text-[#AAB4C3] leading-relaxed">
+          <p className="mt-6 text-base sm:text-lg text-[#4A586E] dark:text-[#AAB4C3] leading-relaxed">
             Our chambers are situated in the judicial corridor of Vanchiyoor, Thiruvananthapuram. We welcome inquiries regarding civil litigation, criminal defense, property, and commercial advisory.
           </p>
         </div>
@@ -63,21 +63,21 @@ export default function ContactPage() {
           {/* Left Column: Chamber Info & Consultation Guidelines */}
           <div className="lg:col-span-5 space-y-6">
             {/* Address */}
-            <GlassPanel variant="subtle" className="p-6 border border-white/10 space-y-3">
+            <GlassPanel variant="subtle" className="p-6 border border-black/10 dark:border-white/10 space-y-3">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-white/[0.05] border border-[#C6A15B]/30 flex items-center justify-center text-[#DFBF7D]">
+                <div className="w-10 h-10 rounded-xl bg-black/[0.04] dark:bg-white/[0.05] border border-[#C6A15B]/30 flex items-center justify-center text-[#92703B] dark:text-[#DFBF7D]">
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="text-xs font-semibold tracking-wider uppercase text-[#DFBF7D]">
+                  <h3 className="text-xs font-semibold tracking-wider uppercase text-[#92703B] dark:text-[#DFBF7D]">
                     Chambers Address
                   </h3>
-                  <p className="text-base font-medium text-[#F7F5F0]">
+                  <p className="text-base font-medium text-[#10253D] dark:text-[#F7F5F0]">
                     Lexlead Legal Solutions — Advocates
                   </p>
                 </div>
               </div>
-              <p className="text-xs sm:text-sm text-[#AAB4C3] leading-relaxed pl-13">
+              <p className="text-xs sm:text-sm text-[#4A586E] dark:text-[#AAB4C3] leading-relaxed pl-13">
                 Court Road / Vanchiyoor, Thiruvananthapuram, Kerala, India — 695035
               </p>
               <div className="pl-13 pt-1">
@@ -85,7 +85,7 @@ export default function ContactPage() {
                   href="https://maps.google.com/?q=Vanchiyoor+Thiruvananthapuram+Kerala"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-xs text-[#DFBF7D] hover:text-[#F7F5F0] transition-colors font-medium"
+                  className="inline-flex items-center gap-1.5 text-xs text-[#92703B] dark:text-[#DFBF7D] hover:text-[#10253D] dark:hover:text-[#F7F5F0] transition-colors font-medium"
                 >
                   <span>Locate via Google Maps</span>
                   <ExternalLink className="w-3.5 h-3.5" />
@@ -94,50 +94,50 @@ export default function ContactPage() {
             </GlassPanel>
 
             {/* Direct Communication */}
-            <GlassPanel variant="subtle" className="p-6 border border-white/10 space-y-4">
+            <GlassPanel variant="subtle" className="p-6 border border-black/10 dark:border-white/10 space-y-4">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-white/[0.05] border border-[#C6A15B]/30 flex items-center justify-center text-[#DFBF7D]">
+                <div className="w-10 h-10 rounded-xl bg-black/[0.04] dark:bg-white/[0.05] border border-[#C6A15B]/30 flex items-center justify-center text-[#92703B] dark:text-[#DFBF7D]">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="text-xs font-semibold tracking-wider uppercase text-[#DFBF7D]">
+                  <h3 className="text-xs font-semibold tracking-wider uppercase text-[#92703B] dark:text-[#DFBF7D]">
                     Electronic Registry
                   </h3>
                   <a
                     href="mailto:office@lexlead.in"
-                    className="text-sm font-medium text-[#F7F5F0] hover:text-[#DFBF7D] transition-colors"
+                    className="text-sm font-medium text-[#10253D] dark:text-[#F7F5F0] hover:text-[#92703B] dark:hover:text-[#DFBF7D] transition-colors"
                   >
                     office@lexlead.in
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 pt-3 border-t border-white/[0.06]">
-                <div className="w-10 h-10 rounded-xl bg-white/[0.05] border border-[#C6A15B]/30 flex items-center justify-center text-[#DFBF7D]">
+              <div className="flex items-center gap-3 pt-3 border-t border-black/10 dark:border-white/[0.06]">
+                <div className="w-10 h-10 rounded-xl bg-black/[0.04] dark:bg-white/[0.05] border border-[#C6A15B]/30 flex items-center justify-center text-[#92703B] dark:text-[#DFBF7D]">
                   <Phone className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="text-xs font-semibold tracking-wider uppercase text-[#DFBF7D]">
+                  <h3 className="text-xs font-semibold tracking-wider uppercase text-[#92703B] dark:text-[#DFBF7D]">
                     Chamber Desk
                   </h3>
-                  <p className="text-sm font-medium text-[#F7F5F0]">
+                  <p className="text-sm font-medium text-[#10253D] dark:text-[#F7F5F0]">
                     +91 (0) 471 Consultation Line
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 pt-3 border-t border-white/[0.06]">
-                <div className="w-10 h-10 rounded-xl bg-white/[0.05] border border-[#C6A15B]/30 flex items-center justify-center text-[#DFBF7D]">
+              <div className="flex items-center gap-3 pt-3 border-t border-black/10 dark:border-white/[0.06]">
+                <div className="w-10 h-10 rounded-xl bg-black/[0.04] dark:bg-white/[0.05] border border-[#C6A15B]/30 flex items-center justify-center text-[#92703B] dark:text-[#DFBF7D]">
                   <Clock className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="text-xs font-semibold tracking-wider uppercase text-[#DFBF7D]">
+                  <h3 className="text-xs font-semibold tracking-wider uppercase text-[#92703B] dark:text-[#DFBF7D]">
                     Working Hours
                   </h3>
-                  <p className="text-xs text-[#F7F5F0]">
+                  <p className="text-xs text-[#10253D] dark:text-[#F7F5F0]">
                     Monday – Friday: 9:30 AM – 6:30 PM IST
                   </p>
-                  <p className="text-xs text-[#AAB4C3]">
+                  <p className="text-xs text-[#4A586E] dark:text-[#AAB4C3]">
                     Saturday: By Prior Chamber Appointment
                   </p>
                 </div>
@@ -145,12 +145,12 @@ export default function ContactPage() {
             </GlassPanel>
 
             {/* Preparation note */}
-            <div className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 space-y-2">
-              <div className="flex items-center gap-2 text-xs font-semibold text-[#DFBF7D] uppercase tracking-wider">
+            <div className="p-5 rounded-2xl bg-black/[0.03] dark:bg-white/[0.03] border border-black/10 dark:border-white/10 space-y-2">
+              <div className="flex items-center gap-2 text-xs font-semibold text-[#92703B] dark:text-[#DFBF7D] uppercase tracking-wider">
                 <ShieldAlert className="w-4 h-4 text-[#C6A15B]" />
                 <span>Confidentiality & Conflict Policy</span>
               </div>
-              <p className="text-xs text-[#AAB4C3] leading-relaxed">
+              <p className="text-xs text-[#4A586E] dark:text-[#AAB4C3] leading-relaxed">
                 To prevent potential conflict of interest, all incoming requests are screened before substantive advice is tendered. Please state the names of opposing parties if litigation has commenced.
               </p>
             </div>
@@ -158,7 +158,7 @@ export default function ContactPage() {
 
           {/* Right Column: Glassmorphic Consultation Form */}
           <div className="lg:col-span-7">
-            <Suspense fallback={<div className="p-12 text-center text-[#AAB4C3]">Loading form...</div>}>
+            <Suspense fallback={<div className="p-12 text-center text-[#4A586E] dark:text-[#AAB4C3]">Loading form...</div>}>
               <ContactForm />
             </Suspense>
           </div>
@@ -166,7 +166,7 @@ export default function ContactPage() {
       </section>
 
       {/* FAQs Section */}
-      <section className="py-20 bg-[#070e1a]/80 border-t border-white/[0.08]">
+      <section className="py-20 bg-[#EFECE4] dark:bg-[#070e1a]/80 border-t border-black/10 dark:border-white/[0.08]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             align="center"
@@ -177,14 +177,14 @@ export default function ContactPage() {
 
           <div className="mt-12 space-y-4">
             {FAQS.map((faq) => (
-              <GlassPanel key={faq.q} variant="subtle" className="p-6 border border-white/10 space-y-2">
+              <GlassPanel key={faq.q} variant="subtle" className="p-6 border border-black/10 dark:border-white/10 space-y-2">
                 <div className="flex items-start gap-3">
                   <HelpCircle className="w-4 h-4 text-[#C6A15B] shrink-0 mt-1" />
-                  <h4 className="font-serif-luxury text-lg text-[#F7F5F0] font-medium">
+                  <h4 className="font-serif-luxury text-lg text-[#10253D] dark:text-[#F7F5F0] font-medium">
                     {faq.q}
                   </h4>
                 </div>
-                <p className="text-xs sm:text-sm text-[#AAB4C3] pl-7 leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#4A586E] dark:text-[#AAB4C3] pl-7 leading-relaxed">
                   {faq.a}
                 </p>
               </GlassPanel>

@@ -1,6 +1,5 @@
 import React from "react";
 import type { Metadata } from "next";
-import Link from "next/link";
 import {
   Gavel,
   ShieldAlert,
@@ -12,7 +11,6 @@ import {
   CheckCircle,
   FileText,
 } from "lucide-react";
-import { SectionHeading } from "@/components/ui/SectionHeading";
 import { GlassPanel } from "@/components/ui/GlassPanel";
 import { Button } from "@/components/ui/Button";
 
@@ -119,23 +117,23 @@ export default function PracticeAreasPage() {
   return (
     <main className="flex-1 w-full pt-28 pb-20 overflow-hidden">
       {/* Background Lighting */}
-      <div className="absolute top-1/4 right-1/4 w-[600px] h-[400px] bg-[#183354]/30 blur-[140px] pointer-events-none -z-10" />
+      <div className="absolute top-1/4 right-1/4 w-[600px] h-[400px] bg-[#DFBF7D]/10 dark:bg-[#183354]/30 blur-[140px] pointer-events-none -z-10" />
 
       {/* Hero Header */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16">
         <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-[#C6A15B]/30 mb-6">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/[0.04] dark:bg-white/[0.04] border border-[#C6A15B]/30 mb-6">
             <FileText className="w-4 h-4 text-[#C6A15B]" />
-            <span className="text-xs font-semibold tracking-widest uppercase text-[#DFBF7D]">
+            <span className="text-xs font-semibold tracking-widest uppercase text-[#92703B] dark:text-[#DFBF7D]">
               Legal Capabilities
             </span>
           </div>
 
-          <h1 className="font-serif-luxury text-4xl sm:text-5xl lg:text-6xl font-medium text-[#F7F5F0] leading-tight">
+          <h1 className="font-serif-luxury text-4xl sm:text-5xl lg:text-6xl font-medium text-[#10253D] dark:text-[#F7F5F0] leading-tight">
             Considered Legal Counsel Across Key Jurisdictions.
           </h1>
 
-          <p className="mt-6 text-base sm:text-lg text-[#AAB4C3] leading-relaxed">
+          <p className="mt-6 text-base sm:text-lg text-[#4A586E] dark:text-[#AAB4C3] leading-relaxed">
             Lexlead Legal Solutions offers targeted legal representation and transactional guidance across the core judicial branches in Thiruvananthapuram and across Kerala.
           </p>
         </div>
@@ -151,30 +149,30 @@ export default function PracticeAreasPage() {
                 key={practice.id}
                 id={practice.id}
                 variant={index % 2 === 0 ? "default" : "subtle"}
-                className="p-8 sm:p-10 lg:p-12 scroll-mt-28 border border-white/10 hover:border-[#C6A15B]/30 transition-all duration-300"
+                className="p-8 sm:p-10 lg:p-12 scroll-mt-28 border border-black/10 dark:border-white/10 hover:border-[#C6A15B]/30 transition-all duration-300"
               >
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
                   {/* Left Column: Heading, Icon, Description */}
                   <div className="lg:col-span-6 space-y-4">
                     <div className="flex items-center gap-4">
-                      <div className="w-14 h-14 rounded-2xl bg-white/[0.06] border border-[#C6A15B]/40 flex items-center justify-center text-[#DFBF7D]">
+                      <div className="w-14 h-14 rounded-2xl bg-black/[0.04] dark:bg-white/[0.06] border border-[#C6A15B]/40 flex items-center justify-center text-[#92703B] dark:text-[#DFBF7D]">
                         <Icon className="w-7 h-7" />
                       </div>
                       <div>
-                        <span className="text-xs font-semibold tracking-wider uppercase text-[#DFBF7D]">
+                        <span className="text-xs font-semibold tracking-wider uppercase text-[#92703B] dark:text-[#DFBF7D]">
                           Practice Area 0{index + 1}
                         </span>
-                        <h2 className="font-serif-luxury text-2xl sm:text-3xl font-medium text-[#F7F5F0]">
+                        <h2 className="font-serif-luxury text-2xl sm:text-3xl font-medium text-[#10253D] dark:text-[#F7F5F0]">
                           {practice.title}
                         </h2>
                       </div>
                     </div>
 
-                    <p className="text-xs sm:text-sm font-medium text-[#DFBF7D]/90">
+                    <p className="text-xs sm:text-sm font-medium text-[#92703B] dark:text-[#DFBF7D]/90">
                       {practice.subtitle}
                     </p>
 
-                    <p className="text-sm text-[#AAB4C3] leading-relaxed pt-1">
+                    <p className="text-sm text-[#4A586E] dark:text-[#AAB4C3] leading-relaxed pt-1">
                       {practice.description}
                     </p>
 
@@ -191,11 +189,11 @@ export default function PracticeAreasPage() {
                   </div>
 
                   {/* Right Column: Scope of Representation */}
-                  <div className="lg:col-span-6 p-6 rounded-xl bg-white/[0.03] border border-white/[0.08] space-y-3">
-                    <h3 className="text-xs font-semibold tracking-wider uppercase text-[#F7F5F0]">
+                  <div className="lg:col-span-6 p-6 rounded-xl bg-black/[0.03] dark:bg-white/[0.03] border border-black/10 dark:border-white/[0.08] space-y-3">
+                    <h3 className="text-xs font-semibold tracking-wider uppercase text-[#10253D] dark:text-[#F7F5F0]">
                       Key Areas of Guidance & Representation:
                     </h3>
-                    <ul className="space-y-2.5 text-xs sm:text-sm text-[#AAB4C3]">
+                    <ul className="space-y-2.5 text-xs sm:text-sm text-[#4A586E] dark:text-[#AAB4C3]">
                       {practice.scope.map((item) => (
                         <li key={item} className="flex items-start gap-2.5">
                           <CheckCircle className="w-4 h-4 text-[#C6A15B] shrink-0 mt-0.5" />
@@ -211,8 +209,8 @@ export default function PracticeAreasPage() {
         </div>
 
         {/* Regulatory Note */}
-        <div className="mt-16 p-6 rounded-2xl bg-white/[0.03] border border-white/[0.08] text-center max-w-3xl mx-auto">
-          <p className="text-xs text-[#AAB4C3]/80 leading-relaxed">
+        <div className="mt-16 p-6 rounded-2xl bg-black/[0.03] dark:bg-white/[0.03] border border-black/10 dark:border-white/[0.08] text-center max-w-3xl mx-auto">
+          <p className="text-xs text-[#4A586E]/80 dark:text-[#AAB4C3]/80 leading-relaxed">
             In compliance with Bar Council of India guidelines, the details provided above are intended to inform potential clients regarding areas of practice. Formal acceptance of a legal brief occurs only after verification of facts, absence of conflict, and execution of a vakalatnama or engagement agreement.
           </p>
         </div>

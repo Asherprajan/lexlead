@@ -63,23 +63,23 @@ export default function OurApproachPage() {
   return (
     <main className="flex-1 w-full pt-28 pb-20 overflow-hidden">
       {/* Background Lighting */}
-      <div className="absolute top-1/3 left-1/3 w-[600px] h-[400px] bg-[#183354]/30 blur-[130px] pointer-events-none -z-10" />
+      <div className="absolute top-1/3 left-1/3 w-[600px] h-[400px] bg-[#DFBF7D]/10 dark:bg-[#183354]/30 blur-[130px] pointer-events-none -z-10" />
 
       {/* Hero Header */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16">
         <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-[#C6A15B]/30 mb-6">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/[0.04] dark:bg-white/[0.04] border border-[#C6A15B]/30 mb-6">
             <Compass className="w-4 h-4 text-[#C6A15B]" />
-            <span className="text-xs font-semibold tracking-widest uppercase text-[#DFBF7D]">
+            <span className="text-xs font-semibold tracking-widest uppercase text-[#92703B] dark:text-[#DFBF7D]">
               Our Methodology
             </span>
           </div>
 
-          <h1 className="font-serif-luxury text-4xl sm:text-5xl lg:text-6xl font-medium text-[#F7F5F0] leading-tight">
+          <h1 className="font-serif-luxury text-4xl sm:text-5xl lg:text-6xl font-medium text-[#10253D] dark:text-[#F7F5F0] leading-tight">
             How We Work: Thorough Inquiry, Clear Strategy.
           </h1>
 
-          <p className="mt-6 text-base sm:text-lg text-[#AAB4C3] leading-relaxed">
+          <p className="mt-6 text-base sm:text-lg text-[#4A586E] dark:text-[#AAB4C3] leading-relaxed">
             Legal outcomes rely on disciplined preparation and candid communication. We reject opaque procedures in favour of a structured, stepwise methodology that keeps you fully informed.
           </p>
         </div>
@@ -89,23 +89,23 @@ export default function OurApproachPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6 space-y-6">
-            <h2 className="font-serif-luxury text-2xl sm:text-3xl lg:text-4xl font-medium text-[#F7F5F0]">
+            <h2 className="font-serif-luxury text-2xl sm:text-3xl lg:text-4xl font-medium text-[#10253D] dark:text-[#F7F5F0]">
               The Value of Considered Legal Analysis
             </h2>
-            <p className="text-sm sm:text-base text-[#AAB4C3] leading-relaxed">
+            <p className="text-sm sm:text-base text-[#4A586E] dark:text-[#AAB4C3] leading-relaxed">
               In legal practice, rushed actions often cause avoidable complications. An incorrectly framed notice or a premature plaint can prejudice your legal standing for years.
             </p>
-            <p className="text-sm sm:text-base text-[#AAB4C3] leading-relaxed">
+            <p className="text-sm sm:text-base text-[#4A586E] dark:text-[#AAB4C3] leading-relaxed">
               At Lexlead Legal Solutions, we place great value on the assessment phase. By scrutinizing records, examining statutory limitations, and anticipating adverse arguments before filing, we build representations anchored in unshakeable legal foundations.
             </p>
-            <div className="p-4 rounded-xl bg-white/[0.04] border border-[#C6A15B]/30 flex items-center gap-3 text-xs sm:text-sm text-[#DFBF7D]">
+            <div className="p-4 rounded-xl bg-black/[0.04] dark:bg-white/[0.04] border border-[#C6A15B]/30 flex items-center gap-3 text-xs sm:text-sm text-[#92703B] dark:text-[#DFBF7D]">
               <Scale className="w-5 h-5 shrink-0 text-[#C6A15B]" />
               <span>We provide candid assessments of probability, never speculative guarantees.</span>
             </div>
           </div>
 
           <div className="lg:col-span-6 relative">
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-black/10 dark:border-white/10 shadow-2xl">
               <Image
                 src="/images/editorial-desk.jpg"
                 alt="Case files and legal research documentation at Lexlead"
@@ -113,14 +113,14 @@ export default function OurApproachPage() {
                 sizes="(max-width: 1024px) 100vw, 600px"
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0B1728]/80 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#F8F7F4]/90 dark:from-[#0B1728]/80 via-transparent to-transparent" />
             </div>
           </div>
         </div>
       </section>
 
       {/* The 4 Detailed Stages */}
-      <section className="py-20 bg-[#070e1a]/80 border-y border-white/[0.08]">
+      <section className="py-20 bg-[#EFECE4] dark:bg-[#070e1a]/80 border-y border-black/10 dark:border-white/[0.08]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             align="center"
@@ -134,23 +134,23 @@ export default function OurApproachPage() {
               <GlassPanel
                 key={stage.step}
                 variant="default"
-                className="p-8 sm:p-10 border border-white/10 hover:border-[#C6A15B]/40 transition-all duration-300 space-y-4"
+                className="p-8 sm:p-10 border border-black/10 dark:border-white/10 hover:border-[#C6A15B]/40 transition-all duration-300 space-y-4"
               >
                 <div className="flex items-center justify-between">
-                  <span className="text-xs font-semibold tracking-widest uppercase text-[#DFBF7D]">
+                  <span className="text-xs font-semibold tracking-widest uppercase text-[#92703B] dark:text-[#DFBF7D]">
                     {stage.step}
                   </span>
                   <span className="w-2 h-2 rounded-full bg-[#C6A15B]" />
                 </div>
-                <h3 className="font-serif-luxury text-2xl font-medium text-[#F7F5F0]">
+                <h3 className="font-serif-luxury text-2xl font-medium text-[#10253D] dark:text-[#F7F5F0]">
                   {stage.title}
                 </h3>
-                <p className="text-sm text-[#AAB4C3] leading-relaxed">
+                <p className="text-sm text-[#4A586E] dark:text-[#AAB4C3] leading-relaxed">
                   {stage.description}
                 </p>
-                <div className="pt-4 border-t border-white/[0.08] space-y-2">
+                <div className="pt-4 border-t border-black/10 dark:border-white/[0.08] space-y-2">
                   {stage.points.map((pt) => (
-                    <div key={pt} className="flex items-start gap-2.5 text-xs text-[#AAB4C3]">
+                    <div key={pt} className="flex items-start gap-2.5 text-xs text-[#4A586E] dark:text-[#AAB4C3]">
                       <CheckCircle2 className="w-3.5 h-3.5 text-[#C6A15B] shrink-0 mt-0.5" />
                       <span>{pt}</span>
                     </div>
@@ -165,32 +165,32 @@ export default function OurApproachPage() {
       {/* Client Communication Promise */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/10 space-y-3">
-            <div className="w-10 h-10 rounded-full bg-[#C6A15B]/20 text-[#DFBF7D] flex items-center justify-center mx-auto">
+          <div className="p-6 rounded-2xl bg-black/[0.03] dark:bg-white/[0.03] border border-black/10 dark:border-white/10 space-y-3">
+            <div className="w-10 h-10 rounded-full bg-[#C6A15B]/20 text-[#92703B] dark:text-[#DFBF7D] flex items-center justify-center mx-auto">
               <MessageSquare className="w-5 h-5" />
             </div>
-            <h4 className="font-serif-luxury text-lg text-[#F7F5F0]">Direct Communication</h4>
-            <p className="text-xs text-[#AAB4C3] leading-relaxed">
+            <h4 className="font-serif-luxury text-lg text-[#10253D] dark:text-[#F7F5F0]">Direct Communication</h4>
+            <p className="text-xs text-[#4A586E] dark:text-[#AAB4C3] leading-relaxed">
               No layered bureaucratic obstacles. You interact directly with the advocate handling your case briefing.
             </p>
           </div>
 
-          <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/10 space-y-3">
-            <div className="w-10 h-10 rounded-full bg-[#C6A15B]/20 text-[#DFBF7D] flex items-center justify-center mx-auto">
+          <div className="p-6 rounded-2xl bg-black/[0.03] dark:bg-white/[0.03] border border-black/10 dark:border-white/10 space-y-3">
+            <div className="w-10 h-10 rounded-full bg-[#C6A15B]/20 text-[#92703B] dark:text-[#DFBF7D] flex items-center justify-center mx-auto">
               <ShieldCheck className="w-5 h-5" />
             </div>
-            <h4 className="font-serif-luxury text-lg text-[#F7F5F0]">Total Confidentiality</h4>
-            <p className="text-xs text-[#AAB4C3] leading-relaxed">
+            <h4 className="font-serif-luxury text-lg text-[#10253D] dark:text-[#F7F5F0]">Total Confidentiality</h4>
+            <p className="text-xs text-[#4A586E] dark:text-[#AAB4C3] leading-relaxed">
               Privileged communications protected by legal professional privilege under Section 126 of the Evidence Act.
             </p>
           </div>
 
-          <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/10 space-y-3">
-            <div className="w-10 h-10 rounded-full bg-[#C6A15B]/20 text-[#DFBF7D] flex items-center justify-center mx-auto">
+          <div className="p-6 rounded-2xl bg-black/[0.03] dark:bg-white/[0.03] border border-black/10 dark:border-white/10 space-y-3">
+            <div className="w-10 h-10 rounded-full bg-[#C6A15B]/20 text-[#92703B] dark:text-[#DFBF7D] flex items-center justify-center mx-auto">
               <Scale className="w-5 h-5" />
             </div>
-            <h4 className="font-serif-luxury text-lg text-[#F7F5F0]">Transparent Terms</h4>
-            <p className="text-xs text-[#AAB4C3] leading-relaxed">
+            <h4 className="font-serif-luxury text-lg text-[#10253D] dark:text-[#F7F5F0]">Transparent Terms</h4>
+            <p className="text-xs text-[#4A586E] dark:text-[#AAB4C3] leading-relaxed">
               Clear mutual understanding regarding chamber conferences, drafting scopes, and court representations.
             </p>
           </div>
