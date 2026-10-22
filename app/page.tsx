@@ -1,31 +1,39 @@
 import React from "react";
-import { Hero } from "@/components/home/Hero";
+import { HeroSection } from "@/components/home/HeroSection";
 import { TrustPrinciples } from "@/components/home/TrustPrinciples";
-import { PracticeAreas } from "@/components/home/PracticeAreas";
-import { Approach } from "@/components/home/Approach";
+import { PracticeAreaGrid } from "@/components/home/PracticeAreaGrid";
+import { AboutSection } from "@/components/home/AboutSection";
+import { ApproachTimeline } from "@/components/home/ApproachTimeline";
+import { WhyLexlead } from "@/components/home/WhyLexlead";
 import { ConsultationCTA } from "@/components/home/ConsultationCTA";
-import { LocationContact } from "@/components/home/LocationContact";
+import { ContactSection } from "@/components/home/ContactSection";
 
 export default function HomePage() {
   return (
     <main className="flex-1 w-full overflow-hidden">
-      {/* Section B: Cinematic Hero */}
-      <Hero />
+      {/* 02. Split-screen hero */}
+      <HeroSection />
 
-      {/* Section C: Floating Trust Indicators */}
+      {/* 03. Trust principles */}
       <TrustPrinciples />
 
-      {/* Section D: Practice Areas */}
-      <PracticeAreas />
+      {/* 04. Practice areas */}
+      <PracticeAreaGrid />
 
-      {/* Section E & F: Editorial Introduction & 4-Stage Process */}
-      <Approach />
+      {/* 05. About Lexlead */}
+      <AboutSection />
 
-      {/* Section G: Striking Consultation Feature */}
+      {/* 06. Our approach */}
+      <ApproachTimeline />
+
+      {/* 07. Why Lexlead */}
+      <WhyLexlead />
+
+      {/* 08. Consultation CTA */}
       <ConsultationCTA />
 
-      {/* Section H: Location and Contact */}
-      <LocationContact />
+      {/* 09. Contact and enquiry form */}
+      <ContactSection />
     </main>
   );
 }

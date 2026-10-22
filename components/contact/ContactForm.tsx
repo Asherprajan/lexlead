@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Send, CheckCircle2, AlertCircle, Loader2, ShieldCheck, Lock } from "lucide-react";
+import { ArrowRight, CheckCircle2, AlertCircle, Loader2, ShieldCheck, Lock } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 
 interface FormData {
@@ -23,8 +23,9 @@ interface FormErrors {
   privacyConsent?: string;
 }
 
-export const ContactForm: React.FC<{ defaultPracticeArea?: string }> = ({
+export const ContactForm: React.FC<{ defaultPracticeArea?: string; darkTheme?: boolean }> = ({
   defaultPracticeArea = "",
+  darkTheme = true,
 }) => {
   const [formData, setFormData] = useState<FormData>({
     fullName: "",
@@ -45,7 +46,7 @@ export const ContactForm: React.FC<{ defaultPracticeArea?: string }> = ({
     const newErrors: FormErrors = {};
 
     if (!formData.fullName.trim() || formData.fullName.trim().length < 2) {
-      newErrors.fullName = "Please enter your full name (at least 2 characters).";
+      newErrors.fullName = "Please enter your full name.";
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -55,19 +56,19 @@ export const ContactForm: React.FC<{ defaultPracticeArea?: string }> = ({
 
     const phoneRegex = /^[+0-9\s\-()]{8,20}$/;
     if (!formData.phone.trim() || !phoneRegex.test(formData.phone.trim())) {
-      newErrors.phone = "Please enter a valid phone number (8–20 digits).";
+      newErrors.phone = "Please enter a valid phone number.";
     }
 
     if (!formData.practiceArea) {
-      newErrors.practiceArea = "Please select the legal practice area.";
+      newErrors.practiceArea = "Please select a practice area.";
     }
 
     if (!formData.message.trim() || formData.message.trim().length < 10) {
-      newErrors.message = "Please provide an initial outline of at least 10 characters.";
+      newErrors.message = "Please provide an outline of at least 10 characters.";
     }
 
     if (!formData.privacyConsent) {
-      newErrors.privacyConsent = "You must acknowledge the disclaimer and privacy terms.";
+      newErrors.privacyConsent = "Please acknowledge the privacy and legal terms.";
     }
 
     setErrors(newErrors);
@@ -112,7 +113,7 @@ export const ContactForm: React.FC<{ defaultPracticeArea?: string }> = ({
       if (!response.ok || !data.success) {
         setStatus("error");
         setErrorMessage(
-          data.error || "Unable to send consultation request. Please try calling our chambers."
+          data.error || "Unable to send consultation request. Please call our chambers directly."
         );
         return;
       }
@@ -122,7 +123,7 @@ export const ContactForm: React.FC<{ defaultPracticeArea?: string }> = ({
     } catch {
       setStatus("error");
       setErrorMessage(
-        "Network connection interrupted. Please verify your connection or call our desk."
+        "Network connection interrupted. Please check your connection or call our desk."
       );
     }
   };
@@ -143,41 +144,45 @@ export const ContactForm: React.FC<{ defaultPracticeArea?: string }> = ({
     setReferenceId("");
   };
 
+  const inputClass = darkTheme
+    ? "w-full px-3.5 py-2.5 rounded bg-white/10 border border-white/20 text-white placeholder-white/40 text-sm focus:outline-none focus:border-[#C6A15B] transition-colors"
+    : "w-full px-3.5 py-2.5 rounded bg-white border border-[#E8E1D5] text-[#10253D] placeholder-[#626B76]/60 text-sm focus:outline-none focus:border-[#C6A15B] transition-colors";
+
   if (status === "success") {
     return (
-      <div className="p-8 sm:p-10 rounded-2xl bg-white/80 dark:bg-white/[0.04] border border-[#C6A15B]/40 text-center space-y-6 backdrop-blur-xl animate-in fade-in duration-500 shadow-xl">
-        <div className="w-16 h-16 rounded-full bg-[#C6A15B]/20 border border-[#C6A15B]/40 flex items-center justify-center mx-auto text-[#92703B] dark:text-[#DFBF7D]">
-          <CheckCircle2 className="w-8 h-8" />
+      <div
+        className={`p-6 sm:p-8 rounded-sm text-center space-y-5 ${
+          darkTheme ? "bg-[#10253D] text-white border border-[#C6A15B]/40" : "bg-white border border-[#E8E1D5]"
+        }`}
+      >
+        <div className="w-14 h-14 rounded-full bg-[#C6A15B]/20 border border-[#C6A15B] flex items-center justify-center mx-auto text-[#C6A15B]">
+          <CheckCircle2 className="w-7 h-7" />
         </div>
 
-        <div className="space-y-2">
-          <span className="text-xs uppercase tracking-widest text-[#92703B] dark:text-[#DFBF7D] font-semibold">
-            Enquiry Dispatched
+        <div className="space-y-1.5">
+          <span className="text-xs uppercase tracking-widest text-[#C6A15B] font-semibold">
+            Enquiry Received
           </span>
-          <h3 className="font-serif-luxury text-2xl sm:text-3xl font-medium text-[#10253D] dark:text-[#F7F5F0]">
+          <h3 className="font-serif-luxury text-2xl sm:text-3xl font-medium">
             Thank You, {formData.fullName}.
           </h3>
-          <p className="text-sm text-[#4A586E] dark:text-[#AAB4C3] max-w-md mx-auto leading-relaxed">
-            Your preliminary consultation request has been lodged under reference:{" "}
-            <span className="font-mono text-[#92703B] dark:text-[#DFBF7D] font-semibold">{referenceId}</span>.
+          <p className="text-xs sm:text-sm text-white/80 max-w-sm mx-auto">
+            Your consultation request is registered under reference:{" "}
+            <span className="font-mono text-[#C6A15B] font-semibold">{referenceId}</span>.
           </p>
         </div>
 
-        <div className="p-4 rounded-xl bg-black/[0.03] dark:bg-[#0B1728]/60 border border-black/10 dark:border-white/10 text-xs text-left space-y-2 text-[#4A586E] dark:text-[#AAB4C3]">
-          <div className="flex items-center gap-2 text-[#10253D] dark:text-[#F7F5F0] font-medium">
+        <div className="p-3.5 rounded bg-black/30 border border-white/10 text-xs text-left space-y-1.5 text-white/80">
+          <div className="flex items-center gap-1.5 text-white font-medium">
             <Lock className="w-3.5 h-3.5 text-[#C6A15B]" />
-            <span>Next Steps from Chambers:</span>
+            <span>Chambers Follow-Up:</span>
           </div>
-          <p>
-            1. An advocate will review the practice domain ({formData.practiceArea}) and check for conflict of interest.
-          </p>
-          <p>
-            2. We will reach out to you via email or phone within 1 business day to schedule a chamber appointment or virtual conference.
-          </p>
+          <p>• An advocate will review your query regarding {formData.practiceArea}.</p>
+          <p>• Our office will contact you via phone or email within 1 business day.</p>
         </div>
 
-        <Button variant="outline" size="sm" onClick={handleReset}>
-          Submit Another Request
+        <Button variant="outline" size="sm" onClick={handleReset} className={darkTheme ? "text-white border-white/40 hover:bg-white/10" : ""}>
+          Send Another Enquiry
         </Button>
       </div>
     );
@@ -186,31 +191,33 @@ export const ContactForm: React.FC<{ defaultPracticeArea?: string }> = ({
   return (
     <form
       onSubmit={handleSubmit}
-      className="p-6 sm:p-8 rounded-2xl bg-white/80 dark:bg-white/[0.04] border border-black/10 dark:border-white/12 backdrop-blur-xl shadow-2xl space-y-5"
+      className={`p-6 sm:p-8 rounded-sm space-y-4 shadow-xl ${
+        darkTheme ? "bg-[#10253D] text-white border border-white/10" : "bg-white text-[#10253D] border border-[#E8E1D5]"
+      }`}
       noValidate
     >
-      <div className="border-b border-black/10 dark:border-white/[0.08] pb-4 mb-2">
-        <h3 className="font-serif-luxury text-xl sm:text-2xl font-medium text-[#10253D] dark:text-[#F7F5F0]">
-          Request a Confidential Consultation
+      <div>
+        <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#C6A15B]">
+          GET IN TOUCH
+        </span>
+        <h3 className="font-serif-luxury text-2xl sm:text-3xl font-medium mt-1">
+          Request a Consultation
         </h3>
-        <p className="text-xs sm:text-sm text-[#4A586E] dark:text-[#AAB4C3] mt-1">
-          Share your legal requirements. Initial reviews are handled under professional advocate discretion.
+        <p className={`text-xs mt-1 ${darkTheme ? "text-white/70" : "text-[#626B76]"}`}>
+          Share a few details and we will get back to you.
         </p>
       </div>
 
       {status === "error" && (
-        <div className="p-4 rounded-xl bg-red-500/10 dark:bg-red-950/40 border border-red-500/40 text-red-700 dark:text-red-200 text-xs sm:text-sm flex items-start gap-3">
-          <AlertCircle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
-          <div className="space-y-1">
-            <p className="font-medium">Request Could Not Be Sent</p>
-            <p className="text-xs text-red-600 dark:text-red-300">{errorMessage}</p>
-          </div>
+        <div className="p-3 rounded bg-red-950/60 border border-red-500/50 text-red-200 text-xs flex items-start gap-2">
+          <AlertCircle className="w-4 h-4 text-red-400 shrink-0 mt-0.5" />
+          <p>{errorMessage}</p>
         </div>
       )}
 
-      {/* Honeypot field (hidden from users) */}
+      {/* Honeypot field */}
       <div className="hidden" aria-hidden="true">
-        <label htmlFor="website_field_check">Leave this field empty</label>
+        <label htmlFor="website_field_check">Leave empty</label>
         <input
           id="website_field_check"
           type="text"
@@ -222,34 +229,27 @@ export const ContactForm: React.FC<{ defaultPracticeArea?: string }> = ({
         />
       </div>
 
-      {/* Full Name */}
-      <div>
-        <label htmlFor="fullName" className="block text-xs font-medium text-[#10253D] dark:text-[#F7F5F0] mb-1.5">
-          Full Name <span className="text-[#C6A15B]">*</span>
-        </label>
-        <input
-          id="fullName"
-          type="text"
-          name="fullName"
-          value={formData.fullName}
-          onChange={handleChange}
-          placeholder="e.g. Adv. K. Raman / Sarah Joseph"
-          className="w-full px-4 py-2.5 rounded-xl glass-input text-sm"
-          aria-invalid={!!errors.fullName}
-          aria-describedby={errors.fullName ? "fullName-error" : undefined}
-          required
-        />
-        {errors.fullName && (
-          <p id="fullName-error" className="mt-1 text-xs text-red-500 dark:text-red-400">
-            {errors.fullName}
-          </p>
-        )}
-      </div>
-
-      {/* Email & Phone Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      {/* Grid: Full Name & Email */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
         <div>
-          <label htmlFor="email" className="block text-xs font-medium text-[#10253D] dark:text-[#F7F5F0] mb-1.5">
+          <label htmlFor="fullName" className="block text-xs font-medium mb-1">
+            Full Name <span className="text-[#C6A15B]">*</span>
+          </label>
+          <input
+            id="fullName"
+            type="text"
+            name="fullName"
+            value={formData.fullName}
+            onChange={handleChange}
+            placeholder="e.g. Adv. K. Raman"
+            className={inputClass}
+            required
+          />
+          {errors.fullName && <p className="mt-1 text-[11px] text-red-400">{errors.fullName}</p>}
+        </div>
+
+        <div>
+          <label htmlFor="email" className="block text-xs font-medium mb-1">
             Email Address <span className="text-[#C6A15B]">*</span>
           </label>
           <input
@@ -258,21 +258,18 @@ export const ContactForm: React.FC<{ defaultPracticeArea?: string }> = ({
             name="email"
             value={formData.email}
             onChange={handleChange}
-            placeholder="client@domain.com"
-            className="w-full px-4 py-2.5 rounded-xl glass-input text-sm"
-            aria-invalid={!!errors.email}
-            aria-describedby={errors.email ? "email-error" : undefined}
+            placeholder="name@domain.com"
+            className={inputClass}
             required
           />
-          {errors.email && (
-            <p id="email-error" className="mt-1 text-xs text-red-500 dark:text-red-400">
-              {errors.email}
-            </p>
-          )}
+          {errors.email && <p className="mt-1 text-[11px] text-red-400">{errors.email}</p>}
         </div>
+      </div>
 
+      {/* Grid: Phone & Practice Area */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
         <div>
-          <label htmlFor="phone" className="block text-xs font-medium text-[#10253D] dark:text-[#F7F5F0] mb-1.5">
+          <label htmlFor="phone" className="block text-xs font-medium mb-1">
             Phone Number <span className="text-[#C6A15B]">*</span>
           </label>
           <input
@@ -281,111 +278,84 @@ export const ContactForm: React.FC<{ defaultPracticeArea?: string }> = ({
             name="phone"
             value={formData.phone}
             onChange={handleChange}
-            placeholder="+91 98765 43210"
-            className="w-full px-4 py-2.5 rounded-xl glass-input text-sm"
-            aria-invalid={!!errors.phone}
-            aria-describedby={errors.phone ? "phone-error" : undefined}
+            placeholder="+91 98470 00000"
+            className={inputClass}
             required
           />
-          {errors.phone && (
-            <p id="phone-error" className="mt-1 text-xs text-red-500 dark:text-red-400">
-              {errors.phone}
-            </p>
-          )}
+          {errors.phone && <p className="mt-1 text-[11px] text-red-400">{errors.phone}</p>}
+        </div>
+
+        <div>
+          <label htmlFor="practiceArea" className="block text-xs font-medium mb-1">
+            Select Practice Area <span className="text-[#C6A15B]">*</span>
+          </label>
+          <select
+            id="practiceArea"
+            name="practiceArea"
+            value={formData.practiceArea}
+            onChange={handleChange}
+            className={`${inputClass} ${darkTheme ? "bg-[#0B1728]" : "bg-white"}`}
+            required
+          >
+            <option value="" disabled className="text-gray-400">
+              Select Area...
+            </option>
+            <option value="Civil Litigation">Civil Litigation</option>
+            <option value="Criminal Law">Criminal Law</option>
+            <option value="Family and Matrimonial Law">Family and Matrimonial Law</option>
+            <option value="Property and Real Estate">Property and Real Estate</option>
+            <option value="Corporate and Commercial Law">Corporate and Commercial Law</option>
+            <option value="Contract and Documentation Support">Contract and Documentation</option>
+            <option value="General Legal Advisory">General Legal Advisory</option>
+          </select>
+          {errors.practiceArea && <p className="mt-1 text-[11px] text-red-400">{errors.practiceArea}</p>}
         </div>
       </div>
 
-      {/* Practice Area Selection */}
+      {/* Message Outline */}
       <div>
-        <label htmlFor="practiceArea" className="block text-xs font-medium text-[#10253D] dark:text-[#F7F5F0] mb-1.5">
-          Practice Area of Interest <span className="text-[#C6A15B]">*</span>
-        </label>
-        <select
-          id="practiceArea"
-          name="practiceArea"
-          value={formData.practiceArea}
-          onChange={handleChange}
-          className="w-full px-4 py-2.5 rounded-xl glass-input text-sm bg-white dark:bg-[#10253D] text-[#10253D] dark:text-[#F7F5F0]"
-          aria-invalid={!!errors.practiceArea}
-          aria-describedby={errors.practiceArea ? "practiceArea-error" : undefined}
-          required
-        >
-          <option value="" disabled className="bg-white dark:bg-[#0B1728] text-gray-400">
-            Select an area of law...
-          </option>
-          <option value="Civil Litigation" className="bg-white dark:bg-[#0B1728]">Civil Litigation & Dispute Resolution</option>
-          <option value="Criminal Law" className="bg-white dark:bg-[#0B1728]">Criminal Law & Bail Defense</option>
-          <option value="Family & Matrimonial Matters" className="bg-white dark:bg-[#0B1728]">Family & Matrimonial Matters</option>
-          <option value="Property & Real Estate" className="bg-white dark:bg-[#0B1728]">Property & Real Estate Law</option>
-          <option value="Corporate & Commercial Law" className="bg-white dark:bg-[#0B1728]">Corporate & Commercial Law</option>
-          <option value="Contract & Documentation Support" className="bg-white dark:bg-[#0B1728]">Contract & Documentation Support</option>
-          <option value="General Legal Advisory" className="bg-white dark:bg-[#0B1728]">General Legal Advisory</option>
-        </select>
-        {errors.practiceArea && (
-          <p id="practiceArea-error" className="mt-1 text-xs text-red-500 dark:text-red-400">
-            {errors.practiceArea}
-          </p>
-        )}
-      </div>
-
-      {/* Brief Enquiry */}
-      <div>
-        <label htmlFor="message" className="block text-xs font-medium text-[#10253D] dark:text-[#F7F5F0] mb-1.5">
-          Brief Outline of Your Matter <span className="text-[#C6A15B]">*</span>
+        <label htmlFor="message" className="block text-xs font-medium mb-1">
+          Brief Enquiry <span className="text-[#C6A15B]">*</span>
         </label>
         <textarea
           id="message"
           name="message"
-          rows={4}
+          rows={3}
           value={formData.message}
           onChange={handleChange}
-          placeholder="Please describe the general nature of your query. Do not disclose confidential or privileged documents here."
-          className="w-full px-4 py-2.5 rounded-xl glass-input text-sm resize-none"
-          aria-invalid={!!errors.message}
-          aria-describedby={errors.message ? "message-error" : undefined}
+          placeholder="Briefly outline your query. Please avoid sharing confidential documents through this initial form."
+          className={`${inputClass} resize-none`}
           required
         />
-        <div className="flex items-center justify-between mt-1 text-[11px] text-[#4A586E]/70 dark:text-[#AAB4C3]/70">
-          <span>Confidential initial overview</span>
-          <span>{formData.message.length} / 1500</span>
-        </div>
-        {errors.message && (
-          <p id="message-error" className="mt-1 text-xs text-red-500 dark:text-red-400">
-            {errors.message}
-          </p>
-        )}
+        {errors.message && <p className="mt-1 text-[11px] text-red-400">{errors.message}</p>}
       </div>
 
-      {/* Privacy & Legal Disclaimer Acknowledgement */}
-      <div className="pt-2">
-        <label className="flex items-start gap-3 cursor-pointer">
+      {/* Privacy Consent */}
+      <div>
+        <label className="flex items-start gap-2.5 cursor-pointer">
           <input
             type="checkbox"
             name="privacyConsent"
             checked={formData.privacyConsent}
             onChange={handleChange}
-            className="mt-1 w-4 h-4 rounded border-black/20 dark:border-white/20 bg-black/5 dark:bg-white/5 text-[#C6A15B] focus:ring-[#C6A15B]/50 accent-[#C6A15B]"
+            className="mt-1 w-3.5 h-3.5 rounded border-[#E8E1D5] accent-[#C6A15B]"
             required
           />
-          <span className="text-xs text-[#4A586E] dark:text-[#AAB4C3] leading-relaxed">
-            I understand that submitting this enquiry does not establish an advocate-client relationship. I agree to the{" "}
-            <a href="/privacy" className="text-[#92703B] dark:text-[#DFBF7D] underline hover:text-[#10253D] dark:hover:text-[#F7F5F0]">
+          <span className={`text-[11px] leading-tight ${darkTheme ? "text-white/70" : "text-[#626B76]"}`}>
+            I acknowledge that submitting this form does not establish an advocate-client relationship and agree to the{" "}
+            <a href="/privacy-policy" className="text-[#C6A15B] underline hover:text-white">
               Privacy Policy
-            </a>{" "}
-            and{" "}
-            <a href="/terms" className="text-[#92703B] dark:text-[#DFBF7D] underline hover:text-[#10253D] dark:hover:text-[#F7F5F0]">
-              Bar Council Compliance Terms
             </a>
             .
           </span>
         </label>
         {errors.privacyConsent && (
-          <p className="mt-1 text-xs text-red-500 dark:text-red-400 pl-7">{errors.privacyConsent}</p>
+          <p className="mt-1 text-[11px] text-red-400 pl-6">{errors.privacyConsent}</p>
         )}
       </div>
 
       {/* Submit Button */}
-      <div className="pt-3">
+      <div className="pt-2">
         <Button
           type="submit"
           variant="primary"
@@ -396,17 +366,17 @@ export const ContactForm: React.FC<{ defaultPracticeArea?: string }> = ({
             status === "submitting" ? (
               <Loader2 className="w-4 h-4 animate-spin" />
             ) : (
-              <Send className="w-4 h-4" />
+              <ArrowRight className="w-4 h-4" />
             )
           }
         >
-          {status === "submitting" ? "Transmitting Enquiry..." : "Submit Consultation Request"}
+          {status === "submitting" ? "Transmitting..." : "Send Enquiry"}
         </Button>
       </div>
 
-      <div className="flex items-center justify-center gap-2 text-[11px] text-[#4A586E]/70 dark:text-[#AAB4C3]/60 pt-1">
+      <div className="flex items-center justify-center gap-1.5 text-[10px] text-white/50 pt-1">
         <ShieldCheck className="w-3.5 h-3.5 text-[#C6A15B]" />
-        <span>SSL Encrypted Transmission • Zero Commercial Solicitation</span>
+        <span>Confidential Preliminary Intake • Advocates Act Compliant</span>
       </div>
     </form>
   );

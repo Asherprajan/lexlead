@@ -1,10 +1,11 @@
 import { MetadataRoute } from "next";
+import { PRACTICE_AREAS } from "@/lib/data/practice-areas";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://lexlead.in";
   const lastModified = new Date("2026-01-15T00:00:00.000Z");
 
-  return [
+  const staticRoutes: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
       lastModified,
@@ -36,7 +37,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/privacy`,
+      url: `${baseUrl}/privacy-policy`,
       lastModified,
       changeFrequency: "yearly",
       priority: 0.3,
@@ -47,5 +48,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.3,
     },
+    {
+      url: `${baseUrl}/disclaimer`,
+      lastModified,
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
   ];
+
+  const practiceAreaRoutes: MetadataRoute.Sitemap = PRACTICE_AREAS.map((p) => ({
+    url: `${baseUrl}/practice-areas/${p.slug}`,
+    lastModified,
+    changeFrequency: "monthly",
+    priority: 0.8,
+  }));
+
+  return [...staticRoutes, ...practiceAreaRoutes];
 }

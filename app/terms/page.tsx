@@ -1,96 +1,69 @@
 import React from "react";
 import type { Metadata } from "next";
-import { Scale, AlertCircle } from "lucide-react";
-import { GlassPanel } from "@/components/ui/GlassPanel";
+import { AlertCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Terms of Use & Disclaimer",
+  title: "Terms of Use",
   description:
-    "Bar Council of India compliance statement, legal disclaimer, and terms of use for the Lexlead Legal Solutions website.",
+    "Terms of use and Bar Council of India compliance statement for Lexlead Legal Solutions, Thiruvananthapuram, Kerala.",
 };
 
 export default function TermsPage() {
   return (
-    <main className="flex-1 w-full pt-28 pb-20 overflow-hidden">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/[0.04] dark:bg-white/[0.04] border border-[#C6A15B]/30 mb-6">
-          <Scale className="w-4 h-4 text-[#C6A15B]" />
-          <span className="text-xs font-semibold tracking-widest uppercase text-[#92703B] dark:text-[#DFBF7D]">
-            Regulatory Compliance
-          </span>
-        </div>
+    <main className="flex-1 w-full bg-[#F7F5F0] pt-10 sm:pt-14 pb-20">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <span className="text-[11px] font-semibold tracking-[0.2em] uppercase text-[#B18A4A]">
+          TERMS OF USE & REGULATORY COMPLIANCE
+        </span>
 
-        <h1 className="font-serif-luxury text-3xl sm:text-4xl lg:text-5xl font-medium text-[#10253D] dark:text-[#F7F5F0]">
-          Terms of Use & Bar Council Compliance
+        <h1 className="font-serif-luxury text-3xl sm:text-4xl lg:text-5xl font-medium text-[#10253D] mt-2">
+          Terms of Use
         </h1>
-        <p className="mt-4 text-xs text-[#92703B] dark:text-[#DFBF7D]">
+        <p className="mt-2 text-xs text-[#B18A4A]">
           Applicable under the Bar Council of India Rules • Thiruvananthapuram, Kerala
         </p>
 
         {/* Highlighted Compliance Notice */}
-        <div className="mt-8 p-6 rounded-2xl bg-[#C6A15B]/15 dark:bg-[#C6A15B]/10 border border-[#C6A15B]/35 flex items-start gap-4">
-          <AlertCircle className="w-6 h-6 text-[#92703B] dark:text-[#DFBF7D] shrink-0 mt-1" />
-          <div className="space-y-1.5 text-xs sm:text-sm text-[#10253D]/90 dark:text-[#F7F5F0]/90 leading-relaxed">
-            <h2 className="font-semibold text-[#92703B] dark:text-[#DFBF7D] uppercase tracking-wide text-xs">
-              Bar Council of India Rule 36 Mandatory Notice
+        <div className="mt-6 p-5 sm:p-6 rounded-sm bg-white border-l-4 border-[#C6A15B] border-y border-r border-[#E8E1D5] flex items-start gap-4">
+          <AlertCircle className="w-5 h-5 text-[#B18A4A] shrink-0 mt-0.5" />
+          <div className="space-y-1.5 text-xs sm:text-sm text-[#10253D] leading-relaxed">
+            <h2 className="font-semibold text-[#B18A4A] uppercase tracking-wide text-xs">
+              Bar Council of India Rule 36 Compliance
             </h2>
             <p>
-              As per the rules of the Bar Council of India, advocates and legal practitioners are not permitted to solicit work or advertise in any form or manner. By accessing this website (www.lexlead.in), you acknowledge and confirm that you are seeking information relating to Lexlead Legal Solutions of your own accord and that there has been no form of solicitation, advertisement, or inducement by the firm or its members.
+              By accessing this website, the user confirms that the information provided is solely for their awareness and that no advertisement, personal communication, solicitation, or inducement of any kind has been made by Lexlead Legal Solutions or its advocates.
             </p>
           </div>
         </div>
 
-        <GlassPanel variant="subtle" className="mt-8 p-8 sm:p-10 border border-black/10 dark:border-white/10 space-y-8 text-sm text-[#4A586E] dark:text-[#AAB4C3] leading-relaxed">
-          <section className="space-y-3">
-            <h2 className="font-serif-luxury text-xl font-medium text-[#10253D] dark:text-[#F7F5F0]">
-              1. Informational Purpose Only
+        <div className="mt-8 bg-white p-8 sm:p-10 rounded-sm border border-[#E8E1D5] space-y-7 text-sm text-[#626B76] leading-relaxed">
+          <section className="space-y-2.5">
+            <h2 className="font-serif-luxury text-xl font-medium text-[#10253D]">
+              1. Non-Reliance for Formal Legal Decisions
             </h2>
             <p>
-              The contents of this website are provided solely for general informational purposes to present an overview of Lexlead Legal Solutions, its areas of practice, and its chambers located in Thiruvananthapuram, Kerala. None of the material on this site should be interpreted or relied upon as formal legal counsel or advice.
+              Users should not act upon any information provided on this website without seeking independent legal advice from a qualified advocate licensed to practice in the appropriate jurisdiction.
             </p>
           </section>
 
-          <section className="space-y-3">
-            <h2 className="font-serif-luxury text-xl font-medium text-[#10253D] dark:text-[#F7F5F0]">
-              2. No Advocate-Client Relationship
+          <section className="space-y-2.5">
+            <h2 className="font-serif-luxury text-xl font-medium text-[#10253D]">
+              2. Intellectual Property Rights
             </h2>
             <p>
-              The transmission, receipt, or browsing of information contained on this website or transmitting an online consultation form does not create an advocate-client relationship between Lexlead Legal Solutions and the user. Formal representation occurs exclusively upon:
-            </p>
-            <ul className="list-disc pl-5 space-y-1 text-xs sm:text-sm">
-              <li>Completion of standard conflict-of-interest checks</li>
-              <li>Mutual agreement on scope of legal assignment</li>
-              <li>Execution of a vakalatnama or formal legal engagement letter</li>
-            </ul>
-          </section>
-
-          <section className="space-y-3">
-            <h2 className="font-serif-luxury text-xl font-medium text-[#10253D] dark:text-[#F7F5F0]">
-              3. No Guarantee of Judicial Outcomes
-            </h2>
-            <p>
-              Under advocate ethics, outcomes of judicial or quasi-judicial proceedings are subject to evidence, court jurisdiction, and judicial discretion. Lexlead Legal Solutions does not make, and expressly disclaims, any guarantees, promises, or warranties regarding specific results in contentious litigation or regulatory matters.
+              All proprietary logos, trademark identifiers, text, images, and brand design on this website belong to Lexlead Legal Solutions. Any unauthorized reproduction or distribution is strictly prohibited.
             </p>
           </section>
 
-          <section className="space-y-3">
-            <h2 className="font-serif-luxury text-xl font-medium text-[#10253D] dark:text-[#F7F5F0]">
-              4. Intellectual Property
+          <section className="space-y-2.5">
+            <h2 className="font-serif-luxury text-xl font-medium text-[#10253D]">
+              3. Jurisdiction & Dispute Resolution
             </h2>
             <p>
-              All proprietary brand identifiers, including the &ldquo;Lexlead Legal Solutions&rdquo; name, logo mark, editorial texts, design elements, and brand layout, are the intellectual property of the firm. Unauthorized reproduction, modification, or commercial distribution is prohibited without prior written sanction.
+              Any dispute arising from or related to the use of this website shall be governed by the laws of India and subject to the exclusive jurisdiction of the competent courts in Thiruvananthapuram, Kerala.
             </p>
           </section>
-
-          <section className="space-y-3">
-            <h2 className="font-serif-luxury text-xl font-medium text-[#10253D] dark:text-[#F7F5F0]">
-              5. Governing Law & Jurisdiction
-            </h2>
-            <p>
-              Any disputes, controversies, or claims arising out of or in connection with the use of this website shall be governed by the laws of India and subject to the exclusive jurisdiction of the competent courts in Thiruvananthapuram, Kerala.
-            </p>
-          </section>
-        </GlassPanel>
+        </div>
       </div>
     </main>
   );

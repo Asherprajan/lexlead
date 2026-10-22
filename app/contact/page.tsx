@@ -1,14 +1,12 @@
 import React, { Suspense } from "react";
 import type { Metadata } from "next";
-import { MapPin, Mail, Phone, Clock, ExternalLink, ShieldAlert, HelpCircle } from "lucide-react";
+import { MapPin, Mail, Phone, Clock, ExternalLink, ShieldCheck, HelpCircle } from "lucide-react";
 import { ContactForm } from "@/components/contact/ContactForm";
-import { GlassPanel } from "@/components/ui/GlassPanel";
-import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export const metadata: Metadata = {
   title: "Contact Chambers",
   description:
-    "Schedule a confidential legal consultation with Lexlead Legal Solutions at our chambers in Vanchiyoor, Thiruvananthapuram, Kerala.",
+    "Contact Lexlead Legal Solutions advocates at our chambers in Vinayaka Building, Vanchiyoor, Thiruvananthapuram, Kerala.",
 };
 
 const FAQS = [
@@ -18,7 +16,7 @@ const FAQS = [
   },
   {
     q: "What should I prepare before an initial consultation?",
-    a: "It is beneficial to bring or compile: (1) A brief chronological outline of events, (2) Copies of primary contracts, deeds, notices, or pleadings received, and (3) A clear summary of the relief or guidance sought.",
+    a: "It is beneficial to bring or compile: (1) A brief chronological outline of events, (2) Copies of primary contracts, deeds, notices, or court pleadings received, and (3) A clear summary of the relief or guidance sought.",
   },
   {
     q: "Does submitting this form create an advocate-client relationship?",
@@ -32,166 +30,150 @@ const FAQS = [
 
 export default function ContactPage() {
   return (
-    <main className="flex-1 w-full pt-28 pb-20 overflow-hidden">
-      {/* Background Lighting */}
-      <div className="absolute top-1/4 right-1/4 w-[600px] h-[400px] bg-[#DFBF7D]/10 dark:bg-[#183354]/30 blur-[130px] pointer-events-none -z-10" />
-      <div className="absolute bottom-1/4 left-10 w-[500px] h-[500px] bg-[#C6A15B]/10 blur-[140px] rounded-full pointer-events-none -z-10" />
-
-      {/* Header */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-12">
-        <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/[0.04] dark:bg-white/[0.04] border border-[#C6A15B]/30 mb-6">
-            <MapPin className="w-4 h-4 text-[#C6A15B]" />
-            <span className="text-xs font-semibold tracking-widest uppercase text-[#92703B] dark:text-[#DFBF7D]">
-              Chambers Registry • Thiruvananthapuram
-            </span>
-          </div>
-
-          <h1 className="font-serif-luxury text-4xl sm:text-5xl lg:text-6xl font-medium text-[#10253D] dark:text-[#F7F5F0] leading-tight">
-            Schedule a Confidential Legal Consultation.
+    <main className="flex-1 w-full bg-[#F7F5F0] pt-10 sm:pt-14 pb-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Hero Header */}
+        <div className="max-w-3xl mb-12 sm:mb-16">
+          <span className="text-[11px] font-semibold tracking-[0.2em] uppercase text-[#B18A4A]">
+            CHAMBERS REGISTRY
+          </span>
+          <h1 className="font-serif-luxury text-4xl sm:text-5xl lg:text-6xl font-medium text-[#10253D] mt-3 leading-tight">
+            Contact Lexlead Legal Solutions
           </h1>
-
-          <p className="mt-6 text-base sm:text-lg text-[#4A586E] dark:text-[#AAB4C3] leading-relaxed">
-            Our chambers are situated in the judicial corridor of Vanchiyoor, Thiruvananthapuram. We welcome inquiries regarding civil litigation, criminal defense, property, and commercial advisory.
+          <p className="mt-5 text-base sm:text-lg text-[#626B76] leading-relaxed">
+            Our chambers are located in Vanchiyoor, adjacent to the District Court Complex in Thiruvananthapuram, Kerala. We provide preliminary assessments for civil, criminal, property, and commercial matters.
           </p>
         </div>
-      </section>
 
-      {/* Two Column Layout: Details & Form */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          {/* Left Column: Chamber Info & Consultation Guidelines */}
+        {/* Two Column Layout: Details & Form */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start mb-20">
+          {/* Left Column: Chambers Details */}
           <div className="lg:col-span-5 space-y-6">
-            {/* Address */}
-            <GlassPanel variant="subtle" className="p-6 border border-black/10 dark:border-white/10 space-y-3">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-black/[0.04] dark:bg-white/[0.05] border border-[#C6A15B]/30 flex items-center justify-center text-[#92703B] dark:text-[#DFBF7D]">
+            <div className="bg-white p-6 sm:p-7 rounded-sm border border-[#E8E1D5] space-y-5">
+              {/* Address */}
+              <div className="flex items-start gap-3.5">
+                <div className="p-2.5 rounded bg-[#F7F5F0] border border-[#E8E1D5] text-[#B18A4A] shrink-0 mt-0.5">
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="text-xs font-semibold tracking-wider uppercase text-[#92703B] dark:text-[#DFBF7D]">
+                  <h3 className="text-xs font-semibold tracking-wider uppercase text-[#B18A4A]">
                     Chambers Address
                   </h3>
-                  <p className="text-base font-medium text-[#10253D] dark:text-[#F7F5F0]">
-                    Lexlead Legal Solutions — Advocates
+                  <p className="text-sm font-semibold text-[#10253D] mt-0.5">
+                    LEXLEAD LEGAL SOLUTIONS
                   </p>
-                </div>
-              </div>
-              <p className="text-xs sm:text-sm text-[#4A586E] dark:text-[#AAB4C3] leading-relaxed pl-13">
-                Court Road / Vanchiyoor, Thiruvananthapuram, Kerala, India — 695035
-              </p>
-              <div className="pl-13 pt-1">
-                <a
-                  href="https://maps.google.com/?q=Vanchiyoor+Thiruvananthapuram+Kerala"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-xs text-[#92703B] dark:text-[#DFBF7D] hover:text-[#10253D] dark:hover:text-[#F7F5F0] transition-colors font-medium"
-                >
-                  <span>Locate via Google Maps</span>
-                  <ExternalLink className="w-3.5 h-3.5" />
-                </a>
-              </div>
-            </GlassPanel>
-
-            {/* Direct Communication */}
-            <GlassPanel variant="subtle" className="p-6 border border-black/10 dark:border-white/10 space-y-4">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-black/[0.04] dark:bg-white/[0.05] border border-[#C6A15B]/30 flex items-center justify-center text-[#92703B] dark:text-[#DFBF7D]">
-                  <Mail className="w-5 h-5" />
-                </div>
-                <div>
-                  <h3 className="text-xs font-semibold tracking-wider uppercase text-[#92703B] dark:text-[#DFBF7D]">
-                    Electronic Registry
-                  </h3>
+                  <p className="text-xs text-[#626B76] mt-1 leading-relaxed">
+                    Ground Floor, Vinayaka Building, <br />
+                    V V Road, Opp. Rainbow Apartments, Vanchiyoor, <br />
+                    Thiruvananthapuram, Kerala – 695035
+                  </p>
                   <a
-                    href="mailto:office@lexlead.in"
-                    className="text-sm font-medium text-[#10253D] dark:text-[#F7F5F0] hover:text-[#92703B] dark:hover:text-[#DFBF7D] transition-colors"
+                    href="https://maps.google.com/?q=Vinayaka+Building+Vanchiyoor+Thiruvananthapuram+Kerala"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-xs text-[#B18A4A] hover:text-[#10253D] mt-2 font-medium"
                   >
-                    office@lexlead.in
+                    <span>Open in Google Maps</span>
+                    <ExternalLink className="w-3 h-3" />
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 pt-3 border-t border-black/10 dark:border-white/[0.06]">
-                <div className="w-10 h-10 rounded-xl bg-black/[0.04] dark:bg-white/[0.05] border border-[#C6A15B]/30 flex items-center justify-center text-[#92703B] dark:text-[#DFBF7D]">
+              {/* Phone */}
+              <div className="flex items-start gap-3.5 pt-4 border-t border-[#E8E1D5]">
+                <div className="p-2.5 rounded bg-[#F7F5F0] border border-[#E8E1D5] text-[#B18A4A] shrink-0 mt-0.5">
                   <Phone className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="text-xs font-semibold tracking-wider uppercase text-[#92703B] dark:text-[#DFBF7D]">
-                    Chamber Desk
+                  <h3 className="text-xs font-semibold tracking-wider uppercase text-[#B18A4A]">
+                    Direct Telephone
                   </h3>
-                  <p className="text-sm font-medium text-[#10253D] dark:text-[#F7F5F0]">
-                    +91 (0) 471 Consultation Line
+                  <div className="flex flex-col gap-1 mt-1 text-sm font-medium text-[#10253D]">
+                    <a href="tel:7907224126" className="hover:text-[#B18A4A]">
+                      +91 79072 24126
+                    </a>
+                    <a href="tel:9567653357" className="hover:text-[#B18A4A]">
+                      +91 95676 53357
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Email */}
+              <div className="flex items-start gap-3.5 pt-4 border-t border-[#E8E1D5]">
+                <div className="p-2.5 rounded bg-[#F7F5F0] border border-[#E8E1D5] text-[#B18A4A] shrink-0 mt-0.5">
+                  <Mail className="w-5 h-5" />
+                </div>
+                <div>
+                  <h3 className="text-xs font-semibold tracking-wider uppercase text-[#B18A4A]">
+                    Email Communications
+                  </h3>
+                  <p className="mt-1 text-sm font-medium text-[#10253D]">
+                    <a href="mailto:lexleadlegal@gmail.com" className="hover:text-[#B18A4A]">
+                      lexleadlegal@gmail.com
+                    </a>
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 pt-3 border-t border-black/10 dark:border-white/[0.06]">
-                <div className="w-10 h-10 rounded-xl bg-black/[0.04] dark:bg-white/[0.05] border border-[#C6A15B]/30 flex items-center justify-center text-[#92703B] dark:text-[#DFBF7D]">
+              {/* Working Hours */}
+              <div className="flex items-start gap-3.5 pt-4 border-t border-[#E8E1D5]">
+                <div className="p-2.5 rounded bg-[#F7F5F0] border border-[#E8E1D5] text-[#B18A4A] shrink-0 mt-0.5">
                   <Clock className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="text-xs font-semibold tracking-wider uppercase text-[#92703B] dark:text-[#DFBF7D]">
+                  <h3 className="text-xs font-semibold tracking-wider uppercase text-[#B18A4A]">
                     Working Hours
                   </h3>
-                  <p className="text-xs text-[#10253D] dark:text-[#F7F5F0]">
-                    Monday – Friday: 9:30 AM – 6:30 PM IST
+                  <p className="text-xs text-[#10253D] mt-1">
+                    Monday to Friday: 9:30 AM – 6:30 PM IST
                   </p>
-                  <p className="text-xs text-[#4A586E] dark:text-[#AAB4C3]">
-                    Saturday: By Prior Chamber Appointment
+                  <p className="text-xs text-[#626B76] mt-0.5">
+                    Saturday: By Prior Appointment
                   </p>
                 </div>
               </div>
-            </GlassPanel>
+            </div>
 
-            {/* Preparation note */}
-            <div className="p-5 rounded-2xl bg-black/[0.03] dark:bg-white/[0.03] border border-black/10 dark:border-white/10 space-y-2">
-              <div className="flex items-center gap-2 text-xs font-semibold text-[#92703B] dark:text-[#DFBF7D] uppercase tracking-wider">
-                <ShieldAlert className="w-4 h-4 text-[#C6A15B]" />
-                <span>Confidentiality & Conflict Policy</span>
-              </div>
-              <p className="text-xs text-[#4A586E] dark:text-[#AAB4C3] leading-relaxed">
-                To prevent potential conflict of interest, all incoming requests are screened before substantive advice is tendered. Please state the names of opposing parties if litigation has commenced.
-              </p>
+            <div className="p-4 rounded-sm bg-white border border-[#E8E1D5] flex items-center gap-3 text-xs text-[#626B76]">
+              <ShieldCheck className="w-4 h-4 text-[#B18A4A] shrink-0" />
+              <span>
+                All inquiries submitted to our chambers are treated with strict confidentiality under advocate ethical obligations.
+              </span>
             </div>
           </div>
 
-          {/* Right Column: Glassmorphic Consultation Form */}
+          {/* Right Column: Contact Form */}
           <div className="lg:col-span-7">
-            <Suspense fallback={<div className="p-12 text-center text-[#4A586E] dark:text-[#AAB4C3]">Loading form...</div>}>
-              <ContactForm />
+            <Suspense fallback={<div className="p-8 text-center text-[#626B76]">Loading form...</div>}>
+              <ContactForm darkTheme={true} />
             </Suspense>
           </div>
         </div>
-      </section>
 
-      {/* FAQs Section */}
-      <section className="py-20 bg-[#EFECE4] dark:bg-[#070e1a]/80 border-t border-black/10 dark:border-white/[0.08]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            align="center"
-            eyebrow="Consultation Guidance"
-            title="Frequently Asked Questions"
-            description="Clear answers regarding consultation procedures, confidentiality, and chamber protocols."
-          />
+        {/* FAQs Section */}
+        <div className="bg-white p-8 sm:p-12 rounded-sm border border-[#E8E1D5]">
+          <h2 className="font-serif-luxury text-2xl sm:text-3xl font-medium text-[#10253D] mb-8 text-center">
+            Frequently Asked Questions
+          </h2>
 
-          <div className="mt-12 space-y-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {FAQS.map((faq) => (
-              <GlassPanel key={faq.q} variant="subtle" className="p-6 border border-black/10 dark:border-white/10 space-y-2">
-                <div className="flex items-start gap-3">
-                  <HelpCircle className="w-4 h-4 text-[#C6A15B] shrink-0 mt-1" />
-                  <h4 className="font-serif-luxury text-lg text-[#10253D] dark:text-[#F7F5F0] font-medium">
+              <div key={faq.q} className="p-5 rounded-sm bg-[#F7F5F0] border border-[#E8E1D5] space-y-2">
+                <div className="flex items-start gap-2.5">
+                  <HelpCircle className="w-4 h-4 text-[#B18A4A] shrink-0 mt-1" />
+                  <h3 className="font-serif-luxury text-lg font-medium text-[#10253D]">
                     {faq.q}
-                  </h4>
+                  </h3>
                 </div>
-                <p className="text-xs sm:text-sm text-[#4A586E] dark:text-[#AAB4C3] pl-7 leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#626B76] pl-6.5 leading-relaxed">
                   {faq.a}
                 </p>
-              </GlassPanel>
+              </div>
             ))}
           </div>
         </div>
-      </section>
+      </div>
     </main>
   );
 }
