@@ -50,7 +50,7 @@ export const ApproachTimeline: React.FC = () => {
                 href="/our-approach"
                 variant="primary"
                 size="md"
-                icon={<ArrowRight className="w-4 h-4" />}
+                icon={<ArrowRight className="w-4 h-4 stroke-[2]" />}
               >
                 Our Approach
               </Button>

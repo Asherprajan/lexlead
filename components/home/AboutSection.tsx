@@ -56,7 +56,7 @@ export const AboutSection: React.FC = () => {
                 href="/about"
                 variant="primary"
                 size="md"
-                icon={<ArrowRight className="w-4 h-4" />}
+                icon={<ArrowRight className="w-4 h-4 stroke-[2]" />}
               >
                 Learn More About Us
               </Button>

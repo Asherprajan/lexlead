@@ -2,7 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, ShieldCheck, Scale, Compass, Users } from "lucide-react";
+import { ArrowRight, ArrowUpRight, CheckCircle2, ShieldCheck, Scale, Compass, Users } from "lucide-react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
 
@@ -150,10 +150,16 @@ export default function AboutPage() {
             We invite you to reach out for an initial discussion regarding your legal requirements in Thiruvananthapuram or across Kerala.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
-            <Button href="/contact" variant="primary" size="lg" icon={<ArrowRight className="w-4 h-4" />}>
+            <Button href="/contact" variant="primary" size="lg" icon={<ArrowRight className="w-4 h-4 stroke-[2]" />}>
               Request Consultation
             </Button>
-            <Button href="/practice-areas" variant="outline" size="lg" className="text-white border-white/30 hover:bg-white/10">
+            <Button
+              href="/practice-areas"
+              variant="outline"
+              size="lg"
+              className="text-white border-white/40 hover:border-white hover:bg-white hover:text-[#10253D]"
+              icon={<ArrowUpRight className="w-4 h-4 stroke-[2]" />}
+            >
               Explore Practice Areas
             </Button>
           </div>

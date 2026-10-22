@@ -23,19 +23,19 @@ export const ConsultationCTA: React.FC = () => {
             href="/contact"
             variant="primary"
             size="lg"
-            icon={<ArrowRight className="w-4 h-4" />}
+            icon={<ArrowRight className="w-4 h-4 stroke-[2]" />}
           >
             Request a Consultation
           </Button>
 
           <Button
-            href="tel:7907224126"
+            href="tel:+914713161884"
             variant="outline"
             size="lg"
-            className="text-white border-white/30 hover:border-white hover:bg-white/10"
+            className="text-white border-white/40 hover:border-white hover:bg-white hover:text-[#10253D]"
             icon={<Phone className="w-4 h-4" />}
           >
-            Call Chambers: 7907224126
+            Call Office: +91 471 316 1884
           </Button>
         </div>
       </div>

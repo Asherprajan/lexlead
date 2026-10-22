@@ -121,14 +121,22 @@ export const SiteFooter: React.FC = () => {
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-[#C6A15B] shrink-0" />
-                <div className="flex items-center gap-2">
-                  <a href="tel:7907224126" className="hover:text-white">
-                    7907224126
-                  </a>
-                  <span>/</span>
-                  <a href="tel:9567653357" className="hover:text-white">
-                    9567653357
-                  </a>
+                <div className="space-y-1">
+                  <div className="flex items-center gap-2">
+                    <a href="tel:+914713161884" className="hover:text-white font-medium text-white">
+                      +91 471 316 1884
+                    </a>
+                    <span className="text-[10px] text-[#C6A15B] uppercase tracking-wider">(Office)</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-[#AAB4C3]">
+                    <a href="tel:7907224126" className="hover:text-white">
+                      +91 79072 24126
+                    </a>
+                    <span>/</span>
+                    <a href="tel:9567653357" className="hover:text-white">
+                      +91 95676 53357
+                    </a>
+                  </div>
                 </div>
               </div>
               <div className="flex items-center gap-2.5">

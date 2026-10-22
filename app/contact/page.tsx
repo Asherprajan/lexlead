@@ -2,6 +2,7 @@ import React, { Suspense } from "react";
 import type { Metadata } from "next";
 import { MapPin, Mail, Phone, Clock, ExternalLink, ShieldCheck, HelpCircle } from "lucide-react";
 import { ContactForm } from "@/components/contact/ContactForm";
+import { ChambersMap } from "@/components/contact/ChambersMap";
 
 export const metadata: Metadata = {
   title: "Contact Chambers",
@@ -88,13 +89,22 @@ export default function ContactPage() {
                   <h3 className="text-xs font-semibold tracking-wider uppercase text-[#B18A4A]">
                     Direct Telephone
                   </h3>
-                  <div className="flex flex-col gap-1 mt-1 text-sm font-medium text-[#10253D]">
-                    <a href="tel:7907224126" className="hover:text-[#B18A4A]">
-                      +91 79072 24126
+                  <div className="flex flex-col gap-1.5 mt-1 text-sm font-medium text-[#10253D]">
+                    <a href="tel:+914713161884" className="hover:text-[#B18A4A] inline-flex items-center gap-2">
+                      <span>+91 471 316 1884</span>
+                      <span className="text-[10px] font-semibold tracking-wider uppercase text-[#B18A4A] bg-[#F7F5F0] px-1.5 py-0.5 rounded border border-[#E8E1D5]">
+                        Office
+                      </span>
                     </a>
-                    <a href="tel:9567653357" className="hover:text-[#B18A4A]">
-                      +91 95676 53357
-                    </a>
+                    <div className="flex items-center gap-2 text-xs text-[#626B76]">
+                      <a href="tel:7907224126" className="hover:text-[#B18A4A] text-sm text-[#10253D]">
+                        +91 79072 24126
+                      </a>
+                      <span className="text-[#AAB4C3]">/</span>
+                      <a href="tel:9567653357" className="hover:text-[#B18A4A] text-sm text-[#10253D]">
+                        +91 95676 53357
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -149,6 +159,24 @@ export default function ContactPage() {
               <ContactForm darkTheme={true} />
             </Suspense>
           </div>
+        </div>
+
+        {/* Chambers Location Map */}
+        <div className="space-y-4">
+          <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-2">
+            <div>
+              <p className="text-xs font-semibold tracking-wider uppercase text-[#B18A4A]">
+                COURT DISTRICT & CHAMBERS LOCATION
+              </p>
+              <h2 className="font-serif-luxury text-2xl sm:text-3xl font-medium text-[#10253D] mt-1">
+                Find Our Chambers in Vanchiyoor
+              </h2>
+            </div>
+            <p className="text-xs text-[#626B76] max-w-md">
+              Located conveniently on V V Road opposite Rainbow Apartments, adjacent to the District Court Complex in Thiruvananthapuram.
+            </p>
+          </div>
+          <ChambersMap height="h-[360px] sm:h-[420px]" />
         </div>
 
         {/* FAQs Section */}

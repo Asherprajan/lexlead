@@ -58,7 +58,7 @@ export const MobileNavigation: React.FC<MobileNavigationProps> = ({
             </Link>
             <button
               onClick={onClose}
-              className="p-2 rounded-md text-[#626B76] hover:text-[#10253D] hover:bg-black/5 transition-colors focus:outline-none focus:ring-2 focus:ring-[#C6A15B]"
+              className="p-2 rounded-none text-[#626B76] hover:text-[#10253D] hover:bg-black/5 transition-colors focus:outline-none outline-none"
               aria-label="Close menu"
             >
               <X className="w-5 h-5" />
@@ -78,7 +78,7 @@ export const MobileNavigation: React.FC<MobileNavigationProps> = ({
                   href={item.href}
                   onClick={onClose}
                   className={cn(
-                    "flex items-center justify-between px-3.5 py-2.5 rounded-md text-sm font-medium transition-colors",
+                    "flex items-center justify-between px-3.5 py-2.5 rounded-none text-sm font-medium transition-colors",
                     isActive
                       ? "bg-[#10253D] text-[#F7F5F0]"
                       : "text-[#10253D] hover:bg-black/5"
@@ -99,7 +99,7 @@ export const MobileNavigation: React.FC<MobileNavigationProps> = ({
             variant="primary"
             size="md"
             className="w-full justify-center"
-            icon={<ArrowRight className="w-4 h-4" />}
+            icon={<ArrowRight className="w-4 h-4 stroke-[2]" />}
             onClick={onClose}
           >
             Request a Consultation
@@ -108,7 +108,7 @@ export const MobileNavigation: React.FC<MobileNavigationProps> = ({
           <div className="space-y-2 text-xs text-[#626B76]">
             <div className="flex items-start gap-2">
               <MapPin className="w-3.5 h-3.5 text-[#C6A15B] shrink-0 mt-0.5" />
-              <span>Vinayaka Bldg, Vanchiyoor, Thiruvananthapuram</span>
+              <span>Ground Floor, Vinayaka Building, V V Road, Opp. Rainbow Apartments, Vanchiyoor, Thiruvananthapuram, Kerala – 695035</span>
             </div>
             <div className="flex items-center gap-2">
               <Mail className="w-3.5 h-3.5 text-[#C6A15B] shrink-0" />
@@ -118,9 +118,23 @@ export const MobileNavigation: React.FC<MobileNavigationProps> = ({
             </div>
             <div className="flex items-center gap-2">
               <Phone className="w-3.5 h-3.5 text-[#C6A15B] shrink-0" />
-              <a href="tel:7907224126" className="hover:text-[#10253D]">
-                7907224126 / 9567653357
-              </a>
+              <div className="space-y-1">
+                <div className="flex items-center gap-2">
+                  <a href="tel:+914713161884" className="hover:text-[#10253D] font-medium">
+                    +91 471 316 1884
+                  </a>
+                  <span className="text-[10px] text-[#B18A4A] font-semibold uppercase">(Office)</span>
+                </div>
+                <div className="flex items-center gap-1.5 flex-wrap text-xs text-[#626B76]">
+                  <a href="tel:7907224126" className="hover:text-[#10253D]">
+                    +91 79072 24126
+                  </a>
+                  <span>/</span>
+                  <a href="tel:9567653357" className="hover:text-[#10253D]">
+                    +91 95676 53357
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>

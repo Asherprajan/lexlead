@@ -2,6 +2,7 @@ import React from "react";
 import { MapPin, Phone, Mail, Clock, ShieldCheck, ExternalLink } from "lucide-react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ContactForm } from "@/components/contact/ContactForm";
+import { ChambersMap } from "@/components/contact/ChambersMap";
 
 export const ContactSection: React.FC = () => {
   return (
@@ -55,13 +56,22 @@ export const ContactSection: React.FC = () => {
                   <h3 className="text-xs font-semibold tracking-wider uppercase text-[#B18A4A]">
                     Telephone Numbers
                   </h3>
-                  <div className="flex flex-col gap-1 mt-1 text-sm font-medium text-[#10253D]">
-                    <a href="tel:7907224126" className="hover:text-[#B18A4A]">
-                      +91 79072 24126
+                  <div className="flex flex-col gap-1.5 mt-1 text-sm font-medium text-[#10253D]">
+                    <a href="tel:+914713161884" className="hover:text-[#B18A4A] inline-flex items-center gap-2">
+                      <span>+91 471 316 1884</span>
+                      <span className="text-[10px] font-semibold tracking-wider uppercase text-[#B18A4A] bg-[#F7F5F0] px-1.5 py-0.5 rounded border border-[#E8E1D5]">
+                        Office
+                      </span>
                     </a>
-                    <a href="tel:9567653357" className="hover:text-[#B18A4A]">
-                      +91 95676 53357
-                    </a>
+                    <div className="flex items-center gap-2 text-xs text-[#626B76]">
+                      <a href="tel:7907224126" className="hover:text-[#B18A4A] text-sm text-[#10253D]">
+                        +91 79072 24126
+                      </a>
+                      <span className="text-[#AAB4C3]">/</span>
+                      <a href="tel:9567653357" className="hover:text-[#B18A4A] text-sm text-[#10253D]">
+                        +91 95676 53357
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -114,6 +124,11 @@ export const ContactSection: React.FC = () => {
           <div className="lg:col-span-7">
             <ContactForm darkTheme={true} />
           </div>
+        </div>
+
+        {/* Embedded Google Map */}
+        <div className="mt-10 sm:mt-12">
+          <ChambersMap height="h-[300px] sm:h-[360px]" />
         </div>
       </div>
     </section>

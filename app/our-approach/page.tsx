@@ -177,7 +177,7 @@ export default function OurApproachPage() {
             Begin with an initial inquiry to understand available options and procedural requirements.
           </p>
           <div className="pt-2">
-            <Button href="/contact" variant="primary" size="lg" icon={<ArrowRight className="w-4 h-4" />}>
+            <Button href="/contact" variant="primary" size="lg" icon={<ArrowRight className="w-4 h-4 stroke-[2]" />}>
               Request a Consultation
             </Button>
           </div>

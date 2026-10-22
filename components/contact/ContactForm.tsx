@@ -145,8 +145,8 @@ export const ContactForm: React.FC<{ defaultPracticeArea?: string; darkTheme?: b
   };
 
   const inputClass = darkTheme
-    ? "w-full px-3.5 py-2.5 rounded bg-white/10 border border-white/20 text-white placeholder-white/40 text-sm focus:outline-none focus:border-[#C6A15B] transition-colors"
-    : "w-full px-3.5 py-2.5 rounded bg-white border border-[#E8E1D5] text-[#10253D] placeholder-[#626B76]/60 text-sm focus:outline-none focus:border-[#C6A15B] transition-colors";
+    ? "w-full px-3.5 py-2.5 rounded-none bg-white/10 border border-white/20 text-white placeholder-white/40 text-sm focus:outline-none focus:border-[#C6A15B] transition-colors"
+    : "w-full px-3.5 py-2.5 rounded-none bg-white border border-[#E8E1D5] text-[#10253D] placeholder-[#626B76]/60 text-sm focus:outline-none focus:border-[#C6A15B] transition-colors";
 
   if (status === "success") {
     return (
@@ -366,7 +366,7 @@ export const ContactForm: React.FC<{ defaultPracticeArea?: string; darkTheme?: b
             status === "submitting" ? (
               <Loader2 className="w-4 h-4 animate-spin" />
             ) : (
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-4 h-4 stroke-[2]" />
             )
           }
         >

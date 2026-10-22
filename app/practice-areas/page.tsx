@@ -81,7 +81,7 @@ export default function PracticeAreasPage() {
                       href={`/practice-areas/${practice.slug}`}
                       variant="primary"
                       size="sm"
-                      icon={<ArrowRight className="w-3.5 h-3.5" />}
+                      icon={<ArrowRight className="w-3.5 h-3.5 stroke-[2]" />}
                     >
                       View Full Details
                     </Button>

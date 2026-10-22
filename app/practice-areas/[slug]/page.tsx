@@ -153,13 +153,27 @@ export default async function PracticeAreaDetailPage({ params }: PageProps) {
               </h3>
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#B18A4A] shrink-0 mt-0.5" />
-                <span>Vinayaka Building, V V Road, Vanchiyoor, Thiruvananthapuram</span>
+                <span>Ground Floor, Vinayaka Building, V V Road, Opp. Rainbow Apartments, Vanchiyoor, Thiruvananthapuram, Kerala – 695035</span>
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-[#B18A4A] shrink-0" />
-                <a href="tel:7907224126" className="hover:text-[#10253D]">
-                  7907224126 / 9567653357
-                </a>
+                <div className="space-y-1">
+                  <div className="flex items-center gap-2">
+                    <a href="tel:+914713161884" className="hover:text-[#10253D] font-medium">
+                      +91 471 316 1884
+                    </a>
+                    <span className="text-[10px] text-[#B18A4A] font-semibold uppercase">(Office)</span>
+                  </div>
+                  <div className="flex items-center gap-1.5 flex-wrap text-xs text-[#626B76]">
+                    <a href="tel:7907224126" className="hover:text-[#10253D]">
+                      +91 79072 24126
+                    </a>
+                    <span>/</span>
+                    <a href="tel:9567653357" className="hover:text-[#10253D]">
+                      +91 95676 53357
+                    </a>
+                  </div>
+                </div>
               </div>
               <div className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-[#B18A4A] shrink-0" />

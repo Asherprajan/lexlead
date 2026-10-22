@@ -24,6 +24,9 @@
   --charcoal: #252C35;
   --muted-text: #626B76;
   --light-border: #E8E1D5;
+  --border: #E8E1D5;
+  --gold: #C6A15B;
+  --antique: #B18A4A;
 }
 
 html {
@@ -51,29 +54,34 @@ body {
   letter-spacing: -0.015em;
 }
 
-/* Swiss Minimalist Buttons */
+/* Swiss Minimalist Sharp Buttons */
 .btn-gold {
-  background: linear-gradient(135deg, #C6A15B 0%, #B18A4A 100%);
-  color: #FFFFFF;
+  background-color: #C59B51;
+  color: #10253D;
   font-weight: 500;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: 0px;
+  border: 1px solid #B38C44;
+  transition: all 0.15s ease-in-out;
 }
 
 .btn-gold:hover {
-  filter: brightness(1.05);
-  box-shadow: 0 4px 14px rgba(198, 161, 91, 0.28);
+  background-color: #B88E43;
+  border-color: #A47C35;
+  color: #0B1728;
 }
 
 .btn-outline-ivory {
   background-color: transparent;
-  border: 1px solid #10253D;
+  border: 1px solid #8E9CAE;
   color: #10253D;
   font-weight: 500;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: 0px;
+  transition: all 0.15s ease-in-out;
 }
 
 .btn-outline-ivory:hover {
   background-color: #10253D;
+  border-color: #10253D;
   color: #F7F5F0;
 }
 
@@ -89,6 +97,13 @@ body {
 .card-hover-clean:hover {
   border-color: #C6A15B;
   transform: translateY(-2px);
+}
+
+/* Bold Editorial Hero Headline */
+.font-hero-bold {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 /* Accessibility: Reduced motion */
