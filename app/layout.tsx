@@ -59,9 +59,17 @@ export const metadata: Metadata = {
     images: ["/images/hero-reception.jpg"],
   },
   icons: {
-    icon: "/images/lexlead-emblem.png",
-    apple: "/images/lexlead-emblem.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
   },
+  manifest: "/manifest.webmanifest",
   robots: {
     index: true,
     follow: true,

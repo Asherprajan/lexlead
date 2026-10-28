@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# LEXLEAD LEGAL SOLUTIONS
 
-## Getting Started
+The official web platform for **Lexlead Legal Solutions**, an advocacy practice based in Vanchiyoor, Thiruvananthapuram, Kerala.
 
-First, run the development server:
+> **"Legal Solutions for a Brighter Tomorrow"**  
+> Practical, reliable, and result-oriented legal counsel across civil litigation, criminal defense, property law, and corporate advisory.
+
+---
+
+## 🏛️ About the Practice
+
+- **Chambers**: Vanchiyoor, Thiruvananthapuram, Kerala — 695035
+- **Jurisdictions**: Kerala High Court, District & Sessions Court, Motor Accidents Claims Tribunal (MACT), Family Courts, and Consumer Dispute Forums.
+- **Email**: [lexleadlegal@gmail.com](mailto:lexleadlegal@gmail.com)
+- **Website**: [lexlead.in](https://lexlead.in)
+
+---
+
+## 🛠️ Technology Stack
+
+- **Framework**: [Next.js](https://nextjs.org) (App Router, Turbopack)
+- **UI Library**: React 19
+- **Styling**: Tailwind CSS v4
+- **Typography**: Playfair Display, Cormorant Garamond, Manrope
+- **Icons**: Lucide React
+- **Validation**: Zod & React Hook Form
+
+---
+
+## 🚀 Getting Started
+
+First, install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📦 Production Build
 
-## Learn More
+To create an optimized production build:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+npm run start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📁 Key Directories
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `app/` — Next.js App Router pages, metadata, sitemap, robots, and layouts
+- `components/` — Modular UI components (Navigation, Header, Footer, Hero, Practice Areas, Consultation)
+- `public/` — Static assets, chambers imagery, branding emblems, and multi-resolution favicon suite
