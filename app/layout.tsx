@@ -12,34 +12,56 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: "LEXLEAD LEGAL SOLUTIONS | Advocates — Thiruvananthapuram, Kerala",
+    default: "LEXLEAD LEGAL SOLUTIONS | Advocates — Ernakulam (Kochi) & Thiruvananthapuram, Kerala",
     template: "%s | LEXLEAD LEGAL SOLUTIONS",
   },
   description:
-    "Lexlead Legal Solutions is an advocacy practice in Vanchiyoor, Thiruvananthapuram, Kerala. We provide practical, reliable, and result-oriented legal guidance across civil litigation, criminal law, property, and corporate advisory.",
+    "Lexlead Legal Solutions — experienced advocates with principal chambers at Padma Junction, Ernakulam (Kochi) and branch chambers in Vanchiyoor, Thiruvananthapuram. We deliver result-oriented legal counsel in civil litigation, criminal law, property disputes, family law, and corporate advisory across Kerala High Court and district courts.",
   keywords: [
     "Lexlead Legal Solutions",
-    "Advocates Thiruvananthapuram",
-    "Lawyers in Trivandrum",
+    "advocates in Ernakulam",
+    "lawyers in Kochi",
+    "advocates in Thiruvananthapuram",
+    "lawyers in Trivandrum",
+    "law firm Ernakulam",
+    "law firm Trivandrum",
     "Kerala High Court advocates",
-    "Civil Litigation Lawyer Kerala",
-    "Property Dispute Lawyer Thiruvananthapuram",
-    "Criminal Defense Advocate Kerala",
-    "Corporate Legal Counsel Trivandrum",
+    "Ernakulam District Court lawyers",
+    "Trivandrum District Court lawyers",
+    "civil litigation lawyer Kochi",
+    "civil litigation lawyer Thiruvananthapuram",
+    "criminal defense advocate Ernakulam",
+    "criminal lawyer Trivandrum",
+    "property dispute lawyer Kochi",
+    "property dispute lawyer Thiruvananthapuram",
+    "family court lawyer Ernakulam",
+    "divorce lawyer Kochi",
+    "corporate legal counsel Kochi",
+    "corporate lawyer Trivandrum",
+    "bail application lawyer Ernakulam",
+    "anticipatory bail Kerala",
+    "property registration lawyer Kerala",
+    "title verification lawyer Kochi",
     "Vanchiyoor advocate chambers",
+    "Padma Junction Ernakulam advocates",
+    "legal consultation Kochi",
+    "legal consultation Trivandrum",
+    "best advocate Kerala",
+    "top law firm Kerala",
   ],
+  applicationName: "Lexlead Legal Solutions",
   authors: [{ name: "Lexlead Legal Solutions" }],
   creator: "Lexlead Legal Solutions",
   publisher: "Lexlead Legal Solutions",
-  metadataBase: new URL("https://lexlead.in"),
+  metadataBase: new URL("https://lexleadlegal.in"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "LEXLEAD LEGAL SOLUTIONS | Advocates — Thiruvananthapuram, Kerala",
+    title: "LEXLEAD LEGAL SOLUTIONS | Advocates — Ernakulam (Kochi) & Thiruvananthapuram, Kerala",
     description:
-      "Legal Solutions for a Brighter Tomorrow. At Lexlead Legal Solutions, we provide practical, reliable, and considered legal guidance to individuals, families and businesses.",
-    url: "https://lexlead.in",
+      "Trusted advocates with principal chambers in Ernakulam (Kochi) and branch chambers in Thiruvananthapuram. Expert legal counsel in civil, criminal, property, family, and corporate law across Kerala.",
+    url: "https://lexleadlegal.in",
     siteName: "Lexlead Legal Solutions",
     locale: "en_IN",
     type: "website",
@@ -48,14 +70,15 @@ export const metadata: Metadata = {
         url: "/images/hero-reception.jpg",
         width: 1122,
         height: 1095,
-        alt: "Lexlead Legal Solutions — Advocates & Legal Consultants",
+        alt: "Lexlead Legal Solutions — Advocates & Legal Consultants, Ernakulam & Thiruvananthapuram",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "LEXLEAD LEGAL SOLUTIONS | Advocates",
-    description: "Legal Solutions for a Brighter Tomorrow.",
+    title: "LEXLEAD LEGAL SOLUTIONS | Advocates — Kochi & Trivandrum, Kerala",
+    description:
+      "Experienced advocates in Ernakulam (Kochi) and Thiruvananthapuram offering civil, criminal, property, family & corporate legal services.",
     images: ["/images/hero-reception.jpg"],
   },
   icons: {
@@ -73,7 +96,14 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
+  category: "Legal Services",
 };
 
 export default function RootLayout({
@@ -84,6 +114,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth antialiased">
       <head>
+        <meta name="geo.region" content="IN-KL" />
+        <meta name="geo.placename" content="Ernakulam, Kochi, Thiruvananthapuram, Kerala, India" />
+        <meta name="geo.position" content="9.9813;76.2656" />
+        <meta name="ICBM" content="9.9813, 76.2656" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link

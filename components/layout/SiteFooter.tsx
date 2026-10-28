@@ -20,11 +20,11 @@ export const SiteFooter: React.FC = () => {
               />
             </Link>
             <p className="text-xs text-[#AAB4C3] leading-relaxed pr-4">
-              Lexlead Legal Solutions is a legal practice based in Thiruvananthapuram, Kerala, delivering disciplined legal guidance, civil representation, criminal defense, property solutions, and corporate advisory.
+              Lexlead Legal Solutions is a premier legal practice with its Main Office in Ernakulam (Kochi) and Branch Office in Thiruvananthapuram, delivering disciplined civil representation, criminal defense, property solutions, and corporate advisory across Kerala.
             </p>
             <div className="flex items-center gap-2 text-xs text-[#C6A15B]">
               <Shield className="w-4 h-4 text-[#C6A15B]" />
-              <span>Advocates & Legal Consultants • Kerala</span>
+              <span>Advocates & Legal Consultants • Ernakulam & Trivandrum</span>
             </div>
           </div>
 
@@ -52,6 +52,21 @@ export const SiteFooter: React.FC = () => {
               <li>
                 <Link href="/our-approach" className="hover:text-[#C6A15B] transition-colors">
                   Our Approach
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog" className="hover:text-[#C6A15B] transition-colors">
+                  Legal Insights
+                </Link>
+              </li>
+              <li>
+                <Link href="/lawyers-in-kochi" className="hover:text-[#C6A15B] transition-colors text-[#F7F5F0]">
+                  Lawyers in Kochi
+                </Link>
+              </li>
+              <li>
+                <Link href="/lawyers-in-trivandrum" className="hover:text-[#C6A15B] transition-colors text-[#F7F5F0]">
+                  Lawyers in Trivandrum
                 </Link>
               </li>
               <li>
@@ -110,16 +125,40 @@ export const SiteFooter: React.FC = () => {
           {/* Col 4: Verified Contact Info */}
           <div className="lg:col-span-3 space-y-3">
             <h3 className="text-xs font-semibold tracking-wider uppercase text-white">
-              Office Details
+              Chambers Locations
             </h3>
-            <div className="space-y-2.5 text-xs text-[#AAB4C3]">
-              <div className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-[#C6A15B] shrink-0 mt-0.5" />
-                <span>
-                  Ground Floor, Vinayaka Building, V V Road, Opp. Rainbow Apartments, Vanchiyoor, Thiruvananthapuram, Kerala – 695035
-                </span>
+            <div className="space-y-3 text-xs text-[#AAB4C3]">
+              <div>
+                <Link href="/lawyers-in-kochi" className="group block">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-[#C6A15B] group-hover:underline flex items-center justify-between">
+                    <span>Ernakulam (Kochi) — Main Office</span>
+                    <ArrowUpRight className="w-3 h-3 opacity-70 group-hover:opacity-100" />
+                  </span>
+                </Link>
+                <div className="flex items-start gap-2 mt-1">
+                  <MapPin className="w-3.5 h-3.5 text-[#C6A15B] shrink-0 mt-0.5" />
+                  <span>
+                    2nd Floor, T K Tower, Chittoor Rd, Padma Junction, Pullepady, Kochi – 682035
+                  </span>
+                </div>
               </div>
-              <div className="flex items-center gap-2.5">
+
+              <div className="pt-2 border-t border-white/10">
+                <Link href="/lawyers-in-trivandrum" className="group block">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-[#C6A15B] group-hover:underline flex items-center justify-between">
+                    <span>Thiruvananthapuram — Branch Office</span>
+                    <ArrowUpRight className="w-3 h-3 opacity-70 group-hover:opacity-100" />
+                  </span>
+                </Link>
+                <div className="flex items-start gap-2 mt-1">
+                  <MapPin className="w-3.5 h-3.5 text-[#C6A15B] shrink-0 mt-0.5" />
+                  <span>
+                    Ground Floor, Vinayaka Building, V V Road, Opp. Rainbow Apartments, Vanchiyoor – 695035
+                  </span>
+                </div>
+              </div>
+
+              <div className="pt-2 border-t border-white/10 flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-[#C6A15B] shrink-0" />
                 <div className="space-y-1">
                   <div className="flex items-center gap-2">
@@ -139,6 +178,7 @@ export const SiteFooter: React.FC = () => {
                   </div>
                 </div>
               </div>
+
               <div className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-[#C6A15B] shrink-0" />
                 <a href="mailto:lexleadlegal@gmail.com" className="hover:text-white">

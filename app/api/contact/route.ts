@@ -96,7 +96,7 @@ export async function POST(req: NextRequest) {
     const data = validationResult.data;
 
     // In a production deployment with configured SMTP / transactional email (e.g. Resend, SendGrid, or AWS SES),
-    // an email notification is dispatched to office@lexlead.in.
+    // an email notification is dispatched to office@lexleadlegal.in.
     // We log the structured consultation request securely (without dumping sensitive case details)
     console.log("[Lexlead Chambers Consultation Request]", {
       fullName: data.fullName,

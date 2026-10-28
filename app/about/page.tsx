@@ -9,7 +9,23 @@ import { Button } from "@/components/ui/Button";
 export const metadata: Metadata = {
   title: "About the Firm",
   description:
-    "Learn about Lexlead Legal Solutions, our advocacy principles, chambers in Vanchiyoor, Thiruvananthapuram, Kerala, and commitment to disciplined legal representation.",
+    "Learn about Lexlead Legal Solutions — our advocacy principles, principal chambers in Ernakulam (Kochi), branch chambers in Thiruvananthapuram, and our commitment to disciplined, ethical legal representation across Kerala.",
+  keywords: [
+    "about Lexlead Legal Solutions",
+    "law firm Ernakulam",
+    "advocates Kochi",
+    "legal firm Thiruvananthapuram",
+    "Kerala advocate firm",
+    "ethical lawyers Kerala",
+  ],
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: "About Lexlead Legal Solutions | Advocates in Ernakulam & Thiruvananthapuram",
+    description:
+      "Principled advocacy and disciplined legal assessment. Lexlead Legal Solutions — principal chambers in Ernakulam (Kochi), branch in Thiruvananthapuram, Kerala.",
+  },
 };
 
 const PILLARS = [
@@ -35,7 +51,7 @@ const PILLARS = [
     icon: Users,
     title: "Rooted in Kerala's Legal Landscape",
     description:
-      "Situated in Thiruvananthapuram with an intimate understanding of local revenue laws, civil procedures, and appellate jurisdictions.",
+      "Established with our main office in Ernakulam and branch chambers in Thiruvananthapuram, with an intimate understanding of Kerala High Court practice, local revenue laws, and trial court procedures.",
   },
 ];
 
@@ -53,7 +69,7 @@ export default function AboutPage() {
             Disciplined Legal Assessment.
           </h1>
           <p className="mt-5 text-base sm:text-lg text-[#626B76] leading-relaxed">
-            Lexlead Legal Solutions is an advocacy practice located in Vanchiyoor, Thiruvananthapuram, Kerala. We provide considered representation and strategic counsel designed to give clients clarity through every phase of dispute or commercial undertaking.
+            Lexlead Legal Solutions is an advocacy practice with its main office in Padma Junction, Ernakulam (Kochi) and branch chambers in Vanchiyoor, Thiruvananthapuram, Kerala. We provide considered representation and strategic counsel designed to give clients clarity through every phase of dispute or commercial undertaking.
           </p>
         </div>
 
@@ -147,7 +163,7 @@ export default function AboutPage() {
             Speak with an Advocate at Our Chambers
           </h2>
           <p className="text-sm sm:text-base text-[#AAB4C3] max-w-xl mx-auto leading-relaxed">
-            We invite you to reach out for an initial discussion regarding your legal requirements in Thiruvananthapuram or across Kerala.
+            We invite you to reach out for an initial discussion regarding your legal requirements in Ernakulam (Kochi), Thiruvananthapuram, or anywhere across Kerala.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
             <Button href="/contact" variant="primary" size="lg" icon={<ArrowRight className="w-4 h-4 stroke-[2]" />}>

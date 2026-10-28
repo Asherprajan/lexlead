@@ -1,6 +1,6 @@
 # LEXLEAD LEGAL SOLUTIONS
 
-The official web platform for **Lexlead Legal Solutions**, an advocacy practice based in Vanchiyoor, Thiruvananthapuram, Kerala.
+The official web platform for **Lexlead Legal Solutions**, an advocacy practice with its main office in Ernakulam (Kochi) and branch chambers in Thiruvananthapuram, Kerala.
 
 > **"Legal Solutions for a Brighter Tomorrow"**  
 > Practical, reliable, and result-oriented legal counsel across civil litigation, criminal defense, property law, and corporate advisory.
@@ -9,10 +9,11 @@ The official web platform for **Lexlead Legal Solutions**, an advocacy practice 
 
 ## 🏛️ About the Practice
 
-- **Chambers**: Vanchiyoor, Thiruvananthapuram, Kerala — 695035
-- **Jurisdictions**: Kerala High Court, District & Sessions Court, Motor Accidents Claims Tribunal (MACT), Family Courts, and Consumer Dispute Forums.
+- **Main Office**: 2nd Floor, T K Tower, Chittoor Rd, Padma Junction, Pullepady, Kochi, Ernakulam, Kerala — 682035
+- **Branch Chambers**: Ground Floor, Vinayaka Building, V V Road, Opp. Rainbow Apartments, Vanchiyoor, Thiruvananthapuram, Kerala — 695035
+- **Jurisdictions**: Kerala High Court, District & Sessions Courts, Motor Accidents Claims Tribunal (MACT), Family Courts, and Consumer Dispute Forums.
 - **Email**: [lexleadlegal@gmail.com](mailto:lexleadlegal@gmail.com)
-- **Website**: [lexlead.in](https://lexlead.in)
+- **Website**: [lexleadlegal.in](https://lexleadlegal.in)
 
 ---
 

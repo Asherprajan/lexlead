@@ -48,7 +48,7 @@ export const AboutSection: React.FC = () => {
             </p>
 
             <p className="text-sm sm:text-base text-[#626B76] leading-relaxed max-w-xl">
-              Based in Thiruvananthapuram, Kerala, we believe legal guidance should be considered and responsive to the distinct human and commercial realities of each matter.
+              With our Principal Chambers at Padma Junction, Ernakulam (Kochi) and Branch Chambers in Vanchiyoor, Thiruvananthapuram, we believe legal guidance should be considered and responsive to the distinct human and commercial realities of each matter across Kerala.
             </p>
 
             <div className="pt-2">

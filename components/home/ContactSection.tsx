@@ -12,38 +12,70 @@ export const ContactSection: React.FC = () => {
           {/* Left Column: Contact Information */}
           <div className="lg:col-span-5 space-y-6">
             <SectionHeading
-              eyebrow="CONTACT OUR OFFICE"
+              eyebrow="CONTACT OUR CHAMBERS"
               title="Reach Lexlead Legal Solutions"
-              description="Our chambers are located in Vanchiyoor, the judicial core of Thiruvananthapuram. Contact us to schedule an in-person or virtual consultation."
+              description="With our main office established in Padma Junction, Ernakulam (Kochi) and branch chambers in Vanchiyoor, Thiruvananthapuram, we provide strategic legal counsel across Kerala. Contact us to schedule an in-person or virtual consultation."
             />
 
             <div className="bg-white p-6 sm:p-7 rounded-sm border border-[#E8E1D5] space-y-5">
-              {/* Address */}
-              <div className="flex items-start gap-3.5">
-                <div className="p-2.5 rounded bg-[#F7F5F0] border border-[#E8E1D5] text-[#B18A4A] shrink-0 mt-0.5">
-                  <MapPin className="w-5 h-5" />
+              {/* Chambers Locations */}
+              <div className="space-y-4">
+                {/* Ernakulam Main Office */}
+                <div className="flex items-start gap-3.5">
+                  <div className="p-2.5 rounded bg-[#F7F5F0] border border-[#E8E1D5] text-[#B18A4A] shrink-0 mt-0.5">
+                    <MapPin className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <div className="flex items-center gap-2">
+                      <h3 className="text-xs font-semibold tracking-wider uppercase text-[#B18A4A]">
+                        Ernakulam (Kochi)
+                      </h3>
+                      <span className="text-[9px] uppercase tracking-wider px-1.5 py-0.2 rounded bg-[#C6A15B] text-[#10253D] font-bold">
+                        Main Office
+                      </span>
+                    </div>
+                    <p className="text-xs text-[#626B76] mt-1 leading-relaxed">
+                      2nd Floor, T K Tower, Chittoor Rd, Padma Junction, Pullepady, Kochi, Ernakulam – 682035
+                    </p>
+                    <a
+                      href="https://maps.google.com/?q=Lexlead+Legal+Solutions+TK+Tower+Chittoor+Rd+Padma+Junction+Pullepady+Kochi+Kerala+682035"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-xs text-[#B18A4A] hover:text-[#10253D] mt-1.5 font-medium"
+                    >
+                      <span>View on Google Maps</span>
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-xs font-semibold tracking-wider uppercase text-[#B18A4A]">
-                    Chambers Location
-                  </h3>
-                  <p className="text-sm font-semibold text-[#10253D] mt-0.5">
-                    LEXLEAD LEGAL SOLUTIONS
-                  </p>
-                  <p className="text-xs text-[#626B76] mt-1 leading-relaxed">
-                    Ground Floor, Vinayaka Building, <br />
-                    V V Road, Opp. Rainbow Apartments, Vanchiyoor, <br />
-                    Thiruvananthapuram, Kerala – 695035
-                  </p>
-                  <a
-                    href="https://maps.google.com/?q=Vinayaka+Building+Vanchiyoor+Thiruvananthapuram+Kerala"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-xs text-[#B18A4A] hover:text-[#10253D] mt-2 font-medium"
-                  >
-                    <span>View Location on Map</span>
-                    <ExternalLink className="w-3 h-3" />
-                  </a>
+
+                {/* Trivandrum Branch */}
+                <div className="flex items-start gap-3.5 pt-3.5 border-t border-[#E8E1D5]/70">
+                  <div className="p-2.5 rounded bg-[#F7F5F0] border border-[#E8E1D5] text-[#B18A4A] shrink-0 mt-0.5">
+                    <MapPin className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <div className="flex items-center gap-2">
+                      <h3 className="text-xs font-semibold tracking-wider uppercase text-[#B18A4A]">
+                        Thiruvananthapuram
+                      </h3>
+                      <span className="text-[9px] uppercase tracking-wider px-1.5 py-0.2 rounded bg-[#F7F5F0] border border-[#E8E1D5] text-[#10253D] font-bold">
+                        Branch Office
+                      </span>
+                    </div>
+                    <p className="text-xs text-[#626B76] mt-1 leading-relaxed">
+                      Ground Floor, Vinayaka Building, V V Road, Opp. Rainbow Apartments, Vanchiyoor, Thiruvananthapuram – 695035
+                    </p>
+                    <a
+                      href="https://maps.google.com/?q=Vinayaka+Building+Vanchiyoor+Thiruvananthapuram+Kerala"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-xs text-[#B18A4A] hover:text-[#10253D] mt-1.5 font-medium"
+                    >
+                      <span>View on Google Maps</span>
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
+                  </div>
                 </div>
               </div>
 

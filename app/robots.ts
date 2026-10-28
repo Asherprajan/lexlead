@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/"],
     },
-    sitemap: "https://lexlead.in/sitemap.xml",
+    sitemap: "https://lexleadlegal.in/sitemap.xml",
   };
 }

@@ -23,8 +23,15 @@ interface FormErrors {
   privacyConsent?: string;
 }
 
-export const ContactForm: React.FC<{ defaultPracticeArea?: string; darkTheme?: boolean }> = ({
+export interface ContactFormProps {
+  defaultPracticeArea?: string;
+  defaultCity?: string;
+  darkTheme?: boolean;
+}
+
+export const ContactForm: React.FC<ContactFormProps> = ({
   defaultPracticeArea = "",
+  defaultCity = "",
   darkTheme = true,
 }) => {
   const [formData, setFormData] = useState<FormData>({
@@ -102,10 +109,14 @@ export const ContactForm: React.FC<{ defaultPracticeArea?: string; darkTheme?: b
     setErrorMessage("");
 
     try {
+      const payload = {
+        ...formData,
+        ...(defaultCity ? { preferredChambers: defaultCity } : {}),
+      };
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(payload),
       });
 
       const data = await response.json();
@@ -197,14 +208,21 @@ export const ContactForm: React.FC<{ defaultPracticeArea?: string; darkTheme?: b
       noValidate
     >
       <div>
-        <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#C6A15B]">
-          GET IN TOUCH
-        </span>
+        <div className="flex items-center justify-between">
+          <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#C6A15B]">
+            GET IN TOUCH
+          </span>
+          {defaultCity && (
+            <span className="text-[9px] uppercase tracking-wider font-semibold px-2 py-0.5 rounded bg-[#C6A15B]/20 text-[#C6A15B] border border-[#C6A15B]/40">
+              {defaultCity}
+            </span>
+          )}
+        </div>
         <h3 className="font-serif-luxury text-2xl sm:text-3xl font-medium mt-1">
           Request a Consultation
         </h3>
         <p className={`text-xs mt-1 ${darkTheme ? "text-white/70" : "text-[#626B76]"}`}>
-          Share a few details and we will get back to you.
+          Share a few details and our advocates will reach out to you.
         </p>
       </div>
 

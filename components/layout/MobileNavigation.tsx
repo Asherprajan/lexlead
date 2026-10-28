@@ -89,6 +89,49 @@ export const MobileNavigation: React.FC<MobileNavigationProps> = ({
                 </Link>
               );
             })}
+
+            {/* City Locations Section */}
+            <div className="pt-3 mt-2 border-t border-[#E8E1D5]">
+              <div className="px-3.5 pb-2 text-[10px] font-bold uppercase tracking-wider text-[#B18A4A]">
+                Chambers Locations
+              </div>
+              <Link
+                href="/lawyers-in-kochi"
+                onClick={onClose}
+                className={cn(
+                  "flex items-center justify-between px-3.5 py-2 rounded-none text-xs font-medium transition-colors",
+                  pathname === "/lawyers-in-kochi"
+                    ? "bg-[#10253D] text-[#F7F5F0]"
+                    : "text-[#10253D] hover:bg-black/5"
+                )}
+              >
+                <div>
+                  <div className="font-semibold">Ernakulam (Kochi)</div>
+                  <div className="text-[10px] text-[#626B76]">Padma Junction • Main Office</div>
+                </div>
+                <span className="text-[9px] uppercase tracking-wider px-1.5 py-0.5 rounded bg-[#C6A15B] text-[#10253D] font-bold">
+                  Main
+                </span>
+              </Link>
+              <Link
+                href="/lawyers-in-trivandrum"
+                onClick={onClose}
+                className={cn(
+                  "flex items-center justify-between px-3.5 py-2 rounded-none text-xs font-medium transition-colors mt-1",
+                  pathname === "/lawyers-in-trivandrum"
+                    ? "bg-[#10253D] text-[#F7F5F0]"
+                    : "text-[#10253D] hover:bg-black/5"
+                )}
+              >
+                <div>
+                  <div className="font-semibold">Thiruvananthapuram</div>
+                  <div className="text-[10px] text-[#626B76]">Vanchiyoor • Branch Office</div>
+                </div>
+                <span className="text-[9px] uppercase tracking-wider px-1.5 py-0.5 rounded bg-[#F7F5F0] border border-[#E8E1D5] text-[#10253D] font-bold">
+                  Branch
+                </span>
+              </Link>
+            </div>
           </nav>
         </div>
 
@@ -108,7 +151,10 @@ export const MobileNavigation: React.FC<MobileNavigationProps> = ({
           <div className="space-y-2 text-xs text-[#626B76]">
             <div className="flex items-start gap-2">
               <MapPin className="w-3.5 h-3.5 text-[#C6A15B] shrink-0 mt-0.5" />
-              <span>Ground Floor, Vinayaka Building, V V Road, Opp. Rainbow Apartments, Vanchiyoor, Thiruvananthapuram, Kerala – 695035</span>
+              <span>
+                <strong>Main Office (Ernakulam):</strong> Padma Junction – 682035 <br />
+                <strong>Branch (Trivandrum):</strong> Vanchiyoor – 695035
+              </span>
             </div>
             <div className="flex items-center gap-2">
               <Mail className="w-3.5 h-3.5 text-[#C6A15B] shrink-0" />

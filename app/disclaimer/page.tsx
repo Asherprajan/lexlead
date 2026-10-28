@@ -31,7 +31,7 @@ export default function DisclaimerPage() {
               Mandatory Regulatory Notice
             </h2>
             <p>
-              Under Rule 36 of the Bar Council of India Rules, advocates and law firms in India are strictly prohibited from soliciting work or advertising in any form. By accessing this website (www.lexlead.in), you acknowledge that you are seeking information voluntarily for your own informational purposes and that there has been no solicitation, invitation, or inducement of any kind.
+              Under Rule 36 of the Bar Council of India Rules, advocates and law firms in India are strictly prohibited from soliciting work or advertising in any form. By accessing this website (www.lexleadlegal.in), you acknowledge that you are seeking information voluntarily for your own informational purposes and that there has been no solicitation, invitation, or inducement of any kind.
             </p>
           </div>
         </div>

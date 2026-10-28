@@ -7,13 +7,30 @@ import { ChambersMap } from "@/components/contact/ChambersMap";
 export const metadata: Metadata = {
   title: "Contact Chambers",
   description:
-    "Contact Lexlead Legal Solutions advocates at our chambers in Vinayaka Building, Vanchiyoor, Thiruvananthapuram, Kerala.",
+    "Contact Lexlead Legal Solutions — main office at Padma Junction, Ernakulam (Kochi) and branch chambers in Vanchiyoor, Thiruvananthapuram, Kerala. Call, email, or fill the enquiry form to schedule a consultation.",
+  keywords: [
+    "contact Lexlead Legal Solutions",
+    "lawyer office Ernakulam",
+    "advocate chambers Kochi",
+    "advocate office Thiruvananthapuram",
+    "legal consultation Kochi contact",
+    "Vanchiyoor advocate office",
+    "Padma Junction law office",
+  ],
+  alternates: {
+    canonical: "/contact",
+  },
+  openGraph: {
+    title: "Contact Lexlead Legal Solutions | Ernakulam & Thiruvananthapuram Chambers",
+    description:
+      "Reach our advocates at Padma Junction, Ernakulam (Kochi) — Principal Chambers — or Vanchiyoor, Thiruvananthapuram — Branch Chambers. Call, email, or submit an enquiry.",
+  },
 };
 
 const FAQS = [
   {
     q: "How are initial consultations conducted?",
-    a: "We offer both in-person conferences at our chambers in Vanchiyoor, Thiruvananthapuram, as well as secure virtual consultations via video conference for non-resident clients.",
+    a: "We offer in-person conferences at both our Main Office in Padma Junction, Ernakulam (Kochi) and our Branch Chambers in Vanchiyoor, Thiruvananthapuram, as well as secure virtual consultations via video conference for non-resident clients.",
   },
   {
     q: "What should I prepare before an initial consultation?",
@@ -29,9 +46,78 @@ const FAQS = [
   },
 ];
 
+const contactSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: FAQS.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.a,
+      },
+    })),
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://lexleadlegal.in/#ernakulam",
+    name: "Lexlead Legal Solutions — Principal Chambers, Ernakulam",
+    url: "https://lexleadlegal.in/contact",
+    telephone: "+917907224126",
+    email: "lexleadlegal@gmail.com",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "2nd Floor, T K Tower, Chittoor Rd, Padma Junction, Pullepady",
+      addressLocality: "Ernakulam",
+      addressRegion: "Kerala",
+      postalCode: "682035",
+      addressCountry: "IN",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 9.9813,
+      longitude: 76.2656,
+    },
+    openingHours: "Mo-Fr 09:30-18:30",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://lexleadlegal.in/#thiruvananthapuram",
+    name: "Lexlead Legal Solutions — Branch Chambers, Thiruvananthapuram",
+    url: "https://lexleadlegal.in/contact",
+    telephone: "+914713161884",
+    email: "lexleadlegal@gmail.com",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Ground Floor, Vinayaka Building, V V Road, Opp. Rainbow Apartments, Vanchiyoor",
+      addressLocality: "Thiruvananthapuram",
+      addressRegion: "Kerala",
+      postalCode: "695035",
+      addressCountry: "IN",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 8.4979,
+      longitude: 76.9529,
+    },
+    openingHours: "Mo-Fr 09:30-18:30",
+  },
+];
+
 export default function ContactPage() {
   return (
-    <main className="flex-1 w-full bg-[#F7F5F0] pt-10 sm:pt-14 pb-20">
+    <>
+      {contactSchema.map((schema, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
+      <main className="flex-1 w-full bg-[#F7F5F0] pt-10 sm:pt-14 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Header */}
         <div className="max-w-3xl mb-12 sm:mb-16">
@@ -42,7 +128,7 @@ export default function ContactPage() {
             Contact Lexlead Legal Solutions
           </h1>
           <p className="mt-5 text-base sm:text-lg text-[#626B76] leading-relaxed">
-            Our chambers are located in Vanchiyoor, adjacent to the District Court Complex in Thiruvananthapuram, Kerala. We provide preliminary assessments for civil, criminal, property, and commercial matters.
+            Our main office is established in Padma Junction, Ernakulam (Kochi) alongside our branch chambers in Vanchiyoor, Thiruvananthapuram. We provide preliminary assessments and strategic litigation counsel for civil, criminal, property, and corporate matters across Kerala.
           </p>
         </div>
 
@@ -51,32 +137,64 @@ export default function ContactPage() {
           {/* Left Column: Chambers Details */}
           <div className="lg:col-span-5 space-y-6">
             <div className="bg-white p-6 sm:p-7 rounded-sm border border-[#E8E1D5] space-y-5">
-              {/* Address */}
-              <div className="flex items-start gap-3.5">
-                <div className="p-2.5 rounded bg-[#F7F5F0] border border-[#E8E1D5] text-[#B18A4A] shrink-0 mt-0.5">
-                  <MapPin className="w-5 h-5" />
+              {/* Chambers Locations */}
+              <div className="space-y-4">
+                {/* Ernakulam Main Office */}
+                <div className="flex items-start gap-3.5">
+                  <div className="p-2.5 rounded bg-[#F7F5F0] border border-[#E8E1D5] text-[#B18A4A] shrink-0 mt-0.5">
+                    <MapPin className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <div className="flex items-center gap-2">
+                      <h3 className="text-xs font-semibold tracking-wider uppercase text-[#B18A4A]">
+                        Ernakulam (Kochi)
+                      </h3>
+                      <span className="text-[9px] uppercase tracking-wider px-1.5 py-0.2 rounded bg-[#C6A15B] text-[#10253D] font-bold">
+                        Main Office
+                      </span>
+                    </div>
+                    <p className="text-xs text-[#626B76] mt-1 leading-relaxed">
+                      2nd Floor, T K Tower, Chittoor Rd, Padma Junction, Pullepady, Kochi, Ernakulam – 682035
+                    </p>
+                    <a
+                      href="https://maps.google.com/?q=Lexlead+Legal+Solutions+TK+Tower+Chittoor+Rd+Padma+Junction+Pullepady+Kochi+Kerala+682035"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-xs text-[#B18A4A] hover:text-[#10253D] mt-1.5 font-medium"
+                    >
+                      <span>Open in Google Maps</span>
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-xs font-semibold tracking-wider uppercase text-[#B18A4A]">
-                    Chambers Address
-                  </h3>
-                  <p className="text-sm font-semibold text-[#10253D] mt-0.5">
-                    LEXLEAD LEGAL SOLUTIONS
-                  </p>
-                  <p className="text-xs text-[#626B76] mt-1 leading-relaxed">
-                    Ground Floor, Vinayaka Building, <br />
-                    V V Road, Opp. Rainbow Apartments, Vanchiyoor, <br />
-                    Thiruvananthapuram, Kerala – 695035
-                  </p>
-                  <a
-                    href="https://maps.google.com/?q=Vinayaka+Building+Vanchiyoor+Thiruvananthapuram+Kerala"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-xs text-[#B18A4A] hover:text-[#10253D] mt-2 font-medium"
-                  >
-                    <span>Open in Google Maps</span>
-                    <ExternalLink className="w-3 h-3" />
-                  </a>
+
+                {/* Trivandrum Branch */}
+                <div className="flex items-start gap-3.5 pt-3.5 border-t border-[#E8E1D5]/70">
+                  <div className="p-2.5 rounded bg-[#F7F5F0] border border-[#E8E1D5] text-[#B18A4A] shrink-0 mt-0.5">
+                    <MapPin className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <div className="flex items-center gap-2">
+                      <h3 className="text-xs font-semibold tracking-wider uppercase text-[#B18A4A]">
+                        Thiruvananthapuram
+                      </h3>
+                      <span className="text-[9px] uppercase tracking-wider px-1.5 py-0.2 rounded bg-[#F7F5F0] border border-[#E8E1D5] text-[#10253D] font-bold">
+                        Branch Office
+                      </span>
+                    </div>
+                    <p className="text-xs text-[#626B76] mt-1 leading-relaxed">
+                      Ground Floor, Vinayaka Building, V V Road, Opp. Rainbow Apartments, Vanchiyoor, Thiruvananthapuram – 695035
+                    </p>
+                    <a
+                      href="https://maps.google.com/?q=Vinayaka+Building+Vanchiyoor+Thiruvananthapuram+Kerala"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-xs text-[#B18A4A] hover:text-[#10253D] mt-1.5 font-medium"
+                    >
+                      <span>Open in Google Maps</span>
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
+                  </div>
                 </div>
               </div>
 
@@ -166,17 +284,17 @@ export default function ContactPage() {
           <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-2">
             <div>
               <p className="text-xs font-semibold tracking-wider uppercase text-[#B18A4A]">
-                COURT DISTRICT & CHAMBERS LOCATION
+                COURT DISTRICTS & CHAMBERS LOCATIONS
               </p>
               <h2 className="font-serif-luxury text-2xl sm:text-3xl font-medium text-[#10253D] mt-1">
-                Find Our Chambers in Vanchiyoor
+                Find Our Chambers in Ernakulam & Thiruvananthapuram
               </h2>
             </div>
             <p className="text-xs text-[#626B76] max-w-md">
-              Located conveniently on V V Road opposite Rainbow Apartments, adjacent to the District Court Complex in Thiruvananthapuram.
+              Toggle between our Main Office at Padma Junction, Ernakulam (Kochi) and our Branch Chambers in Vanchiyoor, Thiruvananthapuram.
             </p>
           </div>
-          <ChambersMap height="h-[360px] sm:h-[420px]" />
+          <ChambersMap height="h-[360px] sm:h-[440px]" defaultBranch="kochi" />
         </div>
 
         {/* FAQs Section */}
@@ -202,6 +320,7 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
-    </main>
+      </main>
+    </>
   );
 }

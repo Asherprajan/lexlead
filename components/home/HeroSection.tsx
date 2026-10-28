@@ -97,17 +97,35 @@ export const HeroSection: React.FC = () => {
                 </div>
 
                 {/* Location Overlay Card at the Bottom */}
-                <div className="location-strip absolute inset-x-0 bottom-0 bg-[#0B1728]/95 border-t border-[#C6A15B]/30 p-3.5 sm:p-4.5 flex items-center gap-3.5 backdrop-blur-md">
-                  <div className="text-[#C6A15B] shrink-0">
-                    <MapPin className="w-5 h-5 stroke-[1.5]" />
-                  </div>
-                  <div className="space-y-0.5">
-                    <div className="eyebrow text-[10px] font-bold tracking-[0.2em] uppercase text-[#C6A15B]">
-                      BASED IN THIRUVANANTHAPURAM
+                <div className="location-strip absolute inset-x-0 bottom-0 bg-[#0B1728]/95 border-t border-[#C6A15B]/30 p-3.5 sm:p-4 backdrop-blur-md">
+                  <div className="flex items-center justify-between gap-3">
+                    <div className="flex items-center gap-2.5">
+                      <div className="text-[#C6A15B] shrink-0">
+                        <MapPin className="w-4 h-4 stroke-[2]" />
+                      </div>
+                      <div>
+                        <div className="eyebrow text-[10px] font-bold tracking-[0.18em] uppercase text-[#C6A15B]">
+                          ERNAKULAM (MAIN) & THIRUVANANTHAPURAM
+                        </div>
+                        <p className="text-xs text-[#F7F5F0] leading-snug font-normal">
+                          Padma Junction, Kochi & Vanchiyoor, Trivandrum
+                        </p>
+                      </div>
                     </div>
-                    <p className="text-xs text-[#F7F5F0] leading-snug font-normal">
-                      Vanchiyoor, Kerala · Guidance with perspective.
-                    </p>
+                    <div className="hidden sm:flex items-center gap-1.5 shrink-0">
+                      <Link
+                        href="/lawyers-in-kochi"
+                        className="text-[10px] uppercase tracking-wider font-semibold px-2 py-1 bg-white/10 hover:bg-[#C6A15B] hover:text-[#10253D] text-white rounded transition-colors"
+                      >
+                        Kochi
+                      </Link>
+                      <Link
+                        href="/lawyers-in-trivandrum"
+                        className="text-[10px] uppercase tracking-wider font-semibold px-2 py-1 bg-white/10 hover:bg-[#C6A15B] hover:text-[#10253D] text-white rounded transition-colors"
+                      >
+                        Trivandrum
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>

@@ -8,7 +8,22 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 export const metadata: Metadata = {
   title: "Our Approach",
   description:
-    "Discover the structured legal methodology at Lexlead Legal Solutions: from preliminary intake and documentary analysis to principled advocacy and client communication.",
+    "Discover the structured legal methodology at Lexlead Legal Solutions — from preliminary intake and documentary analysis to principled advocacy. Serving clients in Ernakulam (Kochi) and Thiruvananthapuram, Kerala.",
+  keywords: [
+    "legal methodology Kerala",
+    "lawyer consultation process Kochi",
+    "advocate approach Thiruvananthapuram",
+    "how to hire a lawyer Kerala",
+    "Lexlead Legal Solutions approach",
+  ],
+  alternates: {
+    canonical: "/our-approach",
+  },
+  openGraph: {
+    title: "Our Approach | Lexlead Legal Solutions — Advocates in Kerala",
+    description:
+      "Structured legal methodology: from intake and documentary analysis to court advocacy. Lexlead Legal Solutions — Ernakulam (Kochi) & Thiruvananthapuram.",
+  },
 };
 
 const DETAILED_STAGES = [
