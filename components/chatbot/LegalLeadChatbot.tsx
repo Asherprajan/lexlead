@@ -456,8 +456,8 @@ export function LegalLeadChatbot() {
 
   return (
     <>
-      {/* Floating Trigger Button */}
-      <div className="fixed bottom-6 right-6 z-50 flex items-center gap-3">
+      {/* Floating Trigger Button: Positioned above MobileConversionBar on mobile with iOS safe area clearance */}
+      <div className="fixed bottom-[84px] sm:bottom-6 right-3 sm:right-6 z-50 flex items-center gap-2.5 sm:gap-3">
         {/* Subtle Welcome Tooltip Badge */}
         {showNotificationBadge && !isOpen && (
           <div
@@ -484,14 +484,14 @@ export function LegalLeadChatbot() {
         {/* Floating Chat Trigger Button */}
         <button
           onClick={() => (isOpen ? handleClose() : handleOpen())}
-          className="relative w-14 h-14 rounded-full bg-[#10253D] hover:bg-[#1A365D] text-white shadow-2xl border-2 border-[#C6A15B] flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95 group focus:outline-none focus:ring-4 focus:ring-[#C6A15B]/30"
+          className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#10253D] hover:bg-[#1A365D] text-white shadow-2xl border-2 border-[#C6A15B] flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95 group focus:outline-none focus:ring-4 focus:ring-[#C6A15B]/30"
           aria-label={isOpen ? "Close Legal Assistant" : "Open Legal Assistant"}
         >
           {isOpen ? (
-            <X className="w-6 h-6 text-[#C6A15B] transition-transform group-hover:rotate-90 duration-200" />
+            <X className="w-5 h-5 sm:w-6 sm:h-6 text-[#C6A15B] transition-transform group-hover:rotate-90 duration-200" />
           ) : (
             <>
-              <Scale className="w-6 h-6 text-[#C6A15B] group-hover:scale-110 transition-transform" />
+              <Scale className="w-5 h-5 sm:w-6 sm:h-6 text-[#C6A15B] group-hover:scale-110 transition-transform" />
               <span className="absolute -top-1 -right-1 w-4 h-4 bg-[#C6A15B] text-[#10253D] rounded-full text-[10px] font-bold flex items-center justify-center shadow-md">
                 1
               </span>
@@ -502,7 +502,7 @@ export function LegalLeadChatbot() {
 
       {/* Interactive Chat Window Modal */}
       {isOpen && (
-        <div className="fixed bottom-24 right-4 sm:right-6 z-50 w-[94vw] sm:w-[410px] max-w-[420px] h-[600px] max-h-[85vh] bg-[#F7F5F0] rounded-sm shadow-2xl border border-[#E8E1D5] flex flex-col overflow-hidden animate-in fade-in slide-in-from-bottom-5 duration-200">
+        <div className="fixed bottom-[88px] sm:bottom-24 right-2 sm:right-6 z-50 w-[95vw] sm:w-[410px] max-w-[420px] h-[550px] sm:h-[600px] max-h-[80vh] sm:max-h-[85vh] bg-[#F7F5F0] rounded-sm shadow-2xl border border-[#E8E1D5] flex flex-col overflow-hidden animate-in fade-in slide-in-from-bottom-5 duration-200">
           {/* Chat Header */}
           <div className="bg-[#10253D] text-white p-4 flex items-center justify-between border-b border-[#C6A15B]/40 shrink-0">
             <div className="flex items-center gap-3">

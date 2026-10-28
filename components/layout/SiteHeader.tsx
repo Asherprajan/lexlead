@@ -16,22 +16,22 @@ export const SiteHeader: React.FC = () => {
   return (
     <>
       {/* Top Conversion Bar: Free Case Evaluation Hook */}
-      <div className="bg-[#10253D] text-white py-2 px-4 border-b border-[#C6A15B]/30 text-[11px] sm:text-xs">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-1.5 sm:gap-4">
-          <div className="flex items-center gap-2 text-center sm:text-left">
-            <span className="w-2 h-2 rounded-full bg-[#C6A15B] animate-pulse shrink-0 hidden sm:inline-block" />
-            <span className="text-[#F7F5F0]">
-              Facing an active legal dispute or court notice in Kerala?{" "}
-              <strong className="text-[#C6A15B] font-semibold">Claim a Free 15-Minute Case Assessment.</strong>
+      <div className="bg-[#10253D] text-white py-1.5 sm:py-2 px-3 sm:px-4 border-b border-[#C6A15B]/30 text-[10px] sm:text-xs">
+        <div className="max-w-7xl mx-auto flex items-center justify-between gap-2">
+          <div className="flex items-center gap-1.5 sm:gap-2 truncate">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#C6A15B] animate-pulse shrink-0" />
+            <span className="text-[#F7F5F0] truncate">
+              <span className="hidden sm:inline">Facing an active legal dispute in Kerala? </span>
+              <strong className="text-[#C6A15B] font-semibold">Free 15-Min Case Assessment</strong>
             </span>
           </div>
 
-          <div className="flex items-center gap-3 shrink-0">
+          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
             <Link
               href="/contact"
-              className="font-semibold text-[#C6A15B] hover:text-white transition-colors underline underline-offset-2 flex items-center gap-1"
+              className="font-semibold text-[#C6A15B] hover:text-white transition-colors underline underline-offset-2 flex items-center gap-1 whitespace-nowrap"
             >
-              <span>Claim Free Evaluation</span>
+              <span>Claim Free<span className="hidden sm:inline"> Evaluation</span></span>
               <ArrowRight className="w-3 h-3" />
             </Link>
             <span className="text-white/30 hidden sm:inline">|</span>
