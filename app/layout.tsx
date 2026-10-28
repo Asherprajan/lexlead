@@ -2,6 +2,8 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
+import { LegalLeadChatbot } from "@/components/chatbot/LegalLeadChatbot";
+import { MobileConversionBar } from "@/components/layout/MobileConversionBar";
 
 export const viewport: Viewport = {
   themeColor: "#F7F5F0",
@@ -129,6 +131,8 @@ export default function RootLayout({
         <SiteHeader />
         <div className="flex-1 flex flex-col">{children}</div>
         <SiteFooter />
+        <LegalLeadChatbot />
+        <MobileConversionBar />
       </body>
     </html>
   );

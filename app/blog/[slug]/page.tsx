@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ArrowRight, Clock, Calendar, CheckCircle2, HelpCircle, MapPin, Scale, Shield, Sparkles, Building2, ExternalLink } from "lucide-react";
+import { ArrowLeft, ArrowRight, Clock, Calendar, CheckCircle2, HelpCircle, MapPin, Scale, Shield, Sparkles, Building2, ExternalLink, Phone } from "lucide-react";
 import { BLOG_POSTS, BlogPost } from "@/lib/data/blog-posts";
 import { ContactForm } from "@/components/contact/ContactForm";
 
@@ -233,37 +233,59 @@ export default async function BlogPostDetailPage({ params }: PageProps) {
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
 
-          {/* Practice Area & Chambers Callout */}
-          <div className="my-10 bg-[#10253D] text-white p-6 sm:p-8 rounded-sm space-y-4">
-            <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#C6A15B]">
-              CHAMBERS REPRESENTATION
-            </span>
-            <h2 className="font-serif-luxury text-2xl font-medium">
-              Need Legal Counsel in {post.relatedPracticeAreaName}?
+          {/* In-Article High-Converting Free Case Assessment Card */}
+          <div className="my-10 bg-[#10253D] text-white p-6 sm:p-8 rounded-sm space-y-4 border border-[#C6A15B]/40 shadow-xl">
+            <div className="flex items-center justify-between">
+              <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#C6A15B] flex items-center gap-1.5">
+                <Sparkles className="w-3.5 h-3.5 text-[#C6A15B]" />
+                <span>FREE 15-MINUTE CONFIDENTIAL CASE ASSESSMENT</span>
+              </span>
+              <span className="hidden sm:inline-block text-[9px] uppercase tracking-wider px-2 py-0.5 rounded bg-white/10 text-[#C6A15B] font-semibold border border-white/20">
+                Kerala High Court & District Practice
+              </span>
+            </div>
+
+            <h2 className="font-serif-luxury text-2xl sm:text-3xl font-medium leading-snug">
+              Have an Active Matter Involving {post.relatedPracticeAreaName}?
             </h2>
+
             <p className="text-xs sm:text-sm text-[#AAB4C3] leading-relaxed">
-              Our advocates appear before the Kerala High Court (Ernakulam), District Courts, and Family Courts across Ernakulam and Thiruvananthapuram. Contact us to schedule an in-person or virtual chamber assessment.
+              Facing an impending court notice, FIR, property title risk, or limitation deadline? Speak directly with an advocate from our Ernakulam (Kochi) or Thiruvananthapuram chambers. We will scrutinize your case facts and outline statutory next steps with zero financial obligation.
             </p>
-            <div className="flex flex-wrap gap-3 pt-2">
-              <Link
-                href={`/practice-areas/${post.relatedPracticeAreaSlug}`}
-                className="px-4 py-2 bg-[#C6A15B] text-[#10253D] font-semibold text-xs rounded-sm hover:bg-[#B18A4A] transition-colors inline-flex items-center gap-1.5"
+
+            <div className="flex flex-wrap items-center gap-3 pt-2">
+              <a
+                href="#consultation-form"
+                className="px-5 py-2.5 bg-[#C6A15B] text-[#10253D] font-bold text-xs uppercase tracking-wider rounded-sm hover:bg-[#B18A4A] transition-colors inline-flex items-center gap-1.5 shadow-md"
               >
-                <span>View {post.relatedPracticeAreaName} Services</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </Link>
-              <Link
-                href="/lawyers-in-kochi"
-                className="px-4 py-2 bg-white/10 text-white font-medium text-xs rounded-sm hover:bg-white/20 transition-colors inline-flex items-center gap-1.5 border border-white/20"
+                <span>Claim Free Assessment Below</span>
+                <ArrowRight className="w-3.5 h-3.5 text-[#10253D]" />
+              </a>
+
+              <a
+                href={`https://wa.me/917907224126?text=${encodeURIComponent(
+                  `Hello Lexlead Legal Solutions, I read your article "${post.title}" and would like a Free 15-Minute Case Assessment.`
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2.5 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-semibold text-xs tracking-wider uppercase rounded-sm transition-colors inline-flex items-center gap-1.5"
               >
-                <span>Ernakulam Chambers</span>
-              </Link>
-              <Link
-                href="/lawyers-in-trivandrum"
-                className="px-4 py-2 bg-white/10 text-white font-medium text-xs rounded-sm hover:bg-white/20 transition-colors inline-flex items-center gap-1.5 border border-white/20"
+                <span>Message on WhatsApp</span>
+              </a>
+
+              <a
+                href="tel:7907224126"
+                className="px-4 py-2.5 bg-white/10 text-white font-medium text-xs tracking-wider uppercase rounded-sm hover:bg-white/20 transition-colors inline-flex items-center gap-1.5 border border-white/20"
               >
-                <span>Trivandrum Chambers</span>
-              </Link>
+                <Phone className="w-3.5 h-3.5 text-[#C6A15B]" />
+                <span>Call: +91 79072 24126</span>
+              </a>
+            </div>
+
+            <div className="flex items-center gap-4 text-[10px] text-white/60 pt-2 border-t border-white/10">
+              <span>✓ Protected by Attorney-Client Privilege</span>
+              <span>✓ Zero Financial Obligation</span>
+              <span>✓ 24-Hour Advocate Callback</span>
             </div>
           </div>
 
@@ -297,16 +319,17 @@ export default async function BlogPostDetailPage({ params }: PageProps) {
           )}
 
           {/* In-Article Consultation Form */}
-          <section className="my-10 bg-white p-6 sm:p-8 rounded-sm border border-[#E8E1D5] shadow-sm">
+          <section id="consultation-form" className="my-10 bg-white p-6 sm:p-8 rounded-sm border border-[#E8E1D5] shadow-sm">
             <div className="max-w-xl mb-6">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-[#B18A4A]">
-                LEGAL CONSULTATION
+              <span className="text-[10px] font-bold uppercase tracking-wider text-[#B18A4A] flex items-center gap-1.5">
+                <Sparkles className="w-3.5 h-3.5 text-[#C6A15B]" />
+                <span>CONFIDENTIAL EVALUATION</span>
               </span>
-              <h2 className="font-serif-luxury text-2xl font-medium text-[#10253D] mt-1">
-                Consult an Advocate on This Subject
+              <h2 className="font-serif-luxury text-2xl sm:text-3xl font-medium text-[#10253D] mt-1">
+                Request a Free 15-Minute Case Assessment
               </h2>
               <p className="text-xs sm:text-sm text-[#626B76] mt-1">
-                Fill in your details for a confidential discussion regarding your legal requirements in Kerala.
+                Share a few brief details below. An advocate from our chambers will evaluate your query and contact you confidentially.
               </p>
             </div>
             <ContactForm defaultPracticeArea={post.relatedPracticeAreaName} darkTheme={true} />

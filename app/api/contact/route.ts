@@ -10,7 +10,8 @@ export const contactFormSchema = z.object({
   email: z
     .string()
     .email("Please enter a valid email address")
-    .max(120, "Email must not exceed 120 characters"),
+    .or(z.literal(""))
+    .optional(),
   phone: z
     .string()
     .min(8, "Please enter a valid phone number with area code")
@@ -19,9 +20,10 @@ export const contactFormSchema = z.object({
   practiceArea: z
     .string()
     .min(1, "Please select an area of practice"),
+  preferredChambers: z.string().optional(),
   message: z
     .string()
-    .min(10, "Please provide a brief outline of at least 10 characters")
+    .min(6, "Please provide a brief outline of your enquiry")
     .max(1500, "Message should not exceed 1500 characters"),
   privacyConsent: z
     .boolean()
@@ -103,6 +105,7 @@ export async function POST(req: NextRequest) {
       email: data.email,
       phone: data.phone,
       practiceArea: data.practiceArea,
+      preferredChambers: data.preferredChambers,
       messageLength: data.message.length,
       timestamp: new Date().toISOString(),
     });

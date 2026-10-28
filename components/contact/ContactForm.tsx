@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { ArrowRight, CheckCircle2, AlertCircle, Loader2, ShieldCheck, Lock } from "lucide-react";
+import { ArrowRight, CheckCircle2, AlertCircle, Loader2, ShieldCheck, Lock, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 
 interface FormData {
@@ -209,8 +209,9 @@ export const ContactForm: React.FC<ContactFormProps> = ({
     >
       <div>
         <div className="flex items-center justify-between">
-          <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#C6A15B]">
-            GET IN TOUCH
+          <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#C6A15B] flex items-center gap-1.5">
+            <Sparkles className="w-3.5 h-3.5 text-[#C6A15B]" />
+            <span>FREE 15-MIN PRELIMINARY CASE ASSESSMENT</span>
           </span>
           {defaultCity && (
             <span className="text-[9px] uppercase tracking-wider font-semibold px-2 py-0.5 rounded bg-[#C6A15B]/20 text-[#C6A15B] border border-[#C6A15B]/40">
@@ -219,10 +220,10 @@ export const ContactForm: React.FC<ContactFormProps> = ({
           )}
         </div>
         <h3 className="font-serif-luxury text-2xl sm:text-3xl font-medium mt-1">
-          Request a Consultation
+          Request a Confidential Evaluation
         </h3>
         <p className={`text-xs mt-1 ${darkTheme ? "text-white/70" : "text-[#626B76]"}`}>
-          Share a few details and our advocates will reach out to you.
+          Speak directly with an advocate at our Ernakulam or Thiruvananthapuram chambers. 100% confidential • Zero financial obligation.
         </p>
       </div>
 
@@ -378,23 +379,35 @@ export const ContactForm: React.FC<ContactFormProps> = ({
           type="submit"
           variant="primary"
           size="lg"
-          className="w-full justify-center"
+          className="w-full justify-center bg-[#C6A15B] hover:bg-[#B18A4A] text-[#10253D] font-bold text-xs uppercase tracking-wider shadow-lg"
           disabled={status === "submitting"}
           icon={
             status === "submitting" ? (
-              <Loader2 className="w-4 h-4 animate-spin" />
+              <Loader2 className="w-4 h-4 animate-spin text-[#10253D]" />
             ) : (
-              <ArrowRight className="w-4 h-4 stroke-[2]" />
+              <ArrowRight className="w-4 h-4 stroke-[2.5] text-[#10253D]" />
             )
           }
         >
-          {status === "submitting" ? "Transmitting..." : "Send Enquiry"}
+          {status === "submitting" ? "Transmitting..." : "Claim Free Case Assessment"}
         </Button>
       </div>
 
-      <div className="flex items-center justify-center gap-1.5 text-[10px] text-white/50 pt-1">
-        <ShieldCheck className="w-3.5 h-3.5 text-[#C6A15B]" />
-        <span>Confidential Preliminary Intake • Advocates Act Compliant</span>
+      <div className="flex flex-wrap items-center justify-center gap-3 text-[10px] text-white/70 pt-1">
+        <span className="flex items-center gap-1">
+          <span className="text-[#C6A15B] font-bold">✓</span> Zero Financial Obligation
+        </span>
+        <span className="flex items-center gap-1">
+          <span className="text-[#C6A15B] font-bold">✓</span> Attorney-Client Privilege
+        </span>
+        <span className="flex items-center gap-1">
+          <span className="text-[#C6A15B] font-bold">✓</span> Same-Day Callback
+        </span>
+      </div>
+
+      <div className="flex items-center justify-center gap-1.5 text-[9px] text-white/40 pt-0.5">
+        <ShieldCheck className="w-3 h-3 text-[#C6A15B]" />
+        <span>Advocates Act Compliant • Preliminary Case Assessment</span>
       </div>
     </form>
   );

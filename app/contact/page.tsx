@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import type { Metadata } from "next";
-import { MapPin, Mail, Phone, Clock, ExternalLink, ShieldCheck, HelpCircle } from "lucide-react";
+import { MapPin, Mail, Phone, Clock, ExternalLink, ShieldCheck, HelpCircle, Sparkles } from "lucide-react";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { ChambersMap } from "@/components/contact/ChambersMap";
 
@@ -121,14 +121,15 @@ export default function ContactPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Header */}
         <div className="max-w-3xl mb-12 sm:mb-16">
-          <span className="text-[11px] font-semibold tracking-[0.2em] uppercase text-[#B18A4A]">
-            CHAMBERS REGISTRY
+          <span className="text-[11px] font-semibold tracking-[0.2em] uppercase text-[#B18A4A] flex items-center gap-2">
+            <Sparkles className="w-4 h-4 text-[#C6A15B]" />
+            <span>FREE PRELIMINARY CASE ASSESSMENT • DIRECT ADVOCATE EVALUATION</span>
           </span>
           <h1 className="font-serif-luxury text-4xl sm:text-5xl lg:text-6xl font-medium text-[#10253D] mt-3 leading-tight">
-            Contact Lexlead Legal Solutions
+            Schedule a Confidential Case Evaluation
           </h1>
           <p className="mt-5 text-base sm:text-lg text-[#626B76] leading-relaxed">
-            Our main office is established in Padma Junction, Ernakulam (Kochi) alongside our branch chambers in Vanchiyoor, Thiruvananthapuram. We provide preliminary assessments and strategic litigation counsel for civil, criminal, property, and corporate matters across Kerala.
+            Discuss your legal matter directly with practicing advocates at our <strong>Ernakulam (Kochi)</strong> main chambers or <strong>Thiruvananthapuram</strong> branch. We provide an initial 15-minute statutory assessment of your documents and court options with <strong>zero financial obligation</strong>.
           </p>
         </div>
 
