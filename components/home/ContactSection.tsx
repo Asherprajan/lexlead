@@ -95,13 +95,17 @@ export const ContactSection: React.FC = () => {
                         Office
                       </span>
                     </a>
-                    <div className="flex items-center gap-2 text-xs text-[#626B76]">
+                    <div className="flex flex-wrap items-center gap-2 text-xs text-[#626B76]">
                       <a href="tel:7907224126" className="hover:text-[#B18A4A] text-sm text-[#10253D]">
                         +91 79072 24126
                       </a>
                       <span className="text-[#AAB4C3]">/</span>
                       <a href="tel:9567653357" className="hover:text-[#B18A4A] text-sm text-[#10253D]">
                         +91 95676 53357
+                      </a>
+                      <span className="text-[#AAB4C3]">/</span>
+                      <a href="tel:9747395967" className="hover:text-[#B18A4A] text-sm text-[#10253D]">
+                        +91 97473 95967
                       </a>
                     </div>
                   </div>
@@ -118,8 +122,8 @@ export const ContactSection: React.FC = () => {
                     Email Communications
                   </h3>
                   <p className="mt-1 text-sm font-medium text-[#10253D]">
-                    <a href="mailto:lexleadlegal@gmail.com" className="hover:text-[#B18A4A]">
-                      lexleadlegal@gmail.com
+                    <a href="mailto:info@lexleadlegal.in" className="hover:text-[#B18A4A]">
+                      info@lexleadlegal.in
                     </a>
                   </p>
                 </div>

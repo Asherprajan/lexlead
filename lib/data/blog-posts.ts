@@ -622,8 +622,8 @@ export const BLOG_POSTS: BlogPost[] = [
       chambers: "Ernakulam & Thiruvananthapuram Chambers",
     },
     coverImage: "/images/hero-reception.jpg",
-    relatedPracticeAreaSlug: "corporate-and-commercial-law",
-    relatedPracticeAreaName: "Corporate & Commercial Law",
+    relatedPracticeAreaSlug: "constitutional-and-writ-matters",
+    relatedPracticeAreaName: "Constitutional and Writ Matters",
     jurisdiction: "Kerala High Court (Ernakulam)",
     keywords: [
       "file writ petition Kerala High Court",

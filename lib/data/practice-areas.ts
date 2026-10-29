@@ -105,4 +105,36 @@ export const PRACTICE_AREAS: PracticeArea[] = [
       "Independent legal review of agreements drafted by opposing parties",
     ],
   },
+  {
+    slug: "constitutional-and-writ-matters",
+    title: "Constitutional and Writ Matters",
+    shortDescription: "Extraordinary writ remedies and fundamental rights enforcement before the High Court of Kerala under Articles 226 and 227.",
+    longDescription:
+      "The High Court of Kerala exercises supervisory and plenary constitutional jurisdiction under Articles 226 and 227 of the Constitution of India. Our chambers provide strategic counsel and articulate courtroom advocacy in invoking extraordinary prerogative writ remedies—securing prompt interim protection against arbitrary state action, statutory excess, and infringements of fundamental rights.",
+    iconName: "Scale",
+    image: "/images/hero-chamber.jpg",
+    scope: [
+      "Writ Petitions (Civil & Criminal) under Article 226 of the Constitution of India",
+      "Prerogative Writs: Mandamus, Certiorari, Prohibition, Quo Warranto, and Habeas Corpus",
+      "Emergency interim stays, status quo directions, and mandatory orders against government bodies",
+      "Constitutional challenges to statutory enactments, administrative orders, and municipal rules",
+      "Supervisory jurisdiction and appellate proceedings before the Division Bench under Article 227",
+    ],
+  },
+  {
+    slug: "administrative-matters",
+    title: "Administrative Matters",
+    shortDescription: "Representation in government service disputes, administrative tribunals, and regulatory proceedings.",
+    longDescription:
+      "Administrative law governs the exercise of public authority, statutory discretion, and government employer-employee relationships. We represent civil servants, public sector personnel, educational institutions, and citizens before the Central Administrative Tribunal (CAT), Kerala Administrative Tribunal (KAT), and state regulatory authorities in Thiruvananthapuram and Ernakulam.",
+    iconName: "Landmark",
+    image: "/images/editorial-desk.jpg",
+    scope: [
+      "Representation before the Central Administrative Tribunal (CAT) and Kerala Administrative Tribunal (KAT)",
+      "Service jurisprudence: promotion disputes, disciplinary inquiries, suspensions, and seniority conflicts",
+      "Pensions, gratuity, voluntary retirement benefits, and terminal settlement adjudications",
+      "Right to Information (RTI) appeals and regulatory compliance before State Commissions",
+      "Administrative representations to Government Secretariats, District Collectors, and statutory boards",
+    ],
+  },
 ];

@@ -99,8 +99,8 @@ const kochiSchema = {
   "@type": "LegalService",
   name: "Lexlead Legal Solutions — Principal Chambers, Ernakulam (Kochi)",
   url: "https://lexleadlegal.in/lawyers-in-kochi",
-  telephone: ["+917907224126", "+919567653357"],
-  email: "lexleadlegal@gmail.com",
+  telephone: ["+917907224126", "+919567653357", "+919747395967"],
+  email: "info@lexleadlegal.in",
   description:
     "Experienced advocates in Kochi (Ernakulam) offering civil litigation, criminal law, property disputes, family law, and corporate legal services from principal chambers at Padma Junction.",
   address: {
@@ -282,15 +282,17 @@ export default function LawyersInKochiPage() {
               </div>
               <div className="flex items-center gap-3 text-sm text-[#AAB4C3]">
                 <Phone className="w-4 h-4 text-[#C6A15B] shrink-0" />
-                <div>
+                <div className="flex flex-wrap items-center">
                   <a href="tel:7907224126" className="hover:text-white">+91 79072 24126</a>
                   <span className="mx-2 text-[#AAB4C3]/50">/</span>
                   <a href="tel:9567653357" className="hover:text-white">+91 95676 53357</a>
+                  <span className="mx-2 text-[#AAB4C3]/50">/</span>
+                  <a href="tel:9747395967" className="hover:text-white">+91 97473 95967</a>
                 </div>
               </div>
               <div className="flex items-center gap-3 text-sm text-[#AAB4C3]">
                 <Mail className="w-4 h-4 text-[#C6A15B] shrink-0" />
-                <a href="mailto:lexleadlegal@gmail.com" className="hover:text-white">lexleadlegal@gmail.com</a>
+                <a href="mailto:info@lexleadlegal.in" className="hover:text-white">info@lexleadlegal.in</a>
               </div>
             </div>
             <div className="flex flex-col gap-3">

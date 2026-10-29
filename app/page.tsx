@@ -20,8 +20,8 @@ const legalServiceSchema = {
   description:
     "Lexlead Legal Solutions is an advocacy practice with principal chambers at Padma Junction, Ernakulam (Kochi) and branch chambers in Vanchiyoor, Thiruvananthapuram, Kerala. We offer expert legal counsel in civil litigation, criminal law, property disputes, family law, and corporate advisory.",
   priceRange: "₹₹",
-  email: "lexleadlegal@gmail.com",
-  telephone: ["+914713161884", "+917907224126", "+919567653357"],
+  email: "info@lexleadlegal.in",
+  telephone: ["+914713161884", "+917907224126", "+919567653357", "+919747395967"],
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
@@ -117,8 +117,8 @@ const legalServiceSchema = {
       "@type": "LocalBusiness",
       "@id": "https://lexleadlegal.in/#ernakulam",
       name: "Lexlead Legal Solutions — Principal Chambers, Ernakulam",
-      telephone: "+917907224126",
-      email: "lexleadlegal@gmail.com",
+      telephone: ["+917907224126", "+919567653357", "+919747395967"],
+      email: "info@lexleadlegal.in",
       address: {
         "@type": "PostalAddress",
         streetAddress: "2nd Floor, T K Tower, Chittoor Rd, Padma Junction, Pullepady",
@@ -140,7 +140,7 @@ const legalServiceSchema = {
       "@id": "https://lexleadlegal.in/#thiruvananthapuram",
       name: "Lexlead Legal Solutions — Branch Chambers, Thiruvananthapuram",
       telephone: "+914713161884",
-      email: "lexleadlegal@gmail.com",
+      email: "info@lexleadlegal.in",
       address: {
         "@type": "PostalAddress",
         streetAddress:

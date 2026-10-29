@@ -2,7 +2,7 @@
 
 import React, { useState, useMemo } from "react";
 import Link from "next/link";
-import { Clock, ArrowRight, Search, Scale, Sparkles, Filter } from "lucide-react";
+import { Clock, ArrowRight, Search, Scale, Filter } from "lucide-react";
 import type { BlogPost } from "@/lib/data/blog-posts";
 
 interface BlogArticlesArchiveProps {

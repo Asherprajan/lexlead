@@ -5,7 +5,6 @@ import Link from "next/link";
 import {
   ArrowRight,
   Phone,
-  Sparkles,
   ShieldCheck,
   FileSearch,
   Clock,
@@ -43,7 +42,7 @@ export const ConsultationCTA: React.FC = () => {
         email: `client-${formData.phone.replace(/[^0-9]/g, "")}@consultation.lexleadlegal.in`,
         practiceArea: formData.practiceArea,
         preferredChambers: formData.preferredChambers,
-        message: `Priority Free 15-Minute Case Assessment requested via Homepage CTA for ${formData.practiceArea} at ${formData.preferredChambers} chambers.`,
+        message: `Priority Case Consultation requested via Homepage CTA for ${formData.practiceArea} at ${formData.preferredChambers} chambers.`,
         privacyConsent: true,
       };
 
@@ -60,7 +59,7 @@ export const ConsultationCTA: React.FC = () => {
         setReferenceId(data.referenceId || `LEX-${Date.now().toString(36).toUpperCase()}`);
       } else {
         setStatus("error");
-        setErrorMessage(data.error || "Unable to submit assessment request. Please call our chambers directly.");
+        setErrorMessage(data.error || "Unable to submit consultation request. Please call our chambers directly.");
       }
     } catch {
       setStatus("error");
@@ -96,14 +95,14 @@ export const ConsultationCTA: React.FC = () => {
             <h2 className="font-serif-luxury text-3xl sm:text-4xl lg:text-5xl font-medium text-white leading-tight">
               Speak Directly With Our Advocates.{" "}
               <span className="italic font-normal text-[#C6A15B] block sm:inline">
-                Free 15-Minute
+                Chambers Legal
               </span>{" "}
-              Case Assessment.
+              Consultation.
             </h2>
 
             {/* Subtitle */}
             <p className="text-sm sm:text-base text-[#AAB4C3] max-w-2xl leading-relaxed">
-              Before filing in court, responding to adverse notices, or signing agreements, get a confidential statutory appraisal from our practicing advocates in Kochi and Trivandrum. Zero financial obligation.
+              Before filing in court, responding to adverse notices, or signing agreements, get a confidential statutory appraisal from our practicing advocates in Kochi and Trivandrum.
             </p>
 
             {/* 4 Deliverables (2x2 Luxury Grid) */}
@@ -161,11 +160,11 @@ export const ConsultationCTA: React.FC = () => {
               <span>•</span>
               <span className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-3.5 h-3.5 text-[#C6A15B]" />
-                <span>Zero Financial Obligation</span>
+                <span>Direct Advocate Review</span>
               </span>
               <span>•</span>
               <span className="flex items-center gap-1.5">
-                <Sparkles className="w-3.5 h-3.5 text-[#C6A15B]" />
+                <Clock className="w-3.5 h-3.5 text-[#C6A15B]" />
                 <span>Same-Day Callback</span>
               </span>
             </div>
@@ -186,7 +185,7 @@ export const ConsultationCTA: React.FC = () => {
 
                   <div className="space-y-1.5">
                     <span className="text-[10px] uppercase tracking-widest text-[#B18A4A] font-bold">
-                      ASSESSMENT REQUEST CONFIRMED
+                      CONSULTATION REQUEST CONFIRMED
                     </span>
                     <h3 className="font-serif-luxury text-2xl font-medium text-[#10253D]">
                       Thank You, {formData.fullName}.
@@ -212,7 +211,7 @@ export const ConsultationCTA: React.FC = () => {
                   <div className="space-y-2 pt-2">
                     <a
                       href={`https://wa.me/917907224126?text=${encodeURIComponent(
-                        `Hello Lexlead Legal Solutions, I submitted Assessment Request [${referenceId}] regarding ${formData.practiceArea} for ${formData.fullName}.`
+                        `Hello Lexlead Legal Solutions, I submitted Consultation Request [${referenceId}] regarding ${formData.practiceArea} for ${formData.fullName}.`
                       )}`}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -236,14 +235,14 @@ export const ConsultationCTA: React.FC = () => {
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
                     <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#B18A4A] flex items-center gap-1.5">
-                      <Sparkles className="w-3.5 h-3.5 text-[#C6A15B]" />
+                      <ShieldCheck className="w-3.5 h-3.5 text-[#C6A15B]" />
                       <span>CONFIDENTIAL INTAKE DESK</span>
                     </span>
                     <h3 className="font-serif-luxury text-2xl font-medium text-[#10253D] mt-1">
-                      Book Your Free 15-Min Assessment
+                      Schedule Case Consultation
                     </h3>
                     <p className="text-xs text-[#626B76] mt-0.5">
-                      Receive an initial review of your facts from practicing advocates.
+                      Receive professional review of your case facts from practicing advocates.
                     </p>
                   </div>
 
@@ -265,8 +264,9 @@ export const ConsultationCTA: React.FC = () => {
                     >
                       <option value="Property and Real Estate Law">Property Due Diligence / Land Dispute</option>
                       <option value="Criminal Law">Anticipatory Bail / Criminal Defense (BNSS)</option>
+                      <option value="Constitutional and Writ Matters">Constitutional & Writ Matters (High Court Art 226 / 227)</option>
+                      <option value="Administrative Matters">Administrative Matters (KAT / CAT / Service Disputes)</option>
                       <option value="Corporate and Commercial Law">Cyber Crime / Bank Account Freeze (Lien Removal)</option>
-                      <option value="Constitutional and High Court Practice">Kerala High Court Writ / Appeal (Art 226)</option>
                       <option value="Family and Matrimonial Law">Mutual Consent Divorce / Family Court</option>
                       <option value="Civil Litigation">Civil Suit / Caveat / Cheque Bounce (Sec 138)</option>
                       <option value="Corporate and Commercial Law">NCLT Kochi Corporate Insolvency (IBC)</option>
@@ -348,7 +348,7 @@ export const ConsultationCTA: React.FC = () => {
                       </>
                     ) : (
                       <>
-                        <span>Claim Free Case Assessment</span>
+                        <span>Schedule Case Consultation</span>
                         <ArrowRight className="w-4 h-4 text-[#C6A15B]" />
                       </>
                     )}
@@ -359,7 +359,7 @@ export const ConsultationCTA: React.FC = () => {
                     <span>Prefer direct call?</span>
                     <div className="flex items-center gap-3">
                       <a
-                        href="https://wa.me/917907224126?text=Hello%20Lexlead%20Legal%20Solutions%2C%20I%20would%20like%20to%20request%20a%20Free%2015-Minute%20Case%20Assessment."
+                        href="https://wa.me/917907224126?text=Hello%20Lexlead%20Legal%20Solutions%2C%20I%20would%20like%20to%20request%20a%20Legal%20Consultation."
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-[#10253D] font-semibold hover:text-[#B18A4A] inline-flex items-center gap-1"
@@ -385,7 +385,7 @@ export const ConsultationCTA: React.FC = () => {
 
         {/* Bar Council Compliance Footer Line */}
         <p className="text-center text-[10px] text-[#8C98A9]/80 mt-12 max-w-3xl mx-auto leading-relaxed">
-          In compliance with Bar Council of India Rule 36: An initial preliminary assessment does not create an advocate-client relationship. Formal representation commences only upon chamber verification, conflict check, and execution of formal vakalath / retainer engagement.
+          In compliance with Bar Council of India Rule 36: A preliminary consultation does not create an advocate-client relationship. Formal representation commences only upon chamber verification, conflict check, and execution of formal vakalath / retainer engagement.
         </p>
       </div>
     </section>

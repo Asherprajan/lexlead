@@ -16,7 +16,6 @@ import {
   HelpCircle,
   ExternalLink,
   ChevronDown,
-  Sparkles,
 } from "lucide-react";
 
 interface Message {
@@ -38,10 +37,11 @@ interface Message {
 const INITIAL_QUICK_OPTIONS = [
   { label: "🏛️ Property Title / Dispute", action: "domain:Property and Real Estate Law" },
   { label: "⚖️ Anticipatory Bail / Criminal", action: "domain:Criminal Law" },
+  { label: "📜 High Court Writ / Art 226", action: "domain:Constitutional and Writ Matters" },
+  { label: "🏛️ KAT / CAT Administrative Disputes", action: "domain:Administrative Matters" },
   { label: "💳 Cyber Police Bank Freeze", action: "domain:Cyber Crime & Bank Freeze" },
-  { label: "📜 High Court Writ / Appeal", action: "domain:High Court & Writ Practice" },
   { label: "🤝 Divorce / Family Court", action: "domain:Family and Matrimonial Law" },
-  { label: "🏢 NCLT / Cheque Bounce / Corporate", action: "domain:Corporate and Commercial Law" },
+  { label: "🏢 Corporate / Commercial / NCLT", action: "domain:Corporate and Commercial Law" },
   { label: "📍 Chambers Address & Contact", action: "faq:address" },
 ];
 
@@ -140,6 +140,10 @@ export function LegalLeadChatbot() {
         proceduralNote = "Under Kerala High Court rulings (Dr. Sajeer v. RBI), bank account freezes must be restricted solely to the disputed lien amount. Our advocates regularly file defreezing applications before High Court & Magistrates.";
       } else if (domain.includes("Criminal")) {
         proceduralNote = "For anticipatory bail under Section 482 BNSS or FIR quashing under Section 528 BNSS, our advocates appear before the Kerala High Court and Sessions Courts daily.";
+      } else if (domain.includes("Constitutional") || domain.includes("Writ")) {
+        proceduralNote = "Our advocates regularly move urgent Writ Petitions (Civil & Criminal) under Article 226 before the High Court of Kerala for emergency stays against arbitrary state action, revenue recovery, and demolition notices.";
+      } else if (domain.includes("Administrative")) {
+        proceduralNote = "We represent civil servants, teachers, and public sector personnel before the Kerala Administrative Tribunal (KAT) and Central Administrative Tribunal (CAT) in service, promotion, and disciplinary disputes.";
       } else if (domain.includes("Property")) {
         proceduralNote = "We conduct comprehensive 30-year Encumbrance Certificate (EC) verification, title scrutiny, wetland act checks, and handle partition/injunction suits.";
       } else if (domain.includes("Family")) {
@@ -349,7 +353,7 @@ export function LegalLeadChatbot() {
         { label: "Verify Property Title", action: "domain:Property and Real Estate Law" },
       ];
     } else if (lower.includes("phone") || lower.includes("number") || lower.includes("contact")) {
-      reply = "You can reach our chambers directly at:\n• Kochi: +91 79072 24126 / +91 95676 53357\n• Thiruvananthapuram: +91 471 316 1884\n• Email: lexleadlegal@gmail.com";
+      reply = "You can reach our chambers directly at:\n• Kochi: +91 79072 24126 / +91 95676 53357 / +91 97473 95967\n• Thiruvananthapuram: +91 471 316 1884\n• Email: info@lexleadlegal.in";
       options = [
         { label: "Call Kochi", action: "call:kochi" },
         { label: "Call Trivandrum", action: "call:tvm" },

@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import type { Metadata } from "next";
-import { MapPin, Mail, Phone, Clock, ExternalLink, ShieldCheck, HelpCircle, Sparkles } from "lucide-react";
+import { MapPin, Mail, Phone, Clock, ExternalLink, ShieldCheck, HelpCircle } from "lucide-react";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { ChambersMap } from "@/components/contact/ChambersMap";
 
@@ -65,8 +65,8 @@ const contactSchema = [
     "@id": "https://lexleadlegal.in/#ernakulam",
     name: "Lexlead Legal Solutions — Principal Chambers, Ernakulam",
     url: "https://lexleadlegal.in/contact",
-    telephone: "+917907224126",
-    email: "lexleadlegal@gmail.com",
+    telephone: ["+917907224126", "+919567653357", "+919747395967"],
+    email: "info@lexleadlegal.in",
     address: {
       "@type": "PostalAddress",
       streetAddress: "2nd Floor, T K Tower, Chittoor Rd, Padma Junction, Pullepady",
@@ -89,7 +89,7 @@ const contactSchema = [
     name: "Lexlead Legal Solutions — Branch Chambers, Thiruvananthapuram",
     url: "https://lexleadlegal.in/contact",
     telephone: "+914713161884",
-    email: "lexleadlegal@gmail.com",
+    email: "info@lexleadlegal.in",
     address: {
       "@type": "PostalAddress",
       streetAddress: "Ground Floor, Vinayaka Building, V V Road, Opp. Rainbow Apartments, Vanchiyoor",
@@ -122,14 +122,14 @@ export default function ContactPage() {
         {/* Hero Header */}
         <div className="max-w-3xl mb-12 sm:mb-16">
           <span className="text-[11px] font-semibold tracking-[0.2em] uppercase text-[#B18A4A] flex items-center gap-2">
-            <Sparkles className="w-4 h-4 text-[#C6A15B]" />
-            <span>FREE PRELIMINARY CASE ASSESSMENT • DIRECT ADVOCATE EVALUATION</span>
+            <ShieldCheck className="w-4 h-4 text-[#C6A15B]" />
+            <span>CHAMBERS LEGAL CONSULTATION • DIRECT ADVOCATE EVALUATION</span>
           </span>
           <h1 className="font-serif-luxury text-4xl sm:text-5xl lg:text-6xl font-medium text-[#10253D] mt-3 leading-tight">
             Schedule a Confidential Case Evaluation
           </h1>
           <p className="mt-5 text-base sm:text-lg text-[#626B76] leading-relaxed">
-            Discuss your legal matter directly with practicing advocates at our <strong>Ernakulam (Kochi)</strong> main chambers or <strong>Thiruvananthapuram</strong> branch. We provide an initial 15-minute statutory assessment of your documents and court options with <strong>zero financial obligation</strong>.
+            Discuss your legal matter directly with practicing advocates at our <strong>Ernakulam (Kochi)</strong> main chambers or <strong>Thiruvananthapuram</strong> branch. We provide structured statutory review of your case documents and strategic guidance on court options.
           </p>
         </div>
 
@@ -215,13 +215,17 @@ export default function ContactPage() {
                         Office
                       </span>
                     </a>
-                    <div className="flex items-center gap-2 text-xs text-[#626B76]">
+                    <div className="flex flex-wrap items-center gap-2 text-xs text-[#626B76]">
                       <a href="tel:7907224126" className="hover:text-[#B18A4A] text-sm text-[#10253D]">
                         +91 79072 24126
                       </a>
                       <span className="text-[#AAB4C3]">/</span>
                       <a href="tel:9567653357" className="hover:text-[#B18A4A] text-sm text-[#10253D]">
                         +91 95676 53357
+                      </a>
+                      <span className="text-[#AAB4C3]">/</span>
+                      <a href="tel:9747395967" className="hover:text-[#B18A4A] text-sm text-[#10253D]">
+                        +91 97473 95967
                       </a>
                     </div>
                   </div>
@@ -238,8 +242,8 @@ export default function ContactPage() {
                     Email Communications
                   </h3>
                   <p className="mt-1 text-sm font-medium text-[#10253D]">
-                    <a href="mailto:lexleadlegal@gmail.com" className="hover:text-[#B18A4A]">
-                      lexleadlegal@gmail.com
+                    <a href="mailto:info@lexleadlegal.in" className="hover:text-[#B18A4A]">
+                      info@lexleadlegal.in
                     </a>
                   </p>
                 </div>

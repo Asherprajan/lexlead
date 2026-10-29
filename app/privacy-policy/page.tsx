@@ -66,8 +66,8 @@ export default function PrivacyPolicyPage() {
               <p className="font-semibold text-[#B18A4A]">Chambers Registry</p>
               <p>LEXLEAD LEGAL SOLUTIONS — ADVOCATES</p>
               <p>Ground Floor, Vinayaka Building, V V Road, Opp. Rainbow Apartments, Vanchiyoor, Thiruvananthapuram, Kerala – 695035</p>
-              <p>Email: <a href="mailto:lexleadlegal@gmail.com" className="text-[#B18A4A] underline">lexleadlegal@gmail.com</a></p>
-              <p>Phone: +91 79072 24126 / +91 95676 53357</p>
+              <p>Email: <a href="mailto:info@lexleadlegal.in" className="text-[#B18A4A] underline">info@lexleadlegal.in</a></p>
+              <p>Phone: +91 79072 24126 / +91 95676 53357 / +91 97473 95967</p>
             </div>
           </section>
         </div>

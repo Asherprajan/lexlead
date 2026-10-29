@@ -2,7 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, BookOpen, Clock, Calendar, ArrowUpRight, Scale, Shield, Sparkles } from "lucide-react";
+import { ArrowRight, BookOpen, Clock, Calendar, ArrowUpRight, Scale, Shield } from "lucide-react";
 import { BLOG_POSTS } from "@/lib/data/blog-posts";
 import { BlogArticlesArchive } from "@/components/blog/BlogArticlesArchive";
 

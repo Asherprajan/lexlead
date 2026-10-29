@@ -9,11 +9,11 @@ import { Button } from "@/components/ui/Button";
 export const metadata: Metadata = {
   title: "Practice Areas",
   description:
-    "Comprehensive legal services in Civil Litigation, Criminal Defense, Property Law, Family Matters, Corporate Advisory, and Contract Documentation — serving clients in Ernakulam (Kochi), Thiruvananthapuram, and across Kerala courts.",
+    "Comprehensive legal services in Civil Litigation, Criminal Defense, Constitutional & Writ Petitions, Administrative Law, Property Law, Family Matters, Corporate Advisory, and Contract Documentation across Kerala High Court and district courts.",
   openGraph: {
     title: "Practice Areas | LEXLEAD LEGAL SOLUTIONS",
     description:
-      "Expert advocacy in Civil Litigation, Criminal Law, Property Disputes, Family Law, and Corporate Advisory in Ernakulam (Kochi) and Thiruvananthapuram, Kerala.",
+      "Expert advocacy in Civil Litigation, Criminal Law, Constitutional & Writ Petitions, Administrative Law, Property Disputes, and Corporate Advisory in Ernakulam (Kochi) and Thiruvananthapuram, Kerala.",
   },
 };
 

@@ -100,7 +100,7 @@ const trivandrumSchema = {
   name: "Lexlead Legal Solutions — Branch Chambers, Thiruvananthapuram",
   url: "https://lexleadlegal.in/lawyers-in-trivandrum",
   telephone: ["+914713161884"],
-  email: "lexleadlegal@gmail.com",
+  email: "info@lexleadlegal.in",
   description:
     "Experienced advocates in Thiruvananthapuram (Trivandrum) offering civil litigation, criminal law, property disputes, family law, and corporate legal services from branch chambers in Vanchiyoor.",
   address: {
@@ -286,7 +286,7 @@ export default function LawyersInTrivandrumPage() {
               </div>
               <div className="flex items-center gap-3 text-sm text-[#AAB4C3]">
                 <Mail className="w-4 h-4 text-[#C6A15B] shrink-0" />
-                <a href="mailto:lexleadlegal@gmail.com" className="hover:text-white">lexleadlegal@gmail.com</a>
+                <a href="mailto:info@lexleadlegal.in" className="hover:text-white">info@lexleadlegal.in</a>
               </div>
             </div>
             <div className="flex flex-col gap-3">

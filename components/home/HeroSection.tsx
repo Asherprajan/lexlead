@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, Users, ShieldCheck, Scale, MapPin, Phone, Sparkles } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Users, ShieldCheck, Scale, MapPin, Phone } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { AnimatedHeroTitle } from "./AnimatedHeroTitle";
 
@@ -29,7 +29,7 @@ export const HeroSection: React.FC = () => {
             {/* Two Boxed CTAs on One Single Line with Executive Badge Redesign */}
             <div className="space-y-3 pt-1">
               <div className="flex flex-row items-center gap-2.5 sm:gap-4 flex-nowrap w-full">
-                {/* CTA Box 1: Claim Free Assessment (Executive Deep Navy Card) */}
+                {/* CTA Box 1: Schedule Consultation (Executive Deep Navy Card) */}
                 <Link
                   href="/contact"
                   className="group relative flex-1 sm:flex-initial inline-flex items-center gap-2 sm:gap-3 px-2.5 sm:px-4 py-2 sm:py-2.5 rounded-sm bg-[#10253D] text-white border-2 border-[#C6A15B] shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_32px_rgba(198,161,91,0.45)] hover:border-[#F2D696] overflow-hidden whitespace-nowrap cursor-pointer select-none"
@@ -41,15 +41,15 @@ export const HeroSection: React.FC = () => {
                   />
                   {/* Left Gold Icon Badge */}
                   <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-sm bg-[#C6A15B]/20 border border-[#C6A15B]/60 text-[#F2D696] flex items-center justify-center shrink-0 group-hover:bg-[#C6A15B] group-hover:text-[#10253D] transition-all duration-300">
-                    <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:rotate-45 transition-transform duration-300" />
+                    <Scale className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:scale-110 transition-transform duration-300" />
                   </div>
                   {/* Two-Tier Content */}
                   <div className="flex flex-col text-left leading-tight shrink-0">
                     <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-wider text-[#C6A15B]">
-                      Zero Obligation
+                      Direct Counsel
                     </span>
                     <span className="text-[11px] sm:text-xs md:text-[13px] font-bold text-white tracking-wide uppercase">
-                      Free Assessment
+                      Chambers Consult
                     </span>
                   </div>
                   <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#C6A15B] group-hover:text-white group-hover:translate-x-1 transition-all duration-300 shrink-0 ml-auto hidden sm:block" />
@@ -89,7 +89,7 @@ export const HeroSection: React.FC = () => {
                   <span className="text-[#C6A15B] font-bold">✓</span> 100% Confidential
                 </span>
                 <span className="flex items-center gap-1">
-                  <span className="text-[#C6A15B] font-bold">✓</span> Zero Obligation
+                  <span className="text-[#C6A15B] font-bold">✓</span> Direct Advocate Review
                 </span>
                 <span className="flex items-center gap-1">
                   <span className="text-[#C6A15B] font-bold">✓</span> Same-Day Callback

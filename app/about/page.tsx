@@ -49,9 +49,9 @@ const PILLARS = [
   },
   {
     icon: Users,
-    title: "Rooted in Kerala's Legal Landscape",
+    title: "Broad Judicial Coverage",
     description:
-      "Established with our main office in Ernakulam and branch chambers in Thiruvananthapuram, with an intimate understanding of Kerala High Court practice, local revenue laws, and trial court procedures.",
+      "Rooted with chambers in Ernakulam and Thiruvananthapuram, our advocates deliver considered representation across Trial Courts, the High Court of Kerala, the Supreme Court of India, and statutory tribunals.",
   },
 ];
 
@@ -69,7 +69,7 @@ export default function AboutPage() {
             Disciplined Legal Assessment.
           </h1>
           <p className="mt-5 text-base sm:text-lg text-[#626B76] leading-relaxed">
-            Lexlead Legal Solutions is an advocacy practice with its main office in Padma Junction, Ernakulam (Kochi) and branch chambers in Vanchiyoor, Thiruvananthapuram, Kerala. We provide considered representation and strategic counsel designed to give clients clarity through every phase of dispute or commercial undertaking.
+            Lexlead Legal Solutions is an advocacy practice with its main chambers in Padma Junction, Ernakulam (Kochi) and branch chambers in Vanchiyoor, Thiruvananthapuram, Kerala. We provide considered, steadfast representation across every tier of the judicial system—advocating for our clients before Trial Courts, the High Court of Kerala, the Supreme Court of India, and specialized statutory tribunals.
           </p>
         </div>
 
@@ -109,11 +109,11 @@ export default function AboutPage() {
             <div className="space-y-2.5 pt-2">
               <div className="flex items-center gap-2.5 text-xs sm:text-sm text-[#10253D] font-medium">
                 <CheckCircle2 className="w-4 h-4 text-[#B18A4A]" />
-                <span>Thorough case-law research and factual scrutiny</span>
+                <span>Considered representation across Trial Courts, High Court, Supreme Court & Tribunals</span>
               </div>
               <div className="flex items-center gap-2.5 text-xs sm:text-sm text-[#10253D] font-medium">
                 <CheckCircle2 className="w-4 h-4 text-[#B18A4A]" />
-                <span>Ethical representation in civil, criminal, and commercial forums</span>
+                <span>Thorough case-law research, statutory scrutiny, and disciplined trial advocacy</span>
               </div>
               <div className="flex items-center gap-2.5 text-xs sm:text-sm text-[#10253D] font-medium">
                 <CheckCircle2 className="w-4 h-4 text-[#B18A4A]" />

@@ -158,8 +158,8 @@ export const MobileNavigation: React.FC<MobileNavigationProps> = ({
             </div>
             <div className="flex items-center gap-2">
               <Mail className="w-3.5 h-3.5 text-[#C6A15B] shrink-0" />
-              <a href="mailto:lexleadlegal@gmail.com" className="hover:text-[#10253D]">
-                lexleadlegal@gmail.com
+              <a href="mailto:info@lexleadlegal.in" className="hover:text-[#10253D]">
+                info@lexleadlegal.in
               </a>
             </div>
             <div className="flex items-center gap-2">
@@ -178,6 +178,10 @@ export const MobileNavigation: React.FC<MobileNavigationProps> = ({
                   <span>/</span>
                   <a href="tel:9567653357" className="hover:text-[#10253D]">
                     +91 95676 53357
+                  </a>
+                  <span>/</span>
+                  <a href="tel:9747395967" className="hover:text-[#10253D]">
+                    +91 97473 95967
                   </a>
                 </div>
               </div>

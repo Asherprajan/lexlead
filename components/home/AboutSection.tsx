@@ -44,12 +44,29 @@ export const AboutSection: React.FC = () => {
             <div className="w-12 h-0.5 bg-[#C6A15B]" />
 
             <p className="text-base sm:text-lg text-[#626B76] leading-relaxed max-w-xl">
-              Lexlead Legal Solutions is built on a commitment to integrity, clarity and client-focused service. We combine legal expertise with a practical approach to help you make informed decisions with confidence.
+              Lexlead Legal Solutions is built on a commitment to integrity, clarity, and client-focused advocacy. We provide considered, steadfast representation across every judicial tier—advocating for our clients before Trial Courts, the High Court of Kerala, the Supreme Court of India, and specialized statutory tribunals.
             </p>
 
             <p className="text-sm sm:text-base text-[#626B76] leading-relaxed max-w-xl">
-              With our Principal Chambers at Padma Junction, Ernakulam (Kochi) and Branch Chambers in Vanchiyoor, Thiruvananthapuram, we believe legal guidance should be considered and responsive to the distinct human and commercial realities of each matter across Kerala.
+              With our Principal Chambers at Padma Junction, Ernakulam (Kochi) and Branch Chambers in Vanchiyoor, Thiruvananthapuram, our advocates combine disciplined statutory research with practical courtroom experience to resolve complex civil, criminal, constitutional, and commercial disputes.
             </p>
+
+            {/* Judicial Forums Coverage Strip */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-1 pb-2 max-w-xl">
+              {[
+                "Trial & District Courts",
+                "High Court of Kerala",
+                "Supreme Court of India",
+                "Statutory Tribunals",
+              ].map((forum, i) => (
+                <div
+                  key={i}
+                  className="px-2.5 py-1.5 rounded-sm bg-[#F7F5F0] border border-[#E8E1D5] text-[10px] xs:text-[11px] font-semibold text-[#10253D] text-center"
+                >
+                  {forum}
+                </div>
+              ))}
+            </div>
 
             <div className="pt-2">
               <Button

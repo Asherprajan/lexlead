@@ -12,7 +12,7 @@ The official web platform for **Lexlead Legal Solutions**, an advocacy practice 
 - **Main Office**: 2nd Floor, T K Tower, Chittoor Rd, Padma Junction, Pullepady, Kochi, Ernakulam, Kerala — 682035
 - **Branch Chambers**: Ground Floor, Vinayaka Building, V V Road, Opp. Rainbow Apartments, Vanchiyoor, Thiruvananthapuram, Kerala — 695035
 - **Jurisdictions**: Kerala High Court, District & Sessions Courts, Motor Accidents Claims Tribunal (MACT), Family Courts, and Consumer Dispute Forums.
-- **Email**: [lexleadlegal@gmail.com](mailto:lexleadlegal@gmail.com)
+- **Email**: [info@lexleadlegal.in](mailto:info@lexleadlegal.in)
 - **Website**: [lexleadlegal.in](https://lexleadlegal.in)
 
 ---

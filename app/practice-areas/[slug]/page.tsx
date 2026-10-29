@@ -92,7 +92,7 @@ export default async function PracticeAreaDetailPage({ params }: PageProps) {
     name: `${practice.title} Lawyers — Lexlead Legal Solutions`,
     description: practice.longDescription,
     url: `https://lexleadlegal.in/practice-areas/${slug}`,
-    telephone: ["+917907224126", "+914713161884"],
+    telephone: ["+917907224126", "+919567653357", "+919747395967", "+914713161884"],
     areaServed: [
       { "@type": "City", name: "Ernakulam" },
       { "@type": "City", name: "Kochi" },
@@ -384,13 +384,17 @@ export default async function PracticeAreaDetailPage({ params }: PageProps) {
                     <a href="tel:9567653357" className="hover:text-[#10253D]">
                       +91 95676 53357
                     </a>
+                    <span>/</span>
+                    <a href="tel:9747395967" className="hover:text-[#10253D]">
+                      +91 97473 95967
+                    </a>
                   </div>
                 </div>
               </div>
               <div className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-[#B18A4A] shrink-0" />
-                <a href="mailto:lexleadlegal@gmail.com" className="hover:text-[#10253D]">
-                  lexleadlegal@gmail.com
+                <a href="mailto:info@lexleadlegal.in" className="hover:text-[#10253D]">
+                  info@lexleadlegal.in
                 </a>
               </div>
             </div>

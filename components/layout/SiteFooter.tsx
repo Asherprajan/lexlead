@@ -119,6 +119,18 @@ export const SiteFooter: React.FC = () => {
                   <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </Link>
               </li>
+              <li>
+                <Link href="/practice-areas/constitutional-and-writ-matters" className="hover:text-[#C6A15B] transition-colors flex items-center justify-between group">
+                  <span>Constitutional & Writ Matters</span>
+                  <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </Link>
+              </li>
+              <li>
+                <Link href="/practice-areas/administrative-matters" className="hover:text-[#C6A15B] transition-colors flex items-center justify-between group">
+                  <span>Administrative Matters</span>
+                  <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -167,7 +179,7 @@ export const SiteFooter: React.FC = () => {
                     </a>
                     <span className="text-[10px] text-[#C6A15B] uppercase tracking-wider">(Office)</span>
                   </div>
-                  <div className="flex items-center gap-2 text-[#AAB4C3]">
+                  <div className="flex flex-wrap items-center gap-2 text-[#AAB4C3]">
                     <a href="tel:7907224126" className="hover:text-white">
                       +91 79072 24126
                     </a>
@@ -175,14 +187,18 @@ export const SiteFooter: React.FC = () => {
                     <a href="tel:9567653357" className="hover:text-white">
                       +91 95676 53357
                     </a>
+                    <span>/</span>
+                    <a href="tel:9747395967" className="hover:text-white">
+                      +91 97473 95967
+                    </a>
                   </div>
                 </div>
               </div>
 
               <div className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-[#C6A15B] shrink-0" />
-                <a href="mailto:lexleadlegal@gmail.com" className="hover:text-white">
-                  lexleadlegal@gmail.com
+                <a href="mailto:info@lexleadlegal.in" className="hover:text-white">
+                  info@lexleadlegal.in
                 </a>
               </div>
             </div>
