@@ -410,10 +410,10 @@ export default function LawyersInKochiPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 pt-2">
               {[
-                "cyber-police-bank-account-freeze-kerala-high-court-unfreeze",
+                "birth-certificate-father-name-correction-kerala",
+                "kerala-paddy-land-data-bank-removal-procedure",
+                "msme-delayed-payment-recovery-kerala-msefc",
                 "anticipatory-bail-bnss-kerala-high-court",
-                "nclt-kochi-ibc-corporate-insolvency-section-7-9-procedure",
-                "kerala-high-court-writ-petition-procedure-article-226",
               ].map((slug) => {
                 const post = BLOG_POSTS.find((p) => p.slug === slug);
                 if (!post) return null;

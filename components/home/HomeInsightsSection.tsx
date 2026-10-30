@@ -29,7 +29,7 @@ export function HomeInsightsSection() {
             href="/blog"
             className="inline-flex items-center gap-2 px-5 py-3 rounded-sm bg-[#10253D] hover:bg-[#1A365D] text-white text-xs font-semibold tracking-wider uppercase transition-colors self-start md:self-auto shrink-0 shadow-sm"
           >
-            <span>Explore All 16 Legal Guides</span>
+            <span>Explore All {BLOG_POSTS.length} Legal Guides</span>
             <ArrowRight className="w-4 h-4 text-[#C6A15B]" />
           </Link>
         </div>
@@ -102,35 +102,47 @@ export function HomeInsightsSection() {
                 Grounded in Authoritative Statutory Precedents
               </p>
               <p className="text-xs text-[#626B76]">
-                Covering BNSS 2023, BNS, CPC Section 148A, NI Act Section 138, RERA, IBC, DPDP Act 2023, and Motor Vehicles Act.
+                Covering BNSS 2023, BNS, MSMED Act, Registration of Births &amp; Deaths Act, Kerala Paddy Land Act, NI Act Section 138, and RERA.
               </p>
             </div>
           </div>
 
           <div className="flex flex-wrap items-center gap-2">
             <Link
+              href="/blog/kerala-arrested-person-magistrate-production-24-hours-bnss"
+              className="text-xs px-3 py-1.5 rounded bg-[#F7F5F0] hover:bg-[#E8E1D5] text-[#10253D] font-medium transition-colors"
+            >
+              After-5 PM Arrest Remand (Adv. Subeesh)
+            </Link>
+            <Link
+              href="/blog/birth-certificate-father-name-correction-kerala"
+              className="text-xs px-3 py-1.5 rounded bg-[#F7F5F0] hover:bg-[#E8E1D5] text-[#10253D] font-medium transition-colors"
+            >
+              Birth Certificate (Swamidasan v. Kochi Corp)
+            </Link>
+            <Link
+              href="/blog/msme-delayed-payment-recovery-kerala-msefc"
+              className="text-xs px-3 py-1.5 rounded bg-[#F7F5F0] hover:bg-[#E8E1D5] text-[#10253D] font-medium transition-colors"
+            >
+              MSME Recovery (45-Day Rule)
+            </Link>
+            <Link
+              href="/blog/kerala-paddy-land-data-bank-removal-procedure"
+              className="text-xs px-3 py-1.5 rounded bg-[#F7F5F0] hover:bg-[#E8E1D5] text-[#10253D] font-medium transition-colors"
+            >
+              Data Bank Form 5 (KSREC Satellite)
+            </Link>
+            <Link
+              href="/blog/child-maintenance-after-fathers-remarriage-kerala"
+              className="text-xs px-3 py-1.5 rounded bg-[#F7F5F0] hover:bg-[#E8E1D5] text-[#10253D] font-medium transition-colors"
+            >
+              Child Maintenance (S v. J 2026)
+            </Link>
+            <Link
               href="/blog/cyber-police-bank-account-freeze-kerala-high-court-unfreeze"
               className="text-xs px-3 py-1.5 rounded bg-[#F7F5F0] hover:bg-[#E8E1D5] text-[#10253D] font-medium transition-colors"
             >
               Cyber Bank Freeze (Dr. Sajeer v. RBI)
-            </Link>
-            <Link
-              href="/blog/anticipatory-bail-bnss-kerala-high-court"
-              className="text-xs px-3 py-1.5 rounded bg-[#F7F5F0] hover:bg-[#E8E1D5] text-[#10253D] font-medium transition-colors"
-            >
-              Bail Under BNSS 482
-            </Link>
-            <Link
-              href="/blog/nclt-kochi-ibc-corporate-insolvency-section-7-9-procedure"
-              className="text-xs px-3 py-1.5 rounded bg-[#F7F5F0] hover:bg-[#E8E1D5] text-[#10253D] font-medium transition-colors"
-            >
-              NCLT Kochi (Sec 7 & 9 IBC)
-            </Link>
-            <Link
-              href="/blog/property-title-verification-kerala-checklist"
-              className="text-xs px-3 py-1.5 rounded bg-[#F7F5F0] hover:bg-[#E8E1D5] text-[#10253D] font-medium transition-colors"
-            >
-              Title Verification (EC 30 Yrs)
             </Link>
           </div>
         </div>

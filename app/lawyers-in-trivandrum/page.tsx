@@ -404,9 +404,9 @@ export default function LawyersInTrivandrumPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 pt-2">
               {[
-                "mutual-consent-divorce-kerala-procedure-timeline",
+                "kerala-arrested-person-magistrate-production-24-hours-bnss",
+                "child-maintenance-after-fathers-remarriage-kerala",
                 "domestic-violence-act-kerala-magistrate-court-procedure",
-                "medical-negligence-laws-kerala-consumer-court-procedure",
                 "property-title-verification-kerala-checklist",
               ].map((slug) => {
                 const post = BLOG_POSTS.find((p) => p.slug === slug);
