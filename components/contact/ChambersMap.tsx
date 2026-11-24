@@ -13,6 +13,7 @@ export interface BranchInfo {
   fullAddress: string;
   mapSrc: string;
   directionsUrl: string;
+  placeUrl: string;
 }
 
 export const BRANCHES: Record<BranchId, BranchInfo> = {
@@ -26,7 +27,9 @@ export const BRANCHES: Record<BranchId, BranchInfo> = {
     mapSrc:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31435.443681939414!2d76.26398062468832!3d9.981255856918327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b08130003e5dd09%3A0x7a558883a44f82c4!2sLexlead%20Legal%20Solutions!5e0!3m2!1sen!2sin!4v1793193810076!5m2!1sen!2sin",
     directionsUrl:
-      "https://maps.google.com/?q=Lexlead+Legal+Solutions+TK+Tower+Chittoor+Rd+Padma+Junction+Pullepady+Kochi+Kerala+682035",
+      "https://www.google.com/maps/dir/?api=1&destination=Lexlead+Legal+Solutions+-+Ernakulam&destination_place_id=ChIJCd3lAwATCDsRxIJPpIOIVXo",
+    placeUrl:
+      "https://www.google.com/maps/place/?q=place_id:ChIJCd3lAwATCDsRxIJPpIOIVXo",
   },
   trivandrum: {
     id: "trivandrum",
@@ -38,7 +41,9 @@ export const BRANCHES: Record<BranchId, BranchInfo> = {
     mapSrc:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3946.029208334732!2d76.9357891!3d8.4965408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05bb26d11045cd%3A0x998f1cb32e2f6110!2s!5e0!3m2!1sen!2sin!4v1792669001255!5m2!1sen!2sin",
     directionsUrl:
-      "https://maps.google.com/?q=Vinayaka+Building+V+V+Road+Opp+Rainbow+Apartments+Vanchiyoor+Thiruvananthapuram+Kerala+695035",
+      "https://www.google.com/maps/dir/?api=1&destination=Lexlead+Legal+Solutions+-+Trivandrum&destination_place_id=ChIJzUUQ0Sa7BTsREGEvLrMcj5k",
+    placeUrl:
+      "https://www.google.com/maps/place/?q=place_id:ChIJzUUQ0Sa7BTsREGEvLrMcj5k",
   },
 };
 
@@ -137,16 +142,30 @@ export const ChambersMap: React.FC<ChambersMapProps> = ({
             </div>
           </div>
 
-          <a
-            href={current.directionsUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2 text-xs font-medium text-[#10253D] bg-[#F7F5F0] hover:bg-[#C59B51] hover:text-white border border-[#CBD5E1] hover:border-[#C59B51] transition-colors shrink-0 rounded-sm"
-          >
-            <Navigation className="w-3.5 h-3.5" />
-            <span>Get Directions</span>
-            <ExternalLink className="w-3 h-3 ml-0.5 opacity-70" />
-          </a>
+          <div className="flex items-center gap-2 shrink-0">
+            <a
+              href={current.placeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-medium text-[#10253D] bg-[#F7F5F0] hover:bg-[#E8E1D5] border border-[#CBD5E1] transition-colors rounded-sm"
+              title="Open verified location in Google Maps"
+            >
+              <MapPin className="w-3.5 h-3.5 text-[#B18A4A]" />
+              <span className="hidden sm:inline">View Location</span>
+              <ExternalLink className="w-3 h-3 ml-0.5 opacity-70" />
+            </a>
+            <a
+              href={current.directionsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold text-[#10253D] bg-[#C6A15B] hover:bg-[#B18A4A] hover:text-white border border-[#B18A4A] transition-colors rounded-sm shadow-xs"
+              title="Get driving / transit directions in Google Maps"
+            >
+              <Navigation className="w-3.5 h-3.5" />
+              <span>Get Directions</span>
+              <ExternalLink className="w-3 h-3 ml-0.5 opacity-70" />
+            </a>
+          </div>
         </div>
       )}
     </div>

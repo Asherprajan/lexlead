@@ -129,8 +129,8 @@ const legalServiceSchema = {
       },
       geo: {
         "@type": "GeoCoordinates",
-        latitude: 9.9813,
-        longitude: 76.2656,
+        latitude: 9.9980,
+        longitude: 76.2801,
       },
       url: "https://lexleadlegal.in/contact",
       openingHours: ["Mo-Fr 09:30-18:30", "Sa 10:00-14:00"],
@@ -152,8 +152,8 @@ const legalServiceSchema = {
       },
       geo: {
         "@type": "GeoCoordinates",
-        latitude: 8.4979,
-        longitude: 76.9529,
+        latitude: 8.4965,
+        longitude: 76.9358,
       },
       url: "https://lexleadlegal.in/contact",
       openingHours: ["Mo-Fr 09:30-18:30", "Sa 10:00-14:00"],

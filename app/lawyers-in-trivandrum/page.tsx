@@ -113,8 +113,8 @@ const trivandrumSchema = {
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: 8.4979,
-    longitude: 76.9529,
+    latitude: 8.4965,
+    longitude: 76.9358,
   },
   areaServed: [
     { "@type": "City", name: "Thiruvananthapuram" },

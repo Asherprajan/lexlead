@@ -77,8 +77,8 @@ const contactSchema = [
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: 9.9813,
-      longitude: 76.2656,
+      latitude: 9.9980,
+      longitude: 76.2801,
     },
     openingHours: "Mo-Fr 09:30-18:30",
   },
@@ -100,8 +100,8 @@ const contactSchema = [
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: 8.4979,
-      longitude: 76.9529,
+      latitude: 8.4965,
+      longitude: 76.9358,
     },
     openingHours: "Mo-Fr 09:30-18:30",
   },
@@ -158,7 +158,7 @@ export default function ContactPage() {
                       2nd Floor, T K Tower, Chittoor Rd, Padma Junction, Pullepady, Kochi, Ernakulam – 682035
                     </p>
                     <a
-                      href="https://maps.google.com/?q=Lexlead+Legal+Solutions+TK+Tower+Chittoor+Rd+Padma+Junction+Pullepady+Kochi+Kerala+682035"
+                      href="https://www.google.com/maps/place/?q=place_id:ChIJCd3lAwATCDsRxIJPpIOIVXo"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1 text-xs text-[#B18A4A] hover:text-[#10253D] mt-1.5 font-medium"
@@ -187,7 +187,7 @@ export default function ContactPage() {
                       Ground Floor, Vinayaka Building, V V Road, Opp. Rainbow Apartments, Vanchiyoor, Thiruvananthapuram – 695035
                     </p>
                     <a
-                      href="https://maps.google.com/?q=Vinayaka+Building+Vanchiyoor+Thiruvananthapuram+Kerala"
+                      href="https://www.google.com/maps/place/?q=place_id:ChIJzUUQ0Sa7BTsREGEvLrMcj5k"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1 text-xs text-[#B18A4A] hover:text-[#10253D] mt-1.5 font-medium"

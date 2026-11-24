@@ -113,8 +113,8 @@ const kochiSchema = {
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: 9.9813,
-    longitude: 76.2656,
+    latitude: 9.9980,
+    longitude: 76.2801,
   },
   areaServed: [
     { "@type": "City", name: "Kochi" },
