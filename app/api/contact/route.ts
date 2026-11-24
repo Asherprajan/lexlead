@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 
 // Zod validation schema
-export const contactFormSchema = z.object({
+const contactFormSchema = z.object({
   fullName: z
     .string()
     .min(2, "Full name must be at least 2 characters")
