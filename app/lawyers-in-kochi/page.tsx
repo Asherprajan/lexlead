@@ -403,7 +403,7 @@ export default function LawyersInKochiPage() {
                 href="/blog"
                 className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#B18A4A] hover:text-[#10253D] transition-colors shrink-0"
               >
-                <span>View All 16 Guides</span>
+                <span>View All {BLOG_POSTS.length} Guides</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>

@@ -139,15 +139,15 @@ export default async function BlogPostDetailPage({ params }: PageProps) {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema).replace(/</g, "\\u003c") }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema).replace(/</g, "\\u003c") }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema).replace(/</g, "\\u003c") }}
       />
       <main className="flex-1 w-full bg-[#F7F5F0] pt-8 pb-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -199,7 +199,9 @@ export default async function BlogPostDetailPage({ params }: PageProps) {
               </div>
               <div className="text-right text-[11px]">
                 <div>Updated: {new Date(post.updatedAt).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}</div>
-                <div className="text-[#AAB4C3]">Jurisdiction: Kerala</div>
+                <div className="text-[#AAB4C3]">
+                  {post.jurisdiction.includes("All India") ? "Jurisdiction: All India & Kerala" : "Jurisdiction: Kerala"}
+                </div>
               </div>
             </div>
           </header>
@@ -228,7 +230,13 @@ export default async function BlogPostDetailPage({ params }: PageProps) {
               [&>p]:text-[#626B76] [&>p]:leading-relaxed [&>p]:mb-4
               [&>ul]:list-disc [&>ul]:pl-5 [&>ul]:space-y-1.5 [&>ul]:text-[#626B76] [&>ul]:mb-4
               [&>ol]:list-decimal [&>ol]:pl-5 [&>ol]:space-y-2 [&>ol]:text-[#626B76] [&>ol]:mb-4
-              [&>strong]:text-[#10253D]
+              [&_strong]:text-[#10253D]
+              [&>blockquote]:border-l-4 [&>blockquote]:border-[#C6A15B] [&>blockquote]:bg-[#F7F5F0] [&>blockquote]:px-5 [&>blockquote]:py-4 [&>blockquote]:italic [&>blockquote]:text-[#10253D] [&>blockquote]:my-6 [&>blockquote]:rounded-r-sm
+              [&_table]:w-full [&_table]:border-collapse [&_table]:text-left [&_table]:text-xs [&_table]:sm:text-sm
+              [&_thead]:bg-[#10253D] [&_thead]:text-white
+              [&_th]:px-4 [&_th]:py-3 [&_th]:font-semibold [&_th]:tracking-wide [&_th]:border-b [&_th]:border-[#E8E1D5]
+              [&_td]:px-4 [&_td]:py-3 [&_td]:text-[#626B76] [&_td]:border-t [&_td]:border-[#E8E1D5] [&_td]:align-top
+              [&_tbody_tr:nth-child(even)]:bg-[#F7F5F0]/60
             "
             dangerouslySetInnerHTML={{ __html: post.content }}
           />

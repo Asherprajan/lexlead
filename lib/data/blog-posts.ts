@@ -29,6 +29,264 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "digital-arrest-scams-india-bank-liability-supreme-court",
+    title: "Digital Arrest Scams in India: Can Banks Be Held Liable for Money Lost Through Cyber Fraud?",
+    subtitle: "A legal guide to the Supreme Court's 29 October 2026 directions in In Re: Victims of Digital Arrest Related to Forged Documents (SMW(Crl) No. 3 of 2025), RBI customer liability rules, cybercrime reporting, and compensation claims.",
+    excerpt: "Learn whether banks can be held liable when customers lose money in digital arrest scams, what the Supreme Court observed on 29 October 2026 regarding due diligence and victim indemnification, how RBI regulations apply, and what immediate steps victims should take.",
+    category: "Civil Litigation",
+    readTime: "10 min read",
+    publishedAt: "2026-11-25T10:00:00.000Z",
+    updatedAt: "2026-11-25T10:00:00.000Z",
+    author: {
+      name: "Lexlead Legal Editorial Board",
+      role: "Civil & Cyber Litigation Advocates",
+      chambers: "Ernakulam & Thiruvananthapuram Chambers",
+    },
+    coverImage: "/images/practice-civil.jpg",
+    relatedPracticeAreaSlug: "civil-litigation",
+    relatedPracticeAreaName: "Civil Litigation",
+    jurisdiction: "Supreme Court of India, Consumer Commissions & RBI Ombudsman (All India, including Kerala)",
+    keywords: [
+      "digital arrest scam bank liability India",
+      "Supreme Court order 29 October 2026 digital arrest",
+      "In Re Victims of Digital Arrest Related to Forged Documents",
+      "SMW Crl No 3 of 2025 digital arrest compensation",
+      "RBI customer liability cyber fraud India",
+      "can I sue my bank for cyber fraud India",
+      "digital arrest cybercrime 1930 complaint recovery",
+      "RBI Integrated Ombudsman cyber fraud",
+      "Consumer Protection Act 2019 bank deficiency in service",
+      "cyber fraud civil litigation lawyer Kerala",
+    ],
+    keyTakeaways: [
+      "There is no legal concept of 'digital arrest' under Indian law or the Bharatiya Nagarik Suraksha Sanhita (BNSS), 2023; police or investigative agencies cannot arrest or hold anyone in custody over a video call.",
+      "In In Re: Victims of Digital Arrest Related to Forged Documents (SMW(Crl) No. 3 of 2025) on 29 October 2026, a Bench led by Chief Justice Surya Kant emphasised that proposed RBI regulatory measures should require financial institutions to indemnify victims for not less than the amount lost where fraud occurred due to institutional failure to exercise due diligence.",
+      "Bank liability is not automatic for every deceived transfer: courts and regulators examine unusual transaction patterns, fraud-monitoring systems, KYC/mule-account controls, and the bank's responsiveness upon reporting.",
+      "Under the RBI framework (including the 6 July 2017 Circular, the Draft RBI KYC Amendment Directions, 2026, and the RBI Responsible Business Conduct Third Amendment Directions, 2026 effective 1 January 2027), timely reporting to both the bank and cybercrime authorities (1930 / cybercrime.gov.in) is critical.",
+      "Depending on the facts and evidence, victims may pursue remedies through the bank's nodal grievance officer, the RBI Integrated Ombudsman Scheme, appropriate Consumer Commissions under the Consumer Protection Act, 2019, police investigations, or civil proceedings.",
+    ],
+    content: `
+      <p><strong>A legal guide to the Supreme Court's directions, bank liability, cybercrime complaints, and compensation remedies for digital arrest victims in India.</strong></p>
+
+      <p>A phone call from someone claiming to be a police officer. A video call showing a person wearing an official uniform against a staged backdrop. A forged arrest warrant or fabricated court order, allegations of money laundering, and threats of immediate arrest.</p>
+
+      <p>Within minutes, an ordinary citizen may be pressured under intense psychological intimidation into transferring their life savings to an unfamiliar bank account.</p>
+
+      <p>This form of organised cybercrime is commonly known as a <strong>digital arrest scam</strong>. Digital arrest scams have become a serious concern across India, particularly because fraudsters exploit people's fear of law enforcement agencies, criminal proceedings, and reputational harm.</p>
+
+      <p>A significant legal development has emerged from the Supreme Court of India, which has emphasised that financial institutions must compensate victims of digital arrest scams and other cyber frauds where it is established that the fraud occurred because the institution failed to exercise due diligence.</p>
+
+      <p>This raises an important legal question: <strong>Can a bank be held legally responsible when its customer loses money through a digital arrest scam?</strong> Below is an examination of the Supreme Court's position, the applicable RBI regulatory framework, and the remedies available to victims.</p>
+
+      <h2>1. What Is a Digital Arrest Scam?</h2>
+      <p>A digital arrest scam is a form of cyber fraud in which criminals impersonate police officers, Central Bureau of Investigation (CBI) officials, Enforcement Directorate (ED) officers, customs authorities, narcotics officials, or even judicial officers. The fraudsters typically contact victims through phone calls, WhatsApp messages, or video calls.</p>
+
+      <p>They commonly fabricate claims that:</p>
+      <ul>
+        <li>The victim's Aadhaar, mobile number, or bank account is linked to a criminal investigation.</li>
+        <li>A courier parcel containing contraband or illegal substances has been intercepted in their name.</li>
+        <li>Their identity or bank accounts have been misused for money laundering.</li>
+        <li>A warrant of arrest or asset-freezing order has been issued against them.</li>
+        <li>Their bank accounts will be frozen or they will face immediate arrest unless they cooperate financially.</li>
+      </ul>
+
+      <p>The perpetrators then coerce victims into transferring funds—supposedly for "verification", "RBI audit", "investigation", or "temporary safekeeping". In many instances, victims are kept under continuous video surveillance and instructed not to speak with family members, advocates, or local police.</p>
+
+      <p><strong>Important legal position:</strong> There is no legal process in India that authorises police officers or investigative agencies to place a person under arrest or judicial custody through a video call. Under Indian constitutional law (<strong>Article 22</strong>) and the <strong>Bharatiya Nagarik Suraksha Sanhita (BNSS), 2023</strong>, a valid arrest involves physical procedure, preparation of an arrest memorandum, statutory rights notices, and production before a Judicial Magistrate within 24 hours (see our detailed guide on <a href="/blog/kerala-arrested-person-magistrate-production-24-hours-bnss" class="text-[#B18A4A] font-semibold underline">arrest procedures and 24-hour Magistrate production under Section 58 BNSS</a>). The phrase "digital arrest" describes a criminal extortion technique, not a recognised legal procedure.</p>
+
+      <h2>2. What Has the Supreme Court Said About Digital Arrest Scams?</h2>
+      <p>The Supreme Court of India took suo motu cognisance of digital arrest scams in the ongoing proceeding titled <em>In Re: Victims of Digital Arrest Related to Forged Documents</em> (<strong>Suo Motu Writ Petition (Criminal) No. 3 of 2025</strong>).</p>
+
+      <p>In its order dated <strong>29 October 2026</strong>, a three-judge Bench comprising <strong>Chief Justice Surya Kant</strong>, <strong>Justice Joymalya Bagchi</strong>, and <strong>Justice V. Mohana</strong> addressed the institutional responsibility of banks and financial institutions in preventing cyber-enabled financial fraud and protecting customers.</p>
+
+      <p>The Bench emphasised that the proposed regulatory measures of the Reserve Bank of India (RBI) must include provisions requiring financial institutions to compensate victims. Specifically, the Court stated that financial institutions should <strong>indemnify victims and pay compensation of not less than the amount lost</strong> where it is established that the fraud occurred because the institution failed to exercise due diligence in preventing or reporting the incident—such as failing to curb "mule accounts" or monitor anomalous transfers.</p>
+
+      <h3>Preventive Safeguards Highlighted by the Supreme Court</h3>
+      <p>During the proceedings, the Court identified key preventive safeguards that financial institutions should incorporate and strengthen:</p>
+      <ol>
+        <li><strong>Temporary Suspension of Anomalous Transfers:</strong> Temporarily holding or suspending unusual or suspicious transactions that are inconsistent with the customer's historical account behaviour.</li>
+        <li><strong>Automated Law Enforcement Alerts:</strong> Automatically notifying the nearest police station or cybercrime authorities regarding flagged suspicious transactions.</li>
+        <li><strong>Physical &amp; Enhanced Verification:</strong> Verifying flagged high-risk transactions to establish whether they are genuine and free from coercion.</li>
+        <li><strong>Strengthened Systemic Monitoring:</strong> Upgrading banking compliance and fraud-detection architecture to identify suspicious account velocity and mule-account networks before funds are layered away.</li>
+      </ol>
+
+      <p>The Court also directed the RBI to submit a comprehensive list of authorised financial institutions, called upon law enforcement agencies across States and Union Territories to furnish details of registered FIRs and investigations, and directed WhatsApp and other relevant digital intermediaries to place before the Court and the Indian Cybercrime Coordination Centre (I4C) concrete proposals explaining how they intend to prevent digital arrest scams.</p>
+
+      <p><strong>Why this matters:</strong> Previously, victims frequently encountered blanket denials from banks whenever the victim had personally entered an OTP or authorised an RTGS/NEFT/UPI transfer under fear. The Supreme Court's observations underscore institutional accountability where a bank's failure to exercise due diligence contributes to the financial loss.</p>
+
+      <h2>3. Can Banks Be Held Liable for Cyber Fraud in India?</h2>
+      <p>Yes, a bank may be held liable in appropriate circumstances. However, <strong>bank liability does not arise automatically</strong> in every case where a customer loses money to cyber fraud. Liability depends heavily on the factual record surrounding both the transaction and the bank's conduct.</p>
+
+      <p>Consider a common scenario: a senior citizen maintains a modest savings account whose ordinary activity consists of small routine withdrawals and utility payments. Suddenly, manipulated over a multi-hour video call, the account holder initiates large high-value transfers emptying fixed deposits or savings to an unfamiliar beneficiary account—often an unverified newly opened or high-velocity mule account. If the bank ignored clear anomaly indicators, bypassed mandatory verification controls, or failed to act promptly when alerted, questions regarding institutional due diligence and negligence directly arise.</p>
+
+      <p>Relevant factors examined by courts, ombudsmen, and consumer forums typically include:</p>
+      <ul>
+        <li>Whether the transaction was starkly unusual compared with the customer's historical banking profile.</li>
+        <li>Whether the bank's transaction-monitoring or fraud-detection systems flagged—or reasonably ought to have flagged—suspicious activity.</li>
+        <li>Whether mandatory KYC, anti-money laundering, and security protocols were complied with at both the originating and beneficiary banks.</li>
+        <li>Whether the bank received a complaint or cyber alert while funds were still traceable or before subsequent transfers occurred.</li>
+        <li>Whether the bank acted promptly after being notified of the fraud to freeze or lien-mark recipient funds.</li>
+        <li>Whether any bank employee, business correspondent, or associated service provider was complicit or negligent.</li>
+      </ul>
+
+      <p><strong>Important clarification:</strong> The Supreme Court has not declared that banks must automatically reimburse every person who transfers money to a fraudster. The compensation framework emphasised by the Court is anchored to an established failure of due diligence by the financial institution.</p>
+
+      <h2>4. What Is the Legal Position Under RBI Banking Regulations?</h2>
+      <p>The Reserve Bank of India governs customer liability in electronic banking through statutory directions that are currently undergoing major modernisation:</p>
+      <ul>
+        <li><strong>Foundational 2017 Customer Liability Framework:</strong> Under the RBI Circular dated <strong>6 July 2017</strong> (<em>Customer Protection – Limiting Liability of Customers in Unauthorised Electronic Banking Transactions</em>), a customer carries <strong>zero liability</strong> where loss occurs due to contributory fraud, negligence, or deficiency on the part of the bank, or due to a third-party breach (where neither bank nor customer is at fault) reported within three working days. Where customer negligence (such as sharing confidential OTPs or PINs) contributes to an unauthorised transaction, liability depends on promptness of reporting.</li>
+        <li><strong>Unauthorised vs. Deceived/Coerced Transfers:</strong> Courts and banking tribunals have traditionally drawn a legal distinction between an <em>unauthorised</em> debit (carried out without the customer's consent or authentication) and a transfer that the customer personally authorises after being deceived or threatened—which is the hallmark of digital arrest scams. This distinction has made proving bank negligence, inadequate transaction monitoring, or delayed post-reporting response essential.</li>
+        <li><strong>2026 Regulatory Reforms:</strong> Addressing evolving fraud patterns, the RBI issued the <strong>Draft Reserve Bank of India (Know Your Customer) Amendment Directions, 2026</strong>—examined by the Supreme Court in the digital arrest proceedings—setting out standardised, time-bound Standard Operating Procedures (SOPs) for temporary debit holds on suspected mule accounts linked to NCRP alerts. Separately, the RBI issued the <strong>Reserve Bank of India (Commercial Banks – Responsible Business Conduct) Third Amendment Directions, 2026</strong> (Circular dated 24 June 2026, taking effect for electronic banking transactions from <strong>1 January 2027</strong>), expanding regulatory protections to fraudulent electronic banking transactions, tightening turnaround and alert requirements, and introducing a conditional compensation mechanism for eligible small-value frauds reported promptly to both the bank and cybercrime authorities.</li>
+      </ul>
+
+      <h2>5. Immediate Steps to Take If You Lose Money in a Digital Arrest Scam</h2>
+      <p>Time is decisive in tracing and freezing siphoned funds before fraudsters withdraw cash or layer transfers across multiple accounts. Taking prompt, documented action also protects your legal rights.</p>
+
+      <h3>Step 1: Contact Your Bank Immediately</h3>
+      <p>Notify your bank's fraud helpline and home branch at once—do not wait until the next working day. Request that the bank:</p>
+      <ul>
+        <li>Block or temporarily freeze compromised net-banking, card, or UPI channels where necessary.</li>
+        <li>Log a formal cyber fraud dispute and provide a written complaint reference number.</li>
+        <li>Coordinate immediately with the beneficiary bank to place a hold or lien on any remaining funds.</li>
+        <li>Preserve complete transaction logs, IP/device logs, and beneficiary account details.</li>
+      </ul>
+
+      <h3>Step 2: Report on the National Cyber Crime Reporting Portal and Dial 1930</h3>
+      <p>Lodge an immediate financial fraud complaint on the official National Cyber Crime Reporting Portal at <a href="https://cybercrime.gov.in/" target="_blank" rel="noopener noreferrer" class="text-[#B18A4A] font-semibold underline">https://cybercrime.gov.in/</a> and call the national cybercrime helpline <strong>1930</strong>. Prompt reporting enables the Indian Cybercrime Coordination Centre (I4C) and state cyber cells to trigger automated inter-bank lien requests across the transaction trail.</p>
+
+      <h3>Step 3: Preserve All Digital and Financial Evidence</h3>
+      <p>Do not delete chat histories, call logs, or reset your mobile device. Preserve copies of:</p>
+      <ul>
+        <li>Bank account statements showing every disputed debit.</li>
+        <li>UPI transaction IDs, IMPS/NEFT/RTGS Unique Transaction Reference (UTR) numbers, and timestamps.</li>
+        <li>Phone numbers, caller IDs, and Skype/WhatsApp profiles used by the impersonators.</li>
+        <li>Screenshots of WhatsApp messages, fake arrest warrants, forged Supreme Court/CBI/ED notices, and video call logs.</li>
+        <li>Lawfully available call recordings, SMS alerts, and emails.</li>
+        <li>The 1930 / NCRP cybercrime acknowledgement number and bank complaint reference numbers.</li>
+      </ul>
+
+      <h3>Step 4: File a Formal Police Complaint / FIR</h3>
+      <p>Approach your nearest Cyber Crime Police Station or jurisdictional local police station with the NCRP acknowledgement and bank statements. Explain clearly how the accused impersonated public servants and coerced transfers, so an FIR can be registered under relevant provisions of the <strong>Bharatiya Nyaya Sanhita (BNS), 2023</strong> and the <strong>Information Technology Act, 2000</strong>, enabling formal investigation and account-freeze orders under <strong>Section 106 BNSS</strong>. (If an innocent third party's account is inadvertently caught in a chain freeze, see our guide on <a href="/blog/cyber-police-bank-account-freeze-kerala-high-court-unfreeze" class="text-[#B18A4A] font-semibold underline">handling cyber police bank account freezes and lien marks</a>.)</p>
+
+      <h3>Step 5: Escalate Through Bank Grievance Channels and the RBI Ombudsman</h3>
+      <p>If your bank rejects your claim or fails to respond satisfactorily within 30 days, escalate the complaint in writing to the bank's Internal Ombudsman / Principal Nodal Officer. Thereafter, subject to eligibility under the <strong>RBI Integrated Ombudsman Scheme, 2021</strong>, you may lodge a formal complaint free of cost via the RBI Complaint Management System at <a href="https://cms.rbi.org.in/" target="_blank" rel="noopener noreferrer" class="text-[#B18A4A] font-semibold underline">https://cms.rbi.org.in/</a> (official RBI website: <a href="https://www.rbi.org.in/" target="_blank" rel="noopener noreferrer" class="text-[#B18A4A] font-semibold underline">https://www.rbi.org.in/</a>, toll-free helpline <strong>14448</strong>).</p>
+
+      <h3>Step 6: Evaluate Appropriate Legal Remedies</h3>
+      <p>Depending on the evidence, quantum of loss, and institutional conduct, an aggrieved customer may evaluate:</p>
+      <ul>
+        <li>Police investigation follow-up and applications under <strong>Section 503 BNSS</strong> (or equivalent magistrate orders) for release of traced/frozen funds recovered during investigation.</li>
+        <li>Proceedings under the <strong>RBI Integrated Ombudsman Scheme</strong> where regulatory deficiency is involved.</li>
+        <li>A consumer complaint alleging <em>deficiency in service</em> before the appropriate District, State, or National Consumer Disputes Redressal Commission under the <strong>Consumer Protection Act, 2019</strong>, where maintainable.</li>
+        <li>Civil recovery proceedings or writ remedies in appropriate cases, depending on jurisdiction and factual matrix.</li>
+      </ul>
+
+      <h2>6. What Evidence Matters When Seeking Compensation From a Bank?</h2>
+      <p>A victim claiming institutional negligence or deficiency in service should compile clear documentary proof establishing both the fraud and any lapse attributable to the bank:</p>
+
+      <div class="overflow-x-auto my-6 rounded-sm border border-[#E8E1D5]">
+        <table>
+          <thead>
+            <tr>
+              <th>Evidence Category</th>
+              <th>Why It Matters Legally</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Bank Statements &amp; Historical Profile</strong></td>
+              <td>Establishes the quantum, timing, and whether the transfers deviated sharply from routine account activity.</td>
+            </tr>
+            <tr>
+              <td><strong>Transaction IDs &amp; UTR Numbers</strong></td>
+              <td>Enables tracing of funds across intermediary and beneficiary mule accounts.</td>
+            </tr>
+            <tr>
+              <td><strong>1930 / NCRP Cybercrime Acknowledgement</strong></td>
+              <td>Proves prompt official reporting and establishes the timestamp for inter-bank freeze requests.</td>
+            </tr>
+            <tr>
+              <td><strong>Bank Complaint Acknowledgements</strong></td>
+              <td>Demonstrates exact time of notification to the bank to test response time and liability timelines.</td>
+            </tr>
+            <tr>
+              <td><strong>Written Correspondence With the Bank</strong></td>
+              <td>Shows whether the bank conducted proper inquiry, followed SOPs, or issued mechanical rejections.</td>
+            </tr>
+            <tr>
+              <td><strong>Call, Message &amp; Forged Document Records</strong></td>
+              <td>Corroborates coercion, impersonation, and absence of genuine commercial intent behind the transfer.</td>
+            </tr>
+            <tr>
+              <td><strong>Police FIR &amp; Investigation Records</strong></td>
+              <td>Establishes criminal fraud, identifies mule accounts, and supports restitution or compensation claims.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>No single document automatically guarantees compensation; courts and adjudicatory forums assess the complete factual record against applicable regulatory duties and the conduct of both parties.</p>
+
+      <h2>7. Does the Supreme Court's Order Guarantee a Full Refund to Every Victim?</h2>
+      <p><strong>No.</strong> This distinction is crucial and frequently misunderstood.</p>
+
+      <p>The Supreme Court's 29 October 2026 order emphasises that proposed RBI regulatory measures should mandate financial institutions to indemnify victims where it is established that the fraud occurred due to the institution's <strong>failure to exercise due diligence</strong>. It does not mean that every customer who transfers funds to a scammer automatically receives a full refund without scrutiny.</p>
+
+      <p>The bank's fraud-monitoring safeguards, KYC diligence on recipient mule accounts, response speed after reporting, the customer's own actions, and the evolving text of the <strong>RBI Know Your Customer Amendment Directions, 2026</strong> and customer protection rules all remain relevant to any adjudication.</p>
+
+      <h2>8. Preventive Measures Financial Institutions Are Expected to Strengthen</h2>
+      <p>As reflected in the Supreme Court's directions and ongoing RBI regulatory reforms, banks play a central gatekeeping role in preventing rapid dissipation of cyber-fraud proceeds through:</p>
+      <ul>
+        <li>Real-time behavioural transaction monitoring to detect sudden high-value anomalies.</li>
+        <li>Automated flagging and temporary holds on suspicious outward transfers or mule accounts where legally permitted.</li>
+        <li>Step-up authentication and cool-off delays for newly added beneficiaries and unusual transfers.</li>
+        <li>Immediate, clear customer alerts and streamlined emergency debit-freeze mechanisms.</li>
+        <li>Dedicated coordination with I4C, cybercrime cells, and nearest police stations.</li>
+        <li>Branch staff training to recognise elderly or distressed customers acting under suspected phone or video coercion.</li>
+      </ul>
+
+      <h2>9. Key Takeaways for Banking Customers</h2>
+      <p>The Supreme Court's intervention marks a significant shift in India's legal discourse on cyber fraud and institutional responsibility, highlighting three enduring principles:</p>
+      <ol>
+        <li><strong>Institutional Due Diligence Matters:</strong> Financial institutions are expected to maintain active safeguards to detect anomalous financial activity and curb mule accounts, rather than remaining passive conduits.</li>
+        <li><strong>Liability Is Not Solely Shifted onto Coerced Victims by Default:</strong> Where institutional negligence or regulatory lapse contributes to the loss, the bank's accountability is subject to legal scrutiny.</li>
+        <li><strong>Speed and Documentation Preserve Rights:</strong> Immediate reporting to the bank and <strong>1930 / cybercrime.gov.in</strong>, combined with disciplined evidence preservation, remains essential for both fund recovery and legal claims.</li>
+      </ol>
+
+      <h2>Civil, Consumer &amp; Cyber Litigation Support</h2>
+      <p>Evaluating potential bank negligence, RBI Ombudsman escalations, magistrate fund-release applications under BNSS, or consumer commission complaints requires careful review of bank records, timelines, and applicable regulatory directions. From our chambers in Ernakulam (Kochi) and Thiruvananthapuram, Lexlead Legal Solutions assists clients across civil disputes, consumer proceedings, and court appearances across Kerala, strictly subject to factual verification and formal consultation.</p>
+    `,
+    faqs: [
+      {
+        question: "Can I get my money back after a digital arrest scam?",
+        answer: "Recovery depends on how quickly the fraud is reported, whether funds can be traced and frozen in recipient accounts before withdrawal, and whether institutional lapses are established. Report the transaction immediately to your bank and call 1930 or file on cybercrime.gov.in.",
+      },
+      {
+        question: "Can I sue my bank for cyber fraud in India?",
+        answer: "A customer may have legal grounds before the RBI Integrated Ombudsman, a Consumer Commission under the Consumer Protection Act, 2019, or a civil forum where evidence shows that the bank's negligence, deficiency in service, or breach of regulatory obligations contributed to the loss. Outcomes depend strictly on the facts and evidence of each case.",
+      },
+      {
+        question: "What did the Supreme Court say on 29 October 2026 about bank liability in digital arrest scams?",
+        answer: "In In Re: Victims of Digital Arrest Related to Forged Documents (SMW(Crl) No. 3 of 2025), the Bench comprising Chief Justice Surya Kant, Justice Joymalya Bagchi, and Justice V. Mohana emphasised that proposed RBI regulatory measures should require financial institutions to indemnify victims and pay compensation not less than the amount lost where the fraud occurred due to a failure of due diligence.",
+      },
+      {
+        question: "Is 'digital arrest' legal in India?",
+        answer: "No. There is no provision for 'digital arrest' or virtual custody via video call under the Bharatiya Nagarik Suraksha Sanhita (BNSS), 2023 or any other Indian law. Fraudsters fabricate fake warrants and impersonate officers to intimidate victims into transferring money.",
+      },
+      {
+        question: "Where should I report digital arrest fraud immediately?",
+        answer: "You should immediately inform your bank's fraud department, dial the national cybercrime helpline 1930, and submit a complaint on the National Cyber Crime Reporting Portal (https://cybercrime.gov.in/), followed by a formal complaint at your nearest police station.",
+      },
+      {
+        question: "What can I do if my bank refuses to compensate me?",
+        answer: "You may escalate the written grievance to the bank's Nodal Officer or Internal Ombudsman, and if unresolved after 30 days or rejected, file a free complaint under the RBI Integrated Ombudsman Scheme via https://cms.rbi.org.in/ (helpline 14448), or examine maintainable remedies before a Consumer Commission or civil court.",
+      },
+      {
+        question: "Does sharing an OTP or personally approving a transfer automatically prevent a compensation claim?",
+        answer: "Not necessarily. While customer-authorised transfers and OTP sharing affect liability assessments under RBI guidelines, courts and regulators also examine surrounding coercion, unusual transaction patterns, beneficiary mule-account checks, and whether the bank acted with due diligence both before and after receiving the fraud alert.",
+      },
+    ],
+  },
+  {
     slug: "kerala-arrested-person-magistrate-production-24-hours-bnss",
     title: "Can Police Delay Producing an Arrested Person Before a Magistrate Until the Next Morning? Kerala High Court Ruling Explained",
     subtitle: "Kerala High Court ruling in Adv. P.S. Subeesh v. State of Kerala (WP(PIL) 165/2025) on the 24-hour rule under BNSS Section 58, Article 22(2), and after-5 PM production procedures.",

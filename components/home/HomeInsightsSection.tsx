@@ -102,12 +102,18 @@ export function HomeInsightsSection() {
                 Grounded in Authoritative Statutory Precedents
               </p>
               <p className="text-xs text-[#626B76]">
-                Covering BNSS 2023, BNS, MSMED Act, Registration of Births &amp; Deaths Act, Kerala Paddy Land Act, NI Act Section 138, and RERA.
+                Covering BNSS 2023, BNS, Consumer Protection Act 2019, RBI Directions, MSMED Act, Registration of Births &amp; Deaths Act, Kerala Paddy Land Act, NI Act Section 138, and RERA.
               </p>
             </div>
           </div>
 
           <div className="flex flex-wrap items-center gap-2">
+            <Link
+              href="/blog/digital-arrest-scams-india-bank-liability-supreme-court"
+              className="text-xs px-3 py-1.5 rounded bg-[#F7F5F0] hover:bg-[#E8E1D5] text-[#10253D] font-medium transition-colors"
+            >
+              Digital Arrest &amp; Bank Liability (SC 2026)
+            </Link>
             <Link
               href="/blog/kerala-arrested-person-magistrate-production-24-hours-bnss"
               className="text-xs px-3 py-1.5 rounded bg-[#F7F5F0] hover:bg-[#E8E1D5] text-[#10253D] font-medium transition-colors"
